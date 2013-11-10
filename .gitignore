@@ -3,14 +3,10 @@
 ###########################
 [Tt]humbs.db
 *.DS_Store
-# Folder config file
-Desktop.ini
 
 ###########################
 # Development Dependencies
 ###########################
 
-project/bower_components
-project/node_modules
-node_modules
 bower_components
+node_modules
