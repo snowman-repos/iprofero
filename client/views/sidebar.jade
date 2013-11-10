@@ -1,0 +1,15 @@
+.header.item(data-ng-repeat='item in menu')
+	a(href='#!/{{item.link}}', data-ng-if="!item.submenu", data-ng-class='{active: $uiRoute}', ui-route='/{{item.link}}', toggle-sidebar)
+		i.right.floated.icon(data-ng-class='item.icon')
+		{{item.title}}
+	div(data-ng-if='item.submenu')
+		a(href='#!/{{item.link}}', data-ng-class='{active: $uiRoute}', ui-route='/{{item.link}}', toggle-sidebar)
+			i.right.floated.icon(data-ng-class='item.icon')
+			{{item.title}}
+		.menu.submenu
+			a.item(href='#!/{{subitem.link}}', data-ng-repeat='subitem in item.submenu', data-ng-class='{active: $uiRoute}', ui-route='/{{subitem.link}}', toggle-sidebar)
+				| {{subitem.title}}
+.header.item(data-ng-repeat='item in admin_menu')
+	a(href='#!/{{item.link}}', data-ng-class='{active: $uiRoute}', ui-route='/{{item.link}}', toggle-sidebar)
+		i.right.floated.icon(data-ng-class='item.icon')
+		{{item.title}}

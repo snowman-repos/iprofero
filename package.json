@@ -1,0 +1,65 @@
+{
+    "name": "iprofero",
+    "description": "iProfero - An agency management toolset.",
+    "version": "0.0.1",
+    "private": true,
+    "author": "Darryl Snow",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Profero-China/nodeproject"
+    },
+    "engines": {
+        "node": "0.10.x",
+        "npm": "1.2.x"
+    },
+    "scripts": {
+        "start": "node node_modules/grunt-cli/bin/grunt",
+        "test": "node node_modules/grunt-cli/bin/grunt test",
+        "postinstall": "bower install"
+    },
+    "dependencies": {
+        "express": "latest",
+        "jade": "latest",
+        "mongoose": "latest",
+        "connect-mongo": "latest",
+        "connect-flash": "latest",
+        "crypto": "latest",
+        "passport": "latest",
+        "passport-local": "latest",
+        "passport-facebook": "latest",
+        "passport-twitter": "latest",
+        "passport-github": "latest",
+        "passport-google-oauth": "latest",
+        "passport-linkedin": "latest",
+        "passport-weibo": "latest",
+        "underscore": "latest",
+        "async": "latest",
+        "view-helpers": "latest",
+        "mean-logger": "latest",
+        "forever": "latest",
+        "bower": "latest",
+        "grunt": "latest",
+        "grunt-cli": "latest",
+        "grunt-env": "latest",
+        "grunt-bower-task": "latest"
+    },
+    "devDependencies": {
+        "supertest": "latest",
+        "should": "latest",
+        "grunt-contrib-watch": "latest",
+        "grunt-contrib-cssmin": "latest",
+        "grunt-contrib-requirejs": "latest",
+        "grunt-contrib-jshint": "latest",
+        "grunt-contrib-coffee": "latest",
+        "grunt-contrib-stylus": "latest",
+        "grunt-contrib-jade": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-coffeelint": "latest",
+        "grunt-newer": "latest",
+        "grunt-nodemon": "latest",
+        "grunt-concurrent": "latest",
+        "grunt-mocha-test": "latest",
+        "grunt-karma": "latest",
+        "grunt-kss": "latest"
+    }
+}

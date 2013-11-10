@@ -1,0 +1,20 @@
+// Edit in Place
+// 
+// Sometimes content can be editted inline
+//
+// Markup:
+// <p>My name is <span click-to-edit="Darryl"></span></p>
+//
+// Styleguide 5.5
+
+[click-to-edit],
+[click-to-edit-headline]
+	cursor 					pointer
+	display 				inline-block
+
+	.ui.form
+		margin 				10px 0 0 0
+
+	&.disabled
+		span
+			opacity 		0.3

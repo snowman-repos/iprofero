@@ -1,0 +1,63 @@
+// Animations
+//
+// These are the animations used throughout the application. These animate all style properties with ease-in-out. Check the stylesheet for more details.
+// 
+// .fast-transition-demo - 0.1s
+// .slow-transition-demo - 0.3s
+// 
+// Markup:
+// <div class="{$modifiers}" style="height: 45px; width: 45px;"></div>
+//
+// Styleguide 1.1
+
+$fast-animation-time =		0.1s
+$slow-animation-time =		0.3s
+
+$fast-transition =			$fast-animation-time all ease-in-out
+$slow-transition =			$slow-animation-time all ease-in-out
+
+animation($animation=demo, $speed=fast, $iterations=infinite)
+	if $speed = fast
+		animation			$animation $fast-animation-time $iterations
+		-webkit-animation	$animation $fast-animation-time $iterations
+	else
+		animation			$animation $slow-animation-time $iterations
+		-webkit-animation	$animation $slow-animation-time $iterations
+
+// For demo purposes:
+
+.fast-animation
+	animation()
+
+.slow-animation
+	animation(,slow,)
+
+.fast-transition-demo
+	background-color 		#ccc
+	cursor 					pointer
+	transition				$fast-transition
+
+	&:hover
+		background-color 	darken(@background-color, 20%)
+		transition				$fast-transition
+
+.slow-transition-demo
+	background-color 		#ccc
+	cursor 					pointer
+	transition				$slow-transition
+
+	&:hover
+		background-color 	darken(@background-color, 20%)
+		transition				$slow-transition
+
+@keyframes demo
+	from
+		margin-left 		0
+	to
+		margin-left 		200px
+
+@-webkit-keyframes demo
+	from
+		margin-left 		0
+	to
+		margin-left 		200px

@@ -1,0 +1,56 @@
+// Multi Select List
+// 
+// MultiSelects allow the user to choose multiple elements from a list.
+//
+// Markup:
+// <div class='ui divided multi selection list'>
+// 	<div class='active item'>
+// 		<input type='checkbox'>
+// 		<i class='large floated left circular user icon'></i>
+// 		<i class='large right floated check icon'></i>
+// 		<div class='content'>
+// 			<div class='header'>Person Name</div>
+// 			<span>Job Title</span>
+// 		</div>
+// 	</div>
+// 	<div class='item'>
+// 		<input type='checkbox'>
+// 		<i class='large floated left circular user icon'></i>
+// 		<div class='content'>
+// 			<div class='header'>Person Name</div>
+// 			<span>Job Title</span>
+// 		</div>
+// 	</div>
+// 	<div class='item'>
+// 		<input type='checkbox'>
+// 		<i class='large floated left circular user icon'></i>
+// 		<div class='content'>
+// 			<div class='header'>Person Name</div>
+// 			<span>Job Title</span>
+// 		</div>
+// 	</div>
+// 	<div class='item'>
+// 		<input type='checkbox'>
+// 		<i class='large floated left circular user icon'></i>
+// 		<div class='content'>
+// 			<div class='header'>Person Name</div>
+// 			<span>Job Title</span>
+// 		</div>
+// 	</div>
+// </div>
+//
+// Styleguide 3.9
+
+.multi.selection.list
+
+	[type='checkbox']
+		display 			none
+
+	.floated.left.icon
+		font-size 			1.2em
+
+	.ui.avatar.image
+		float 				left
+
+	&.ui.list .item > .right.floated.icon
+		padding 			0

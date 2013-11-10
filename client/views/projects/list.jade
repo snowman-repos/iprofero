@@ -1,0 +1,43 @@
+.page-container(data-ng-controller='ProjectsController', data-ng-init='find()')
+
+	.ui.page.one.column.grid
+
+		.row
+			.center.aligned.column.top.bottom.margin
+
+				.ui.icon.header
+					i.circular.briefcase.icon
+					span(data-ng-bind="projects.length")
+					span(ng-pluralize, count="projects.length", when="{'1': ' Project', 'other': ' Projects'}")
+
+		.row
+			.column
+
+				table.ui.padded.sortable.table.segment
+					thead
+						tr
+							th(data-ng-click="predicate = 'name'; reverse=!reverse")
+								| name
+								i.alphabet.sort.icon.right(data-ng-class="{'descending':reverse}", data-ng-show="predicate == 'name'")
+							th(data-ng-click="predicate = 'client'; reverse=!reverse")
+								| client
+								i.alphabet.sort.icon.right(data-ng-class="{'descending':reverse}", data-ng-show="predicate == 'client'")
+							th
+					tbody
+						tr(data-ng-repeat='project in projects | orderBy:predicate:reverse')
+							td
+								a(data-ng-href='#!/projects/{{project._id}}')
+									.ui.inline.header(data-ng-bind="project.name")
+							td(data-ng-bind="project.client")
+							td
+								.ui.green.label
+									i.user.icon
+									span(data-ng-bind="project.participants.length")
+								.ui.cobalt.label(data-ng-if="isAdmin")
+									i.icon(data-ng-class="project.revenue.currency")
+									span(data-ng-bind="project.revenue.amount")
+					tfoot
+						th(colspan="3")
+							a.ui.green.button(href="#!/projects/new")
+								i.add.icon
+								| New project

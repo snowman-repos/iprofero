@@ -1,0 +1,24 @@
+.container(data-ng-controller='HeaderController')
+	a.icon.item(data-ng-if='global.authenticated', toggle-sidebar)
+		i.reorder.icon.avatar
+	a.item(href='/', close-sidebar)
+		img.ui.logo.image(src='/img/icons/profero.png')
+	.right.menu
+		.ui.pointing.dropdown.link.item(data-ng-show='global.authenticated', dropdown)
+			img.ui.tiny.image.avatar(data-ng-src='{{global.user.avatar}}', data-ng-if="global.user.avatar")
+			i.small.user.icon(data-ng-if="!global.user.avatar")
+			span(data-ng-bind='global.user.name')
+			i.dropdown.icon
+			.menu.ui.transition.hidden
+				a.item(href="#!/me", close-sidebar)
+					i.user.icon
+					| profile
+				a.item(href="signout", close-sidebar)
+					i.sign.out.icon
+					| sign out
+		a.item(href='/signin', target="_self", data-ng-hide='global.authenticated', ui-route='/signin', ng-class='{active: $uiRoute}')
+			i.sign.in.icon
+			|  sign in
+		a.item(href='/signup', target="_self", data-ng-hide='global.authenticated', ui-route='/signup', ng-class='{active: $uiRoute}')
+			i.add.icon
+			|  sign up

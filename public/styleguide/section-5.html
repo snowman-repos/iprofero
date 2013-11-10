@@ -1,0 +1,4132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>iProfero Styleguide v0.0.1</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel='stylesheet' href='/lib/semantic-ui/css/semantic.css' />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar kss-fixed">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">iProfero Styleguide</a></h1>
+            <h2 class="kss-doc-subtitle">v0.0.1</h2>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="5">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Base</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Elements</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Collections</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Views</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Modules</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Templates</span></a></li>
+              
+            </ul>
+            
+            <ul class="kss-menu-child">
+              
+              
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.1"><span class="kss-ref">5.1</span><span class="kss-name">Accordion</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.1.1"><span class="kss-ref">5.1.1</span><span class="kss-name">Example: Form Accordion</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.1.2"><span class="kss-ref">5.1.2</span><span class="kss-name">Accordion Menu</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.2"><span class="kss-ref">5.2</span><span class="kss-name">Checkbox</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.2.1"><span class="kss-ref">5.2.1</span><span class="kss-name">Slider Checkbox</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.2.2"><span class="kss-ref">5.2.2</span><span class="kss-name">Toggle Checkbox</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.2.3"><span class="kss-ref">5.2.3</span><span class="kss-name">Radio Buttons</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.2.4"><span class="kss-ref">5.2.4</span><span class="kss-name">Using Buttons to Toggle Checkbox State</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.3"><span class="kss-ref">5.3</span><span class="kss-name">Dimmer</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.3.1"><span class="kss-ref">5.3.1</span><span class="kss-name">Content Dimmer</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.3.2"><span class="kss-ref">5.3.2</span><span class="kss-name">Dimmer states</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.3.4"><span class="kss-ref">5.3.4</span><span class="kss-name">Simple Dimmer</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4"><span class="kss-ref">5.4</span><span class="kss-name">Dropdown</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.1"><span class="kss-ref">5.4.1</span><span class="kss-name">Inline Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.2"><span class="kss-ref">5.4.2</span><span class="kss-name">Select Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.3"><span class="kss-ref">5.4.3</span><span class="kss-name">Floating Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.4"><span class="kss-ref">5.4.4</span><span class="kss-name">Pointing Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.5"><span class="kss-ref">5.4.5</span><span class="kss-name">Simple Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.6"><span class="kss-ref">5.4.6</span><span class="kss-name">Preselected Dropdown Menu Items</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.7"><span class="kss-ref">5.4.7</span><span class="kss-name">Button Group Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.8"><span class="kss-ref">5.4.8</span><span class="kss-name">Combo Button Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.9"><span class="kss-ref">5.4.9</span><span class="kss-name">Nested Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.10"><span class="kss-ref">5.4.10</span><span class="kss-name">Menu Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.11"><span class="kss-ref">5.4.11</span><span class="kss-name">Form Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.12"><span class="kss-ref">5.4.12</span><span class="kss-name">Dropdown Transitions</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.4.13"><span class="kss-ref">5.4.13</span><span class="kss-name">Fluid Dropdowns</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.5"><span class="kss-ref">5.5</span><span class="kss-name">Edit in Place</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.6"><span class="kss-ref">5.6</span><span class="kss-name">Modal</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.6.1"><span class="kss-ref">5.6.1</span><span class="kss-name">Basic Modal</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.6.2"><span class="kss-ref">5.6.2</span><span class="kss-name">Small Modals</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.6.3"><span class="kss-ref">5.6.3</span><span class="kss-name">Large Modals</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.6.4"><span class="kss-ref">5.6.4</span><span class="kss-name">Modal Callbacks</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.6.5"><span class="kss-ref">5.6.5</span><span class="kss-name">Forced Choice Modals</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.6.6"><span class="kss-ref">5.6.6</span><span class="kss-name">Modal Transitions</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.7"><span class="kss-ref">5.7</span><span class="kss-name">Popup</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.7.1"><span class="kss-ref">5.7.1</span><span class="kss-name">Positioned Popups</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.7.2"><span class="kss-ref">5.7.2</span><span class="kss-name">Popups with Titles</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.7.3"><span class="kss-ref">5.7.3</span><span class="kss-name">Popups with HTML</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.8"><span class="kss-ref">5.8</span><span class="kss-name">Rating</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.8.1"><span class="kss-ref">5.8.1</span><span class="kss-name">Ratings with Intial Values</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.8.2"><span class="kss-ref">5.8.2</span><span class="kss-name">Read-Only Ratings</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.8.3"><span class="kss-ref">5.8.3</span><span class="kss-name">Clearable Ratings</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.9"><span class="kss-ref">5.9</span><span class="kss-name">Reveal</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.9.1"><span class="kss-ref">5.9.1</span><span class="kss-name">Reveal Variations</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.10"><span class="kss-ref">5.10</span><span class="kss-name">Shape</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.10.1"><span class="kss-ref">5.10.1</span><span class="kss-name">Rectangular Shape</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.10.2"><span class="kss-ref">5.10.2</span><span class="kss-name">Irregular Shape</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.10.3"><span class="kss-ref">5.10.3</span><span class="kss-name">Shape with Content</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.11"><span class="kss-ref">5.11</span><span class="kss-name">Sidebar</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.11.1"><span class="kss-ref">5.11.1</span><span class="kss-name">Overlay Sidebar</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.11.2"><span class="kss-ref">5.11.2</span><span class="kss-name">Sidebar Directions</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-5.12"><span class="kss-ref">5.12</span><span class="kss-name">Transition</span></a></li>
+              
+              
+            </ul>
+            
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          
+          <section id="section-5" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">5</span> Modules</h1>
+            
+            
+            <div class="kss-description">
+              <p>Components made up of combinations of views and collections.</p>
+
+            </div>
+            
+            
+          </section>
+          
+          <section id="section-5.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.1</span> Accordion</h1>
+            
+            
+            <div class="kss-description">
+              <p>An accordion displays a single piece of content, while allowing the option of displaying other related content</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui {$modifiers} accordion">
+  <div class="active title">
+    <i class="dropdown icon"></i>
+    What is a dog?
+  </div>
+  <div class="active content">
+    <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    What kinds of dogs are there?
+  </div>
+  <div class="content">
+    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    How do you acquire a dog?
+  </div>
+  <div class="content">
+    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.basic</div>
+                  <div class="kss-modifier-description">
+                    <p>A basic accordion does not add any extra formatting</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui basic accordion">
+  <div class="active title">
+    <i class="dropdown icon"></i>
+    What is a dog?
+  </div>
+  <div class="active content">
+    <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    What kinds of dogs are there?
+  </div>
+  <div class="content">
+    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    How do you acquire a dog?
+  </div>
+  <div class="content">
+    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.fluid</div>
+                  <div class="kss-modifier-description">
+                    <p>An accordion can take up the width of its container</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui fluid accordion">
+  <div class="active title">
+    <i class="dropdown icon"></i>
+    What is a dog?
+  </div>
+  <div class="active content">
+    <p>A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    What kinds of dogs are there?
+  </div>
+  <div class="content">
+    <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.</p>
+  </div>
+  <div class="title">
+    <i class="dropdown icon"></i>
+    How do you acquire a dog?
+  </div>
+  <div class="content">
+    <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.</p>
+    <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.</p>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui {$modifiers} accordion&quot;&gt;
+  &lt;div class=&quot;active title&quot;&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    What is a dog?
+  &lt;/div&gt;
+  &lt;div class=&quot;active content&quot;&gt;
+    &lt;p&gt;A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;title&quot;&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    What kinds of dogs are there?
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;title&quot;&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    How do you acquire a dog?
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.&lt;/p&gt;
+    &lt;p&gt;A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.1.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.1.1</span> Example: Form Accordion</h1>
+            
+            
+            <div class="kss-description">
+              <p>An accordion can be used anywhere where content can be shown or hidden. For example, to show optional form fields.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui basic accordion form">
+  <div class="two fields">
+    <div class="field">
+      <label>First Name</label>
+      <input placeholder="First Name" type="text">
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input placeholder="Last Name" type="text">
+    </div>
+  </div>
+  <div class="title">
+    <i class="icon dropdown"></i>
+    Optional Details
+  </div>
+  <div class="content">
+    <div class="field">
+      <label>Maiden Name</label>
+      <input placeholder="Maiden Name" type="text">
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui basic accordion form&quot;&gt;
+  &lt;div class=&quot;two fields&quot;&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;First Name&lt;/label&gt;
+      &lt;input placeholder=&quot;First Name&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Last Name&lt;/label&gt;
+      &lt;input placeholder=&quot;Last Name&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;title&quot;&gt;
+    &lt;i class=&quot;icon dropdown&quot;&gt;&lt;/i&gt;
+    Optional Details
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Maiden Name&lt;/label&gt;
+      &lt;input placeholder=&quot;Maiden Name&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.1.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.1.2</span> Accordion Menu</h1>
+            
+            
+            <div class="kss-description">
+              <p>An accordion can be used to create content drawers inside a menu</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui basic vertical accordion menu">
+  <div class="item">
+    <a class="active title">
+      <i class="dropdown icon"></i>
+      Size
+    </a>
+    <div class="active content menu">
+      <div class="ui form item">
+        <div class="grouped inline fields">
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="size" value="small">
+              <label></label>
+            </div>
+            <label>Small</label>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="size" value="medium">
+              <label></label>
+            </div>
+            <label>Medium</label>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="size" value="large">
+              <label></label>
+            </div>
+            <label>Large</label>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="size" value="x-large">
+              <label></label>
+            </div>
+            <label>X-Large</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <a class="active title">
+      <i class="dropdown icon"></i>
+      Colors
+    </a>
+    <div class="active content menu">
+      <div class="ui form item">
+        <div class="grouped inline fields">
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="small">
+              <label></label>
+            </div>
+            <label>Red</label>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="medium">
+              <label></label>
+            </div>
+            <label>Orange</label>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="large">
+              <label></label>
+            </div>
+            <label>Green</label>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="x-large">
+              <label></label>
+            </div>
+            <label>Blue</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui basic vertical accordion menu&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;a class=&quot;active title&quot;&gt;
+      &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+      Size
+    &lt;/a&gt;
+    &lt;div class=&quot;active content menu&quot;&gt;
+      &lt;div class=&quot;ui form item&quot;&gt;
+        &lt;div class=&quot;grouped inline fields&quot;&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui radio checkbox&quot;&gt;
+              &lt;input type=&quot;radio&quot; name=&quot;size&quot; value=&quot;small&quot;&gt;
+              &lt;label&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label&gt;Small&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui radio checkbox&quot;&gt;
+              &lt;input type=&quot;radio&quot; name=&quot;size&quot; value=&quot;medium&quot;&gt;
+              &lt;label&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label&gt;Medium&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui radio checkbox&quot;&gt;
+              &lt;input type=&quot;radio&quot; name=&quot;size&quot; value=&quot;large&quot;&gt;
+              &lt;label&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label&gt;Large&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui radio checkbox&quot;&gt;
+              &lt;input type=&quot;radio&quot; name=&quot;size&quot; value=&quot;x-large&quot;&gt;
+              &lt;label&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label&gt;X-Large&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;a class=&quot;active title&quot;&gt;
+      &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+      Colors
+    &lt;/a&gt;
+    &lt;div class=&quot;active content menu&quot;&gt;
+      &lt;div class=&quot;ui form item&quot;&gt;
+        &lt;div class=&quot;grouped inline fields&quot;&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui checkbox&quot;&gt;
+              &lt;input type=&quot;checkbox&quot; name=&quot;small&quot;&gt;
+              &lt;label&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label&gt;Red&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui checkbox&quot;&gt;
+              &lt;input type=&quot;checkbox&quot; name=&quot;medium&quot;&gt;
+              &lt;label&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label&gt;Orange&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui checkbox&quot;&gt;
+              &lt;input type=&quot;checkbox&quot; name=&quot;large&quot;&gt;
+              &lt;label&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label&gt;Green&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;div class=&quot;ui checkbox&quot;&gt;
+              &lt;input type=&quot;checkbox&quot; name=&quot;x-large&quot;&gt;
+              &lt;label&gt;&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;label&gt;Blue&lt;/label&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.2</span> Checkbox</h1>
+            
+            
+            <div class="kss-description">
+              <p>A checkbox visually indicates the status of a user&apos;s selection</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui {$modifiers} checkbox">
+  <input type="checkbox">
+  <label>Poodle</label>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.large</div>
+                  <div class="kss-modifier-description">
+                    <p>A checkbox can be a large size</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui large checkbox">
+  <input type="checkbox">
+  <label>Poodle</label>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.huge</div>
+                  <div class="kss-modifier-description">
+                    <p>A checkbox can be a huge size</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui huge checkbox">
+  <input type="checkbox">
+  <label>Poodle</label>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui {$modifiers} checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;label&gt;Poodle&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.2.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.2.1</span> Slider Checkbox</h1>
+            
+            
+            <div class="kss-description">
+              <p>A checkbox can be formatted to show user selection as a slider</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui slider checkbox">
+  <input type="checkbox" name="walk">
+  <label>Allow others to see when your dog is on a walk</label>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui slider checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;walk&quot;&gt;
+  &lt;label&gt;Allow others to see when your dog is on a walk&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.2.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.2.2</span> Toggle Checkbox</h1>
+            
+            
+            <div class="kss-description">
+              <p>A checkbox can be formatted to show user selection as a toggle</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui toggle checkbox">
+  <input type="checkbox" name="pet">
+  <label>Allow other people to pet my dog</label>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui toggle checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;pet&quot;&gt;
+  &lt;label&gt;Allow other people to pet my dog&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.2.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.2.3</span> Radio Buttons</h1>
+            
+            
+            <div class="kss-description">
+              <p>A checkbox can be formatted as a radio element. This means it is an exclusive option.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui form">
+  <div class="grouped inline fields">
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="fruit" checked="checked">
+        <label>Apples</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="fruit">
+        <label>Oranges</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="fruit">
+        <label>Pears</label>
+      </div>
+    </div>
+    <div class="field">
+      <div class="ui radio checkbox">
+        <input type="radio" name="fruit">
+        <label>Grapefruit</label>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui form&quot;&gt;
+  &lt;div class=&quot;grouped inline fields&quot;&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;div class=&quot;ui radio checkbox&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;fruit&quot; checked=&quot;checked&quot;&gt;
+        &lt;label&gt;Apples&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;div class=&quot;ui radio checkbox&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;fruit&quot;&gt;
+        &lt;label&gt;Oranges&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;div class=&quot;ui radio checkbox&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;fruit&quot;&gt;
+        &lt;label&gt;Pears&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;div class=&quot;ui radio checkbox&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;fruit&quot;&gt;
+        &lt;label&gt;Grapefruit&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.2.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.2.4</span> Using Buttons to Toggle Checkbox State</h1>
+            
+            
+            <div class="kss-description">
+              <p>Description</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui buttons">
+  <div class="ui enablethem button">Enable</div>
+  <div class="ui disablethem button">Disable</div>
+  <div class="ui togglethem button">Toggle</div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+<div class="ui slider checkbox" style="display: inline-block;">
+  <input type="checkbox">
+  <div class="box"></div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui buttons&quot;&gt;
+  &lt;div class=&quot;ui enablethem button&quot;&gt;Enable&lt;/div&gt;
+  &lt;div class=&quot;ui disablethem button&quot;&gt;Disable&lt;/div&gt;
+  &lt;div class=&quot;ui togglethem button&quot;&gt;Toggle&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui slider checkbox&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot;&gt;
+  &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.3</span> Dimmer</h1>
+            
+            
+            <div class="kss-description">
+              <p>Dimmers hide distractions to focus user&apos;s attention on particular content. Any element can be dimmed using a dimmer. If a dimmer does not exist inside the element it will be created on first use. If a dimmer is already included on the page, instead of calling dimmer on the section you would like to dim, you can can invoke behaviors directly on the dimmer.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui button toggledimmer">turn on page dimmer</div>
+<div class="ui page dimmer">
+  <div class="content">
+    <div class="center">
+      <h2 class="ui inverted icon header">
+        <i class="icon circular inverted emphasized green mail"></i>
+        You're all signed up for the weekly dog tips newsletter!
+        <div class="sub header">Your first edition will be sent on January 22</div>
+      </h2>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui button toggledimmer&quot;&gt;turn on page dimmer&lt;/div&gt;
+&lt;div class=&quot;ui page dimmer&quot;&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;center&quot;&gt;
+      &lt;h2 class=&quot;ui inverted icon header&quot;&gt;
+        &lt;i class=&quot;icon circular inverted emphasized green mail&quot;&gt;&lt;/i&gt;
+        You&#x27;re all signed up for the weekly dog tips newsletter!
+        &lt;div class=&quot;sub header&quot;&gt;Your first edition will be sent on January 22&lt;/div&gt;
+      &lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.3.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.3.1</span> Content Dimmer</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dimmer can display content. Content must be included inside <code>.content .center</code> to display centered correctly in the modal.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui segment dimmable" style="display: block;">
+  <h4 class="ui dividing header">
+    <i class="photo icon"></i>Dog Photos
+  </h4>
+  <img src="http://placehold.it/200x200">
+  <img src="http://placehold.it/200x200">
+  <div class="ui dogs dimmer hidden">
+    <div class="content">
+      <div class="center">
+        <h2 class="ui inverted icon header">
+          <i class="icon circular inverted emphasized red heart"></i>
+          Your poodle photo uploaded successfully!
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui icon buttons" style="display: inline-block;">
+  <div class="ui showsectiondimmer button"><i class="plus icon"></i></div>
+  <div class="ui hidesectiondimmer button"><i class="minus icon"></i></div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui segment dimmable&quot; style=&quot;display: block;&quot;&gt;
+  &lt;h4 class=&quot;ui dividing header&quot;&gt;
+    &lt;i class=&quot;photo icon&quot;&gt;&lt;/i&gt;Dog Photos
+  &lt;/h4&gt;
+  &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+  &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+  &lt;div class=&quot;ui dogs dimmer hidden&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;center&quot;&gt;
+        &lt;h2 class=&quot;ui inverted icon header&quot;&gt;
+          &lt;i class=&quot;icon circular inverted emphasized red heart&quot;&gt;&lt;/i&gt;
+          Your poodle photo uploaded successfully!
+        &lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui icon buttons&quot; style=&quot;display: inline-block;&quot;&gt;
+  &lt;div class=&quot;ui showsectiondimmer button&quot;&gt;&lt;i class=&quot;plus icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class=&quot;ui hidesectiondimmer button&quot;&gt;&lt;i class=&quot;minus icon&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.3.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.3.2</span> Dimmer states</h1>
+            
+            
+            <div class="kss-description">
+              <p>Dimmers have various states</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui segment">
+  <div class="ui {$modifiers} dimmer"></div>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.active</div>
+                  <div class="kss-modifier-description">
+                    <p>An active dimmer will dim its parent container</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui segment">
+  <div class="ui active dimmer"></div>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.disabled</div>
+                  <div class="kss-modifier-description">
+                    <p>A disabled dimmer cannot be activated</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui segment">
+  <div class="ui disabled dimmer"></div>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.inverted.active</div>
+                  <div class="kss-modifier-description">
+                    <p>A dimmer can be formatted to have its colors inverted</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui segment">
+  <div class="ui inverted active dimmer"></div>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui segment&quot;&gt;
+  &lt;div class=&quot;ui {$modifiers} dimmer&quot;&gt;&lt;/div&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.3.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.3.4</span> Simple Dimmer</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dimmer can be controlled without javascript. Having any parent element receive the class ui dimmable dimmed will trigger the dimmer to display.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui dimmable dimmed segment">
+  <div class="ui simple dimmer"></div>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui dimmable dimmed segment&quot;&gt;
+  &lt;div class=&quot;ui simple dimmer&quot;&gt;&lt;/div&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.4</span> Dropdown</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown is a hidden list of selections that a user can choose to have appear</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui dropdown">
+  <div class="text">Select</div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+    <div class="item" data-value="option1">Option 1</div>
+    <div class="item" data-value="option2">Option 2</div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui dropdown&quot;&gt;
+  &lt;div class=&quot;text&quot;&gt;Select&lt;/div&gt;
+  &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot; data-value=&quot;option1&quot;&gt;Option 1&lt;/div&gt;
+    &lt;div class=&quot;item&quot; data-value=&quot;option2&quot;&gt;Option 2&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.1</span> Inline Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown can be formatted to appear inline in other content</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div>Show me posts trending
+  <div class="ui inline dropdown">
+    <div class="text">today</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item active" data-text="today">Today</div>
+      <div class="item" data-text="this week">This Week</div>
+      <div class="item" data-text="this month">This Month</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div&gt;Show me posts trending
+  &lt;div class=&quot;ui inline dropdown&quot;&gt;
+    &lt;div class=&quot;text&quot;&gt;today&lt;/div&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item active&quot; data-text=&quot;today&quot;&gt;Today&lt;/div&gt;
+      &lt;div class=&quot;item&quot; data-text=&quot;this week&quot;&gt;This Week&lt;/div&gt;
+      &lt;div class=&quot;item&quot; data-text=&quot;this month&quot;&gt;This Month&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.2</span> Select Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown can be formatted to allow selection of a menu choice.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui selection dropdown">
+  <input type="hidden" name="gender">
+  <div class="default text">Gender</div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+    <div class="item" data-value="male">Male</div>
+    <div class="item" data-value="female">Female</div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui selection dropdown&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;gender&quot;&gt;
+  &lt;div class=&quot;default text&quot;&gt;Gender&lt;/div&gt;
+  &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot; data-value=&quot;male&quot;&gt;Male&lt;/div&gt;
+    &lt;div class=&quot;item&quot; data-value=&quot;female&quot;&gt;Female&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.3</span> Floating Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown menu can appear to be floating below an element.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui teal buttons">
+  <div class="ui button">Save</div>
+  <div class="ui teal floating dropdown icon button">
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item"><i class="edit icon"></i>Edit Post</div>
+      <div class="item"><i class="delete icon"></i>Remove Post</div>
+      <div class="item"><i class="hide icon"></i>Hide Post</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui teal buttons&quot;&gt;
+  &lt;div class=&quot;ui button&quot;&gt;Save&lt;/div&gt;
+  &lt;div class=&quot;ui teal floating dropdown icon button&quot;&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit Post&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove Post&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Hide Post&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.4</span> Pointing Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown menu can be formatted to point to its content</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui compact menu">
+  <div class="menu">
+    <a class="active item">
+      <i class="home icon"></i> Home
+    </a>
+    <div class="ui pointing dropdown link item">
+      <i class="icon mail"></i> Messages <i class="dropdown icon"></i>
+      <div class="menu">
+        <a class="item"><i class="mail icon"></i>Inbox</a>
+        <a class="item"><i class="book icon"></i>Archive</a>
+      </div>
+    </div>
+    <a class="item">
+      <i class="user icon"></i> Browse
+    </a>
+    <a class="item">
+      <i class="question icon"></i> Help
+    </a>
+  </div>
+</div>
+<div class="ui blue labeled icon top left pointing dropdown button">
+  <i class="settings icon"></i>
+  <span class="text">Settings</span>
+  <div class="menu">
+    <div class="item"><i class="edit icon"></i>Edit</div>
+    <div class="item"><i class="delete icon"></i>Remove</div>
+    <div class="item"><i class="hide icon"></i>Hide</div>
+  </div>
+</div>
+<div class="ui red labeled icon top right pointing dropdown button">
+  <i class="settings icon"></i>
+  <span class="text">Settings</span>
+  <div class="menu">
+    <div class="item"><i class="edit icon"></i>Edit</div>
+    <div class="item"><i class="delete icon"></i>Remove</div>
+    <div class="item"><i class="hide icon"></i>Hide</div>
+  </div>
+</div>
+<div class="ui teal right pointing dropdown icon button">
+  <i class="settings icon"></i>
+  <div class="menu">
+    <div class="item"><i class="edit icon"></i>Edit</div>
+    <div class="item"><i class="delete icon"></i>Remove</div>
+    <div class="item"><i class="hide icon"></i>Hide</div>
+  </div>
+</div>
+<div class="ui green left pointing dropdown icon button">
+  <i class="settings icon"></i>
+  <div class="menu">
+    <div class="item"><i class="edit icon"></i>Edit</div>
+    <div class="item"><i class="delete icon"></i>Remove</div>
+    <div class="item"><i class="hide icon"></i>Hide</div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui compact menu&quot;&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;a class=&quot;active item&quot;&gt;
+      &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt; Home
+    &lt;/a&gt;
+    &lt;div class=&quot;ui pointing dropdown link item&quot;&gt;
+      &lt;i class=&quot;icon mail&quot;&gt;&lt;/i&gt; Messages &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+      &lt;div class=&quot;menu&quot;&gt;
+        &lt;a class=&quot;item&quot;&gt;&lt;i class=&quot;mail icon&quot;&gt;&lt;/i&gt;Inbox&lt;/a&gt;
+        &lt;a class=&quot;item&quot;&gt;&lt;i class=&quot;book icon&quot;&gt;&lt;/i&gt;Archive&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a class=&quot;item&quot;&gt;
+      &lt;i class=&quot;user icon&quot;&gt;&lt;/i&gt; Browse
+    &lt;/a&gt;
+    &lt;a class=&quot;item&quot;&gt;
+      &lt;i class=&quot;question icon&quot;&gt;&lt;/i&gt; Help
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui blue labeled icon top left pointing dropdown button&quot;&gt;
+  &lt;i class=&quot;settings icon&quot;&gt;&lt;/i&gt;
+  &lt;span class=&quot;text&quot;&gt;Settings&lt;/span&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Hide&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui red labeled icon top right pointing dropdown button&quot;&gt;
+  &lt;i class=&quot;settings icon&quot;&gt;&lt;/i&gt;
+  &lt;span class=&quot;text&quot;&gt;Settings&lt;/span&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Hide&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui teal right pointing dropdown icon button&quot;&gt;
+  &lt;i class=&quot;settings icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Hide&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui green left pointing dropdown icon button&quot;&gt;
+  &lt;i class=&quot;settings icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Hide&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.5" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.5</span> Simple Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A simple dropdown can open without javascript</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui compact menu">
+  <div class="ui simple dropdown item">
+    Dropdown <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item">Choice 1</div>
+      <div class="item">Choice 2</div>
+      <div class="item">Choice 3</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui compact menu&quot;&gt;
+  &lt;div class=&quot;ui simple dropdown item&quot;&gt;
+    Dropdown &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;Choice 1&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;Choice 2&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;Choice 3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.6" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.6</span> Preselected Dropdown Menu Items</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown will automatically select on page load any menu item that includes the currently value of text or your dropdown&apos;s hidden input value. This is used to preserve a user&apos;s selection on page navigation and will automatically remove and default text placeholder formatting.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui inline dropdown">
+  <div class="text">Remove</div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+    <div class="item">Edit</div>
+    <div class="item active">Remove</div>
+    <div class="item">Hide</div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui inline dropdown&quot;&gt;
+  &lt;div class=&quot;text&quot;&gt;Remove&lt;/div&gt;
+  &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Edit&lt;/div&gt;
+    &lt;div class=&quot;item active&quot;&gt;Remove&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Hide&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.7" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.7</span> Button Group Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A button group can be formatted to show additional content as a dropdown</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui red icon buttons">
+  <div class="ui top left pointing dropdown button">
+    <i class="user icon"></i>
+    <div class="menu">
+      <div class="item"><i class="edit icon"></i>Edit User</div>
+      <div class="item"><i class="delete icon"></i>Remove User</div>
+      <div class="item"><i class="hide icon"></i>Make Invisible</div>
+    </div>
+  </div>
+  <div class="ui top left pointing dropdown button">
+    <i class="users icon"></i>
+    <div class="menu">
+      <div class="item"><i class="edit icon"></i>Edit Group</div>
+      <div class="item"><i class="delete icon"></i>Remove Group</div>
+      <div class="item"><i class="hide icon"></i>Hide from Group</div>
+    </div>
+  </div>
+  <div class="ui top right pointing dropdown button">
+    <i class="settings icon"></i>
+    <div class="menu">
+      <div class="item"><i class="edit icon"></i>Edit</div>
+      <div class="item"><i class="delete icon"></i>Remove</div>
+      <div class="item"><i class="hide icon"></i>Hide</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui red icon buttons&quot;&gt;
+  &lt;div class=&quot;ui top left pointing dropdown button&quot;&gt;
+    &lt;i class=&quot;user icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit User&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove User&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Make Invisible&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ui top left pointing dropdown button&quot;&gt;
+    &lt;i class=&quot;users icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit Group&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove Group&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Hide from Group&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ui top right pointing dropdown button&quot;&gt;
+    &lt;i class=&quot;settings icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Hide&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.8" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.8</span> Combo Button Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A button can be formatted with a dropdown</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui teal buttons">
+  <div class="ui button">Update Post</div>
+  <div class="ui teal dropdown icon button">
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item"><i class="edit icon"></i>Edit Post</div>
+      <div class="item"><i class="delete icon"></i>Remove Post</div>
+      <div class="item"><i class="hide icon"></i>Hide Post</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui teal buttons&quot;&gt;
+  &lt;div class=&quot;ui button&quot;&gt;Update Post&lt;/div&gt;
+  &lt;div class=&quot;ui teal dropdown icon button&quot;&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;edit icon&quot;&gt;&lt;/i&gt;Edit Post&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;delete icon&quot;&gt;&lt;/i&gt;Remove Post&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;hide icon&quot;&gt;&lt;/i&gt;Hide Post&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.9" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.9</span> Nested Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown menu can also contain sub menus inside of it</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui inline dropdown">
+  <input type="hidden" name="gender">
+  <div class="text">Shiba Inu</div>
+  <i class="dropdown icon"></i>
+  <div class="menu">
+    <div class="item">
+      <i class="dropdown icon"></i>
+      Dogs
+      <div class="menu">
+        <div class="item active">Shiba Inu</div>
+        <div class="item">Poodle</div>
+        <div class="item">Labrador</div>
+      </div>
+    </div>
+    <div class="item">
+      <i class="dropdown icon"></i>
+      Cats
+      <div class="menu">
+        <div class="item">Aegean</div>
+        <div class="item">Balinese</div>
+        <div class="item">Persian</div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui inline dropdown&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;gender&quot;&gt;
+  &lt;div class=&quot;text&quot;&gt;Shiba Inu&lt;/div&gt;
+  &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+      Dogs
+      &lt;div class=&quot;menu&quot;&gt;
+        &lt;div class=&quot;item active&quot;&gt;Shiba Inu&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;Poodle&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;Labrador&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+      Cats
+      &lt;div class=&quot;menu&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;Aegean&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;Balinese&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;Persian&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.10" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.10</span> Menu Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A menu element can contain a dropdown</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui compact tiered purple inverted menu">
+  <div class="menu">
+    <a class="active item">
+      <i class="icon home"></i> Home
+    </a>
+    <a class="ui dropdown item">
+      <i class="icon mail"></i> Messages <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item">
+          <i class="mail icon"></i>Categories
+          <div class="menu">
+            <div class="item">Unread</div>
+            <div class="item">Promotions</div>
+            <div class="item">Updates</div>
+          </div>
+        </div>
+        <div class="item"><i class="book icon"></i>Archive</div>
+      </div>
+    </a>
+    <a class="item">
+      <i class="user icon"></i> Browse
+    </a>
+  </div>
+  <div class="sub menu">
+    <a class="item">Activity Feed</a>
+    <a class="item">Profile</a>
+    <a class="item">Events</a>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui compact tiered purple inverted menu&quot;&gt;
+  &lt;div class=&quot;menu&quot;&gt;
+    &lt;a class=&quot;active item&quot;&gt;
+      &lt;i class=&quot;icon home&quot;&gt;&lt;/i&gt; Home
+    &lt;/a&gt;
+    &lt;a class=&quot;ui dropdown item&quot;&gt;
+      &lt;i class=&quot;icon mail&quot;&gt;&lt;/i&gt; Messages &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+      &lt;div class=&quot;menu&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
+          &lt;i class=&quot;mail icon&quot;&gt;&lt;/i&gt;Categories
+          &lt;div class=&quot;menu&quot;&gt;
+            &lt;div class=&quot;item&quot;&gt;Unread&lt;/div&gt;
+            &lt;div class=&quot;item&quot;&gt;Promotions&lt;/div&gt;
+            &lt;div class=&quot;item&quot;&gt;Updates&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;&lt;i class=&quot;book icon&quot;&gt;&lt;/i&gt;Archive&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;a class=&quot;item&quot;&gt;
+      &lt;i class=&quot;user icon&quot;&gt;&lt;/i&gt; Browse
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;sub menu&quot;&gt;
+    &lt;a class=&quot;item&quot;&gt;Activity Feed&lt;/a&gt;
+    &lt;a class=&quot;item&quot;&gt;Profile&lt;/a&gt;
+    &lt;a class=&quot;item&quot;&gt;Events&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.11" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.11</span> Form Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown can be formatted to allow selection inside a form</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui form segment">
+  <p>Let's go ahead and get you signed up.</p>
+  <div class="two fields">
+    <div class="field">
+      <label>First Name</label>
+      <input placeholder="First Name" type="text">
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input placeholder="Last Name" type="text">
+    </div>
+  </div>
+  <div class="field">
+    <label>Gender</label>
+    <div class="ui dropdown selection">
+      <input type="hidden" name="gender">
+      <div class="default text">...</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item" data-value="male">Male</div>
+        <div class="item" data-value="female">Female</div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui form segment&quot;&gt;
+  &lt;p&gt;Let&#x27;s go ahead and get you signed up.&lt;/p&gt;
+  &lt;div class=&quot;two fields&quot;&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;First Name&lt;/label&gt;
+      &lt;input placeholder=&quot;First Name&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;field&quot;&gt;
+      &lt;label&gt;Last Name&lt;/label&gt;
+      &lt;input placeholder=&quot;Last Name&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;field&quot;&gt;
+    &lt;label&gt;Gender&lt;/label&gt;
+    &lt;div class=&quot;ui dropdown selection&quot;&gt;
+      &lt;input type=&quot;hidden&quot; name=&quot;gender&quot;&gt;
+      &lt;div class=&quot;default text&quot;&gt;...&lt;/div&gt;
+      &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+      &lt;div class=&quot;menu&quot;&gt;
+        &lt;div class=&quot;item&quot; data-value=&quot;male&quot;&gt;Male&lt;/div&gt;
+        &lt;div class=&quot;item&quot; data-value=&quot;female&quot;&gt;Female&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.12" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.12</span> Dropdown Transitions</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown can have different transitions.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui teal buttons">
+  <div class="ui button">Toggle</div>
+  <div class="ui teal floating transitionsexample dropdown icon button">
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div class="item" data-value="horizontal flip">Horizontal Flip</div>
+      <div class="item" data-value="fade up">Fade Up</div>
+      <div class="item" data-value="scale">Scale</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui teal buttons&quot;&gt;
+  &lt;div class=&quot;ui button&quot;&gt;Toggle&lt;/div&gt;
+  &lt;div class=&quot;ui teal floating transitionsexample dropdown icon button&quot;&gt;
+    &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;menu&quot;&gt;
+      &lt;div class=&quot;item&quot; data-value=&quot;horizontal flip&quot;&gt;Horizontal Flip&lt;/div&gt;
+      &lt;div class=&quot;item&quot; data-value=&quot;fade up&quot;&gt;Fade Up&lt;/div&gt;
+      &lt;div class=&quot;item&quot; data-value=&quot;scale&quot;&gt;Scale&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.4.13" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.4.13</span> Fluid Dropdowns</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dropdown can take the full width of its parent</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui vertical menu">
+  <a class="item">Link 1</a>
+  <a class="item">Link 2</a>
+  <div class="header item">All Sections</div>
+  <div class="ui item">
+    <div class="ui fluid selection dropdown">
+      <div class="text">More</div>
+      <i class="dropdown icon"></i>
+      <div class="menu">
+        <div class="item">Choice 1</div>
+        <div class="item">Choice 2</div>
+        <div class="item">Choice 3</div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui vertical menu&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;Link 1&lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;Link 2&lt;/a&gt;
+  &lt;div class=&quot;header item&quot;&gt;All Sections&lt;/div&gt;
+  &lt;div class=&quot;ui item&quot;&gt;
+    &lt;div class=&quot;ui fluid selection dropdown&quot;&gt;
+      &lt;div class=&quot;text&quot;&gt;More&lt;/div&gt;
+      &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+      &lt;div class=&quot;menu&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;Choice 1&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;Choice 2&lt;/div&gt;
+        &lt;div class=&quot;item&quot;&gt;Choice 3&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.5" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.5</span> Edit in Place</h1>
+            
+            
+            <div class="kss-description">
+              <p>Sometimes content can be editted inline</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <p>My name is <span click-to-edit="Darryl"></span></p>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;p&gt;My name is &lt;span click-to-edit=&quot;Darryl&quot;&gt;&lt;/span&gt;&lt;/p&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.6" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.6</span> Modal</h1>
+            
+            
+            <div class="kss-description">
+              <p>A modal displays content that temporarily blocks interactions with a web site</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui button testmodalbutton">Open Modal</button>
+<div class="ui test modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Modal Title
+  </div>
+  <div class="content">
+    <div class="left">
+      Content can appear on left
+    </div>
+    <div class="right">
+      Content can appear on right
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui button">Cancel</div>
+    <div class="ui button">OK</div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui button testmodalbutton&quot;&gt;Open Modal&lt;/button&gt;
+&lt;div class=&quot;ui test modal&quot;&gt;
+  &lt;i class=&quot;close icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;header&quot;&gt;
+    Modal Title
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;left&quot;&gt;
+      Content can appear on left
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      Content can appear on right
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;div class=&quot;ui button&quot;&gt;Cancel&lt;/div&gt;
+    &lt;div class=&quot;ui button&quot;&gt;OK&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.6.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.6.1</span> Basic Modal</h1>
+            
+            
+            <div class="kss-description">
+              <p>A modal can reduce its complexity</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui button testbasicmodalbutton">Open Basic Modal</button>
+<div class="ui basic modal transition visible active scrolling" style="margin-top: 1em; top: 1226px;">
+  <div class="header">
+    Change Your Homepage
+  </div>
+  <div class="content">
+    <div class="left">
+      <i class="home icon"></i>
+    </div>
+    <div class="right">
+      <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="two fluid ui buttons">
+      <div class="ui negative labeled icon button">
+        <i class="remove icon"></i>
+        No
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui button testbasicmodalbutton&quot;&gt;Open Basic Modal&lt;/button&gt;
+&lt;div class=&quot;ui basic modal transition visible active scrolling&quot; style=&quot;margin-top: 1em; top: 1226px;&quot;&gt;
+  &lt;div class=&quot;header&quot;&gt;
+    Change Your Homepage
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;p&gt;Are you sure you want to change your homepage to &lt;b&gt;Poodle.com&lt;/b&gt;?&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;div class=&quot;two fluid ui buttons&quot;&gt;
+      &lt;div class=&quot;ui negative labeled icon button&quot;&gt;
+        &lt;i class=&quot;remove icon&quot;&gt;&lt;/i&gt;
+        No
+      &lt;/div&gt;
+      &lt;div class=&quot;ui positive right labeled icon button&quot;&gt;
+        Yes
+        &lt;i class=&quot;checkmark icon&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.6.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.6.2</span> Small Modals</h1>
+            
+            
+            <div class="kss-description">
+              <p>A modal can vary in size</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui button testsmallmodalbutton">Open Small Modal</button>
+<div class="ui small modal transition visible active">
+  <i class="close icon"></i>
+  <div class="header">
+    Changing Your Thing
+  </div>
+  <div class="content">
+    <p>Do you want to change that thing to something else?</p>
+  </div>
+  <div class="actions">
+    <div class="ui negative button">
+      No
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yes
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui button testsmallmodalbutton&quot;&gt;Open Small Modal&lt;/button&gt;
+&lt;div class=&quot;ui small modal transition visible active&quot;&gt;
+  &lt;i class=&quot;close icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;header&quot;&gt;
+    Changing Your Thing
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;Do you want to change that thing to something else?&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;div class=&quot;ui negative button&quot;&gt;
+      No
+    &lt;/div&gt;
+    &lt;div class=&quot;ui positive right labeled icon button&quot;&gt;
+      Yes
+      &lt;i class=&quot;checkmark icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.6.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.6.3</span> Large Modals</h1>
+            
+            
+            <div class="kss-description">
+              <p>A modal can vary in size</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui button testlargemodalbutton">Open Large Modal</button>
+<div class="ui large modal transition visible active">
+  <i class="close icon"></i>
+  <div class="header">
+    Changing Your Thing
+  </div>
+  <div class="content">
+    <p>Do you want to change that thing to something else?</p>
+  </div>
+  <div class="actions">
+    <div class="ui negative button">
+      No
+    </div>
+    <div class="ui positive right labeled icon button">
+      Yes
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui button testlargemodalbutton&quot;&gt;Open Large Modal&lt;/button&gt;
+&lt;div class=&quot;ui large modal transition visible active&quot;&gt;
+  &lt;i class=&quot;close icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;header&quot;&gt;
+    Changing Your Thing
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;p&gt;Do you want to change that thing to something else?&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;div class=&quot;ui negative button&quot;&gt;
+      No
+    &lt;/div&gt;
+    &lt;div class=&quot;ui positive right labeled icon button&quot;&gt;
+      Yes
+      &lt;i class=&quot;checkmark icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.6.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.6.4</span> Modal Callbacks</h1>
+            
+            
+            <div class="kss-description">
+              <p>Modals will automatically tie approve deny callbacks to any positive/approve or negative/deny buttons</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui button testcallbacksbutton">Open Modal</button>
+<div class="ui basic testcallbacks modal transition visible active scrolling" style="margin-top: 1em; top: 1226px;">
+  <div class="header">
+    Change Your Homepage
+  </div>
+  <div class="content">
+    <div class="left">
+      <i class="home icon"></i>
+    </div>
+    <div class="right">
+      <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="two fluid ui buttons">
+      <div class="ui negative labeled icon button">
+        <i class="remove icon"></i>
+        No
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui button testcallbacksbutton&quot;&gt;Open Modal&lt;/button&gt;
+&lt;div class=&quot;ui basic testcallbacks modal transition visible active scrolling&quot; style=&quot;margin-top: 1em; top: 1226px;&quot;&gt;
+  &lt;div class=&quot;header&quot;&gt;
+    Change Your Homepage
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;p&gt;Are you sure you want to change your homepage to &lt;b&gt;Poodle.com&lt;/b&gt;?&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;div class=&quot;two fluid ui buttons&quot;&gt;
+      &lt;div class=&quot;ui negative labeled icon button&quot;&gt;
+        &lt;i class=&quot;remove icon&quot;&gt;&lt;/i&gt;
+        No
+      &lt;/div&gt;
+      &lt;div class=&quot;ui positive right labeled icon button&quot;&gt;
+        Yes
+        &lt;i class=&quot;checkmark icon&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.6.5" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.6.5</span> Forced Choice Modals</h1>
+            
+            
+            <div class="kss-description">
+              <p>You can disable a modal&apos;s dimmer from being closed by click to force a user to make a choice</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui button testforcedbutton">Open Modal</button>
+<div class="ui basic testforced modal transition visible active scrolling" style="margin-top: 1em; top: 1226px;">
+  <div class="header">
+    Change Your Homepage
+  </div>
+  <div class="content">
+    <div class="left">
+      <i class="home icon"></i>
+    </div>
+    <div class="right">
+      <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="two fluid ui buttons">
+      <div class="ui negative labeled icon button">
+        <i class="remove icon"></i>
+        No
+      </div>
+      <div class="ui positive right labeled icon button">
+        Yes
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui button testforcedbutton&quot;&gt;Open Modal&lt;/button&gt;
+&lt;div class=&quot;ui basic testforced modal transition visible active scrolling&quot; style=&quot;margin-top: 1em; top: 1226px;&quot;&gt;
+  &lt;div class=&quot;header&quot;&gt;
+    Change Your Homepage
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;left&quot;&gt;
+      &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      &lt;p&gt;Are you sure you want to change your homepage to &lt;b&gt;Poodle.com&lt;/b&gt;?&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;div class=&quot;two fluid ui buttons&quot;&gt;
+      &lt;div class=&quot;ui negative labeled icon button&quot;&gt;
+        &lt;i class=&quot;remove icon&quot;&gt;&lt;/i&gt;
+        No
+      &lt;/div&gt;
+      &lt;div class=&quot;ui positive right labeled icon button&quot;&gt;
+        Yes
+        &lt;i class=&quot;checkmark icon&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.6.6" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.6.6</span> Modal Transitions</h1>
+            
+            
+            <div class="kss-description">
+              <p>A dimmer can use any named ui transition.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui selection dropdown modaltransitionselection">
+  <input type="hidden" name="transition">
+  <div class="default text">Choose transition</div>
+  <i class="dropdown icon"></i>
+  <div class="menu ui transition hidden">
+    <div class="item">Horizontal Flip</div>
+    <div class="item">Vertical Flip</div>
+    <div class="item">Fade Up</div>
+    <div class="item">Fade</div>
+    <div class="item">Scale</div>
+  </div>
+</div>
+<div class="ui transitiontest modal">
+  <i class="close icon"></i>
+  <div class="header">
+    Modal Title
+  </div>
+  <div class="content">
+    <div class="left">
+      Content can appear on left
+    </div>
+    <div class="right">
+      Content can appear on right
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui button">Cancel</div>
+    <div class="ui button">OK</div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui selection dropdown modaltransitionselection&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;transition&quot;&gt;
+  &lt;div class=&quot;default text&quot;&gt;Choose transition&lt;/div&gt;
+  &lt;i class=&quot;dropdown icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;menu ui transition hidden&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;Horizontal Flip&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Vertical Flip&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Fade Up&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Fade&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;Scale&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui transitiontest modal&quot;&gt;
+  &lt;i class=&quot;close icon&quot;&gt;&lt;/i&gt;
+  &lt;div class=&quot;header&quot;&gt;
+    Modal Title
+  &lt;/div&gt;
+  &lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;left&quot;&gt;
+      Content can appear on left
+    &lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+      Content can appear on right
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;actions&quot;&gt;
+    &lt;div class=&quot;ui button&quot;&gt;Cancel&lt;/div&gt;
+    &lt;div class=&quot;ui button&quot;&gt;OK&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.7" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.7</span> Popup</h1>
+            
+            
+            <div class="kss-description">
+              <p>A popup displays additional information on top of a page element</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <i class="heart circular icon link" data-content="Hello, I am a pop-up." data-variation="{$modifiers}"></i>
+<div class="ignored ui {$modifiers} popup transition top center hidden">
+	<div class="content">Hello, I am a pop-up.</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.small</div>
+                  <div class="kss-modifier-description">
+                    <p>A popup can be small</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular icon link" data-content="Hello, I am a pop-up." data-variation="small"></i>
+<div class="ignored ui small popup transition top center hidden">
+	<div class="content">Hello, I am a pop-up.</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.large</div>
+                  <div class="kss-modifier-description">
+                    <p>A popup can be large</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular icon link" data-content="Hello, I am a pop-up." data-variation="large"></i>
+<div class="ignored ui large popup transition top center hidden">
+	<div class="content">Hello, I am a pop-up.</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.inverted</div>
+                  <div class="kss-modifier-description">
+                    <p>A popup can have its colors inverted</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular icon link" data-content="Hello, I am a pop-up." data-variation="inverted"></i>
+<div class="ignored ui inverted popup transition top center hidden">
+	<div class="content">Hello, I am a pop-up.</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;i class=&quot;heart circular icon link&quot; data-content=&quot;Hello, I am a pop-up.&quot; data-variation=&quot;{$modifiers}&quot;&gt;&lt;/i&gt;
+&lt;div class=&quot;ignored ui {$modifiers} popup transition top center hidden&quot;&gt;
+	&lt;div class=&quot;content&quot;&gt;Hello, I am a pop-up.&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.7.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.7.1</span> Positioned Popups</h1>
+            
+            
+            <div class="kss-description">
+              <p>A popup can be positioned to any side of an element. If space is not available, it will automatically search for a similar alternative position to use.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="{$modifiers}"></i>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.top.left</div>
+                  <div class="kss-modifier-description">
+                    <p>Top Left</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="top left"></i>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.top.center</div>
+                  <div class="kss-modifier-description">
+                    <p>Top Centre</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="top center"></i>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.top.right</div>
+                  <div class="kss-modifier-description">
+                    <p>Top Right</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="top right"></i>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.right.center</div>
+                  <div class="kss-modifier-description">
+                    <p>Right Centre</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="right center"></i>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.bottom.right</div>
+                  <div class="kss-modifier-description">
+                    <p>Bottom Right</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="bottom right"></i>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.bottom.center</div>
+                  <div class="kss-modifier-description">
+                    <p>Bottom Centre</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="bottom center"></i>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.bottom.left</div>
+                  <div class="kss-modifier-description">
+                    <p>Bottom Left</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="bottom left"></i>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.left.center</div>
+                  <div class="kss-modifier-description">
+                    <p>Left Centre</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <i class="heart circular small icon link" data-content="Pop-up." data-position="left center"></i>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;i class=&quot;heart circular small icon link&quot; data-content=&quot;Pop-up.&quot; data-position=&quot;{$modifiers}&quot;&gt;&lt;/i&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.7.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.7.2</span> Popups with Titles</h1>
+            
+            
+            <div class="kss-description">
+              <p>A popup can be formatted with a title</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <i class="circular heart icon link" data-title="Dog Breeds" data-content="There are many types of dogs. We don't have time to list them all"></i>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;i class=&quot;circular heart icon link&quot; data-title=&quot;Dog Breeds&quot; data-content=&quot;There are many types of dogs. We don&#x27;t have time to list them all&quot;&gt;&lt;/i&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.7.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.7.3</span> Popups with HTML</h1>
+            
+            
+            <div class="kss-description">
+              <p>A popup can be formatted with html</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <i class="circular heart icon link" data-html="<strike>I rescind my comment about cats<strike>"></i>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;i class=&quot;circular heart icon link&quot; data-html=&quot;&lt;strike&gt;I rescind my comment about cats&lt;strike&gt;&quot;&gt;&lt;/i&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.8" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.8</span> Rating</h1>
+            
+            
+            <div class="kss-description">
+              <p>A rating lets a user assess and view the desirability of content</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui rating {$modifiers} active">
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.star</div>
+                  <div class="kss-modifier-description">
+                    <p>A rating can use a set of star icons</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui rating star active">
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.heart</div>
+                  <div class="kss-modifier-description">
+                    <p>A rating can use a set of star icons</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui rating heart active">
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.small</div>
+                  <div class="kss-modifier-description">
+                    <p>A rating can have a small size</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui rating small active">
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.large</div>
+                  <div class="kss-modifier-description">
+                    <p>A rating can have a large size </p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui rating large active">
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.huge</div>
+                  <div class="kss-modifier-description">
+                    <p>A rating can have a huge size</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui rating huge active">
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui rating {$modifiers} active&quot;&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.8.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.8.1</span> Ratings with Intial Values</h1>
+            
+            
+            <div class="kss-description">
+              <p>Starting ratings can be set either using metadata values or the setting initialRating.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui divided list">
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="ui heart rating active" data-rating="5">
+      <i class="icon active"></i>
+      <i class="icon active"></i>
+      <i class="icon active"></i>
+      <i class="icon active"></i>
+      <i class="icon active"></i>
+    </div>
+    <div class="content">
+      <div class="header">New York Dog Fair</div>
+      A fun day at the fair
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="ui heart rating active" data-rating="2">
+      <i class="icon active"></i>
+      <i class="icon active"></i>
+      <i class="icon"></i>
+      <i class="icon"></i>
+      <i class="icon"></i>
+    </div>
+    <div class="content">
+      <div class="header">Dog Appreciation Day</div>
+      I night to tell your dog he's great
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;ui heart rating active&quot; data-rating=&quot;5&quot;&gt;
+      &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;New York Dog Fair&lt;/div&gt;
+      A fun day at the fair
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;ui heart rating active&quot; data-rating=&quot;2&quot;&gt;
+      &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+      &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Dog Appreciation Day&lt;/div&gt;
+      I night to tell your dog he&#x27;s great
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.8.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.8.2</span> Read-Only Ratings</h1>
+            
+            
+            <div class="kss-description">
+              <p>You can disable or enable interactive rating using JavaScript.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui heart readonly rating active" data-rating="3">
+  <i class="icon active"></i>
+  <i class="icon active"></i>
+  <i class="icon active"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui heart readonly rating active&quot; data-rating=&quot;3&quot;&gt;
+  &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.8.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.8.3</span> Clearable Ratings</h1>
+            
+            
+            <div class="kss-description">
+              <p>When clearable is set to true you can clear the rating by clicking on the current start rating.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui heart clearable rating active" data-rating="3">
+  <i class="icon active"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+  <i class="icon"></i>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui heart clearable rating active&quot; data-rating=&quot;3&quot;&gt;
+  &lt;i class=&quot;icon active&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+  &lt;i class=&quot;icon&quot;&gt;&lt;/i&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.9" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.9</span> Reveal</h1>
+            
+            
+            <div class="kss-description">
+              <p>A reveal is an element that shows different content below it when hovered. Note: A reveal will take no action unless a type of reveal is specified.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui {$modifiers} reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.fade</div>
+                  <div class="kss-modifier-description">
+                    <p>Fade reveal</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui fade reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.move</div>
+                  <div class="kss-modifier-description">
+                    <p>Move reveal</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui move reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.move.right</div>
+                  <div class="kss-modifier-description">
+                    <p>Move right reveal</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui move right reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.move.up</div>
+                  <div class="kss-modifier-description">
+                    <p>Move up reveal</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui move up reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.move.down</div>
+                  <div class="kss-modifier-description">
+                    <p>Move down reveal</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui move down reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.rotate</div>
+                  <div class="kss-modifier-description">
+                    <p>Rotate reveal</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui rotate reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.rotate.left</div>
+                  <div class="kss-modifier-description">
+                    <p>Rotate left reveal</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui rotate left reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.disabled</div>
+                  <div class="kss-modifier-description">
+                    <p>A disabled reveal will not animate when hovered</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui disabled reveal circular image">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui {$modifiers} reveal circular image&quot;&gt;
+  &lt;img class=&quot;visible content&quot; src=&quot;http://placehold.it/200x200/000000&quot;&gt;
+  &lt;img class=&quot;hidden content&quot; src=&quot;http://placehold.it/200x200/65c3df&quot;&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.9.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.9.1</span> Reveal Variations</h1>
+            
+            
+            <div class="kss-description">
+              <p>Reveal elements can vary in subtle ways...</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui {$modifiers} move reveal">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.masked</div>
+                  <div class="kss-modifier-description">
+                    <p>An element can mask its content so that an element does not escape its parent</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui masked move reveal">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.instant</div>
+                  <div class="kss-modifier-description">
+                    <p>An element can show its content without delay</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui instant move reveal">
+  <img class="visible content" src="http://placehold.it/200x200/000000">
+  <img class="hidden content" src="http://placehold.it/200x200/65c3df">
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui {$modifiers} move reveal&quot;&gt;
+  &lt;img class=&quot;visible content&quot; src=&quot;http://placehold.it/200x200/000000&quot;&gt;
+  &lt;img class=&quot;hidden content&quot; src=&quot;http://placehold.it/200x200/65c3df&quot;&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.10" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.10</span> Shape</h1>
+            
+            
+            <div class="kss-description">
+              <p>A shape is a three dimensional object displayed on a two dimensional plane. The module uses 3D transformations which are currently only supported in modern versions of Chrome, Safari, and Firefox.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="demo ui shape square">
+  <div class="sides">
+    <div class="jira side active">
+      <img src="http://placehold.it/200/45b7af/ffffff">
+    </div>
+    <div class="heroku side">
+      <img src="http://placehold.it/200/a48ad4/ffffff">
+    </div>
+    <div class="quirky side">
+      <img src="http://placehold.it/200/65c3df/ffffff">
+    </div>
+  </div>
+</div>
+<h3 class="ui header">Animations:</div>
+<div class="ui direction buttons">
+  <div class="ui button" data-animation="flip" data-direction="left">Left</div>
+  <div class="ui button" data-animation="flip" data-direction="right">Right</div>
+  <div class="ui button" data-animation="flip" data-direction="up">Up</div>
+  <div class="ui button" data-animation="flip" data-direction="down">Down</div>
+  <div class="ui button" data-animation="flip" data-direction="over">Over</div>
+  <div class="ui button" data-animation="flip" data-direction="back">Back</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;demo ui shape square&quot;&gt;
+  &lt;div class=&quot;sides&quot;&gt;
+    &lt;div class=&quot;jira side active&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200/45b7af/ffffff&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;heroku side&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200/a48ad4/ffffff&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;quirky side&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200/65c3df/ffffff&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;ui header&quot;&gt;Animations:&lt;/div&gt;
+&lt;div class=&quot;ui direction buttons&quot;&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;left&quot;&gt;Left&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;right&quot;&gt;Right&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;up&quot;&gt;Up&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;down&quot;&gt;Down&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;over&quot;&gt;Over&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;back&quot;&gt;Back&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.10.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.10.1</span> Rectangular Shape</h1>
+            
+            
+            <div class="kss-description">
+              <p>Shapes can be rectangular.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="demo ui shape rectangle">
+  <div class="sides">
+    <div class="jira side active">
+      <img src="http://placehold.it/300x100/45b7af/ffffff">
+    </div>
+    <div class="heroku side">
+      <img src="http://placehold.it/300x100/a48ad4/ffffff">
+    </div>
+    <div class="quirky side">
+      <img src="http://placehold.it/300x100/65c3df/ffffff">
+    </div>
+  </div>
+</div>
+<h3 class="ui header">Animations:</div>
+<div class="ui direction buttons">
+  <div class="ui button" data-animation="flip" data-direction="left">Left</div>
+  <div class="ui button" data-animation="flip" data-direction="right">Right</div>
+  <div class="ui button" data-animation="flip" data-direction="up">Up</div>
+  <div class="ui button" data-animation="flip" data-direction="down">Down</div>
+  <div class="ui button" data-animation="flip" data-direction="over">Over</div>
+  <div class="ui button" data-animation="flip" data-direction="back">Back</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;demo ui shape rectangle&quot;&gt;
+  &lt;div class=&quot;sides&quot;&gt;
+    &lt;div class=&quot;jira side active&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/300x100/45b7af/ffffff&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;heroku side&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/300x100/a48ad4/ffffff&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;quirky side&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/300x100/65c3df/ffffff&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;ui header&quot;&gt;Animations:&lt;/div&gt;
+&lt;div class=&quot;ui direction buttons&quot;&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;left&quot;&gt;Left&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;right&quot;&gt;Right&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;up&quot;&gt;Up&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;down&quot;&gt;Down&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;over&quot;&gt;Over&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;back&quot;&gt;Back&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.10.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.10.2</span> Irregular Shape</h1>
+            
+            
+            <div class="kss-description">
+              <p>Shapes can have different sized sides.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="demo ui shape irregular">
+  <div class="sides">
+    <div class="jira side active">
+      <img src="http://placehold.it/200x100/45b7af/ffffff">
+    </div>
+    <div class="heroku side">
+      <img src="http://placehold.it/300x300/a48ad4/ffffff">
+    </div>
+    <div class="quirky side">
+      <img src="http://placehold.it/100x300/65c3df/ffffff">
+    </div>
+  </div>
+</div>
+<h3 class="ui header">Animations:</div>
+<div class="ui direction buttons">
+  <div class="ui button" data-animation="flip" data-direction="left">Left</div>
+  <div class="ui button" data-animation="flip" data-direction="right">Right</div>
+  <div class="ui button" data-animation="flip" data-direction="up">Up</div>
+  <div class="ui button" data-animation="flip" data-direction="down">Down</div>
+  <div class="ui button" data-animation="flip" data-direction="over">Over</div>
+  <div class="ui button" data-animation="flip" data-direction="back">Back</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;demo ui shape irregular&quot;&gt;
+  &lt;div class=&quot;sides&quot;&gt;
+    &lt;div class=&quot;jira side active&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x100/45b7af/ffffff&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;heroku side&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/300x300/a48ad4/ffffff&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;quirky side&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/100x300/65c3df/ffffff&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;ui header&quot;&gt;Animations:&lt;/div&gt;
+&lt;div class=&quot;ui direction buttons&quot;&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;left&quot;&gt;Left&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;right&quot;&gt;Right&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;up&quot;&gt;Up&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;down&quot;&gt;Down&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;over&quot;&gt;Over&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;back&quot;&gt;Back&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.10.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.10.3</span> Shape with Content</h1>
+            
+            
+            <div class="kss-description">
+              <p>Any content may be contained within a shape.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="dog ui shape">
+  <div class="sides">
+    <div class="active side">
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <a class="ui like corner label">
+              <i class="like icon"></i>
+            </a>
+            <img src="http://placehold.it/200/45b7af/ffffff">
+          </div>
+          <div class="content">
+            <div class="name">Cute Dog</div>
+            <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <a class="ui like corner label">
+              <i class="like icon"></i>
+            </a>
+            <img src="http://placehold.it/200/a48ad4/ffffff">
+          </div>
+          <div class="content">
+            <div class="name">Silly Dog</div>
+            <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <a class="ui like corner label">
+              <i class="like icon"></i>
+            </a>
+            <img src="http://placehold.it/200/65c3df/ffffff">
+          </div>
+          <div class="content">
+            <div class="meta">5 days ago</div>
+            <div class="name">Faithful Dog</div>
+            <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="dog ui shape">
+  <div class="sides">
+    <div class="active side">
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <a class="ui like corner label">
+              <i class="like icon"></i>
+            </a>
+            <img src="http://placehold.it/200/45b7af/ffffff">
+          </div>
+          <div class="content">
+            <div class="name">Cute Dog</div>
+            <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <a class="ui like corner label">
+              <i class="like icon"></i>
+            </a>
+            <img src="http://placehold.it/200/a48ad4/ffffff">
+          </div>
+          <div class="content">
+            <div class="name">Silly Dog</div>
+            <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side">
+      <div class="ui items">
+        <div class="item">
+          <div class="image">
+            <a class="ui like corner label">
+              <i class="like icon"></i>
+            </a>
+            <img src="http://placehold.it/200/65c3df/ffffff">
+          </div>
+          <div class="content">
+            <div class="meta">5 days ago</div>
+            <div class="name">Faithful Dog</div>
+            <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui direction buttons">
+  <div class="ui button" data-animation="flip" data-direction="left">Left</div>
+  <div class="ui button" data-animation="flip" data-direction="right">Right</div>
+  <div class="ui button" data-animation="flip" data-direction="up">Up</div>
+  <div class="ui button" data-animation="flip" data-direction="down">Down</div>
+  <div class="ui button" data-animation="flip" data-direction="over">Over</div>
+  <div class="ui button" data-animation="flip" data-direction="back">Back</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;dog ui shape&quot;&gt;
+  &lt;div class=&quot;sides&quot;&gt;
+    &lt;div class=&quot;active side&quot;&gt;
+      &lt;div class=&quot;ui items&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;a class=&quot;ui like corner label&quot;&gt;
+              &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;img src=&quot;http://placehold.it/200/45b7af/ffffff&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+            &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;side&quot;&gt;
+      &lt;div class=&quot;ui items&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;a class=&quot;ui like corner label&quot;&gt;
+              &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;img src=&quot;http://placehold.it/200/a48ad4/ffffff&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;name&quot;&gt;Silly Dog&lt;/div&gt;
+            &lt;p class=&quot;description&quot;&gt;Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;side&quot;&gt;
+      &lt;div class=&quot;ui items&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;a class=&quot;ui like corner label&quot;&gt;
+              &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;img src=&quot;http://placehold.it/200/65c3df/ffffff&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;meta&quot;&gt;5 days ago&lt;/div&gt;
+            &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+            &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;dog ui shape&quot;&gt;
+  &lt;div class=&quot;sides&quot;&gt;
+    &lt;div class=&quot;active side&quot;&gt;
+      &lt;div class=&quot;ui items&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;a class=&quot;ui like corner label&quot;&gt;
+              &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;img src=&quot;http://placehold.it/200/45b7af/ffffff&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+            &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;side&quot;&gt;
+      &lt;div class=&quot;ui items&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;a class=&quot;ui like corner label&quot;&gt;
+              &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;img src=&quot;http://placehold.it/200/a48ad4/ffffff&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;name&quot;&gt;Silly Dog&lt;/div&gt;
+            &lt;p class=&quot;description&quot;&gt;Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;side&quot;&gt;
+      &lt;div class=&quot;ui items&quot;&gt;
+        &lt;div class=&quot;item&quot;&gt;
+          &lt;div class=&quot;image&quot;&gt;
+            &lt;a class=&quot;ui like corner label&quot;&gt;
+              &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+            &lt;/a&gt;
+            &lt;img src=&quot;http://placehold.it/200/65c3df/ffffff&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;div class=&quot;meta&quot;&gt;5 days ago&lt;/div&gt;
+            &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+            &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui direction buttons&quot;&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;left&quot;&gt;Left&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;right&quot;&gt;Right&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;up&quot;&gt;Up&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;down&quot;&gt;Down&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;over&quot;&gt;Over&lt;/div&gt;
+  &lt;div class=&quot;ui button&quot; data-animation=&quot;flip&quot; data-direction=&quot;back&quot;&gt;Back&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.11" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.11</span> Sidebar</h1>
+            
+            
+            <div class="kss-description">
+              <p>A sidebar is a menu hidden beside page content</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui testsidebar button">toggle sidebar</div>
+<div class="ui red vertical demo sidebar menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Test
+  </a>
+  <a class="active item">
+    <i class="heart icon"></i>
+    Sidebar
+  </a>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui testsidebar button&quot;&gt;toggle sidebar&lt;/div&gt;
+&lt;div class=&quot;ui red vertical demo sidebar menu&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+    Test
+  &lt;/a&gt;
+  &lt;a class=&quot;active item&quot;&gt;
+    &lt;i class=&quot;heart icon&quot;&gt;&lt;/i&gt;
+    Sidebar
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.11.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.11.1</span> Overlay Sidebar</h1>
+            
+            
+            <div class="kss-description">
+              <p>A sidebar can overlay page content instead of pushing it to the side</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui testoverlaysidebar button">toggle sidebar</div>
+<div class="ui red vertical overlay sidebar menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Test
+  </a>
+  <a class="active item">
+    <i class="heart icon"></i>
+    Sidebar
+  </a>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui testoverlaysidebar button&quot;&gt;toggle sidebar&lt;/div&gt;
+&lt;div class=&quot;ui red vertical overlay sidebar menu&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+    Test
+  &lt;/a&gt;
+  &lt;a class=&quot;active item&quot;&gt;
+    &lt;i class=&quot;heart icon&quot;&gt;&lt;/i&gt;
+    Sidebar
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.11.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">5.11.2</span> Sidebar Directions</h1>
+            
+            
+            <div class="kss-description">
+              <p>A sidebar can appear on any side of content</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui buttons">
+  <div class="ui sidebardirection button" data-direction="top">
+    Top
+  </div>
+  <div class="ui sidebardirection button" data-direction="right">
+    Right
+  </div>
+  <div class="ui sidebardirection button" data-direction="bottom">
+    Bottom
+  </div>
+</div>
+<div class="ui red inverted top sidebar menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Test
+  </a>
+  <a class="active item">
+    <i class="heart icon"></i>
+    Sidebar
+  </a>
+</div>
+<div class="ui blue inverted vertical right sidebar menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Test
+  </a>
+  <a class="active item">
+    <i class="heart icon"></i>
+    Sidebar
+  </a>
+</div>
+<div class="ui purple inverted bottom sidebar menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Test
+  </a>
+  <a class="active item">
+    <i class="heart icon"></i>
+    Sidebar
+  </a>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui buttons&quot;&gt;
+  &lt;div class=&quot;ui sidebardirection button&quot; data-direction=&quot;top&quot;&gt;
+    Top
+  &lt;/div&gt;
+  &lt;div class=&quot;ui sidebardirection button&quot; data-direction=&quot;right&quot;&gt;
+    Right
+  &lt;/div&gt;
+  &lt;div class=&quot;ui sidebardirection button&quot; data-direction=&quot;bottom&quot;&gt;
+    Bottom
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui red inverted top sidebar menu&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+    Test
+  &lt;/a&gt;
+  &lt;a class=&quot;active item&quot;&gt;
+    &lt;i class=&quot;heart icon&quot;&gt;&lt;/i&gt;
+    Sidebar
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui blue inverted vertical right sidebar menu&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+    Test
+  &lt;/a&gt;
+  &lt;a class=&quot;active item&quot;&gt;
+    &lt;i class=&quot;heart icon&quot;&gt;&lt;/i&gt;
+    Sidebar
+  &lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui purple inverted bottom sidebar menu&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;home icon&quot;&gt;&lt;/i&gt;
+    Test
+  &lt;/a&gt;
+  &lt;a class=&quot;active item&quot;&gt;
+    &lt;i class=&quot;heart icon&quot;&gt;&lt;/i&gt;
+    Sidebar
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-5.12" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">5.12</span> Transition</h1>
+            
+            
+            <div class="kss-description">
+              <p>A transition is an animation usually used to move content in or out </p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <img style="width:100px;height:100px;background:#f05940;" class="transitionelement">
+<div class="ui buttons">
+	<div class="ui testtransition button" data-transition="scale">scale</div>
+	<div class="ui testtransition button" data-transition="fade">fade</div>
+	<div class="ui testtransition button" data-transition="horizontal flip">horizontal flip</div>
+	<div class="ui testtransition button" data-transition="vertical flip">vertical flip</div>
+	<div class="ui testtransition button" data-transition="pulse">pulse</div>
+	<div class="ui testtransition button" data-transition="bounce">bounce</div>
+	<div class="ui testtransition button" data-transition="flash">flash</div>
+	<div class="ui testtransition button" data-transition="shake">shake</div>
+	<div class="ui testtransition button" data-transition="tada">tada</div>
+	<div class="ui testtransition button" data-transition="slide up">slide up</div>
+	<div class="ui testtransition button" data-transition="slide down">slide down</div>
+	<div class="ui testtransition button" data-transition="start loop">start loop</div>
+	<div class="ui testtransition button" data-transition="stop loop">stop loop</div>
+	<div class="ui testtransition button" data-transition="flip then scale">flip then scale</div>
+	<div class="ui testtransition button" data-transition="callback">callback</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;img style=&quot;width:100px;height:100px;background:#f05940;&quot; class=&quot;transitionelement&quot;&gt;
+&lt;div class=&quot;ui buttons&quot;&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;scale&quot;&gt;scale&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;fade&quot;&gt;fade&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;horizontal flip&quot;&gt;horizontal flip&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;vertical flip&quot;&gt;vertical flip&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;pulse&quot;&gt;pulse&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;bounce&quot;&gt;bounce&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;flash&quot;&gt;flash&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;shake&quot;&gt;shake&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;tada&quot;&gt;tada&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;slide up&quot;&gt;slide up&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;slide down&quot;&gt;slide down&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;start loop&quot;&gt;start loop&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;stop loop&quot;&gt;stop loop&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;flip then scale&quot;&gt;flip then scale&lt;/div&gt;
+	&lt;div class=&quot;ui testtransition button&quot; data-transition=&quot;callback&quot;&gt;callback&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          
+        </article>
+        <!-- <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer> -->
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <script src="/lib/semantic-ui/javascript/semantic.js">
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    <script>
+
+// attach ready event
+$(document).ready(function() {
+
+	$(".toggle.button").state({
+		text: {
+			inactive : 'Vote',
+			active   : 'Voted'
+		},
+		className: {
+			inactive : 'inactive',
+			active : 'active'
+		}
+	});
+
+	$('#datepicker').datepicker();
+
+	$('.ui.checkbox').checkbox();
+	$('.ui.dropdown').dropdown();
+	$('.ui.accordion').accordion();
+	$('.ui.modal').modal();
+	$('[data-content]').popup();
+	$('.ui.rating').rating();
+	$('.shape').shape();
+	// $('.ui.sidebar').sidebar();
+
+	$('.enablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('enable');
+	});
+	$('.disablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('disable');
+	});
+	$('.togglethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('toggle');
+	});
+
+	$('.toggledimmer').on('click', function() {
+		$('.page.dimmer').dimmer('toggle');
+	});
+
+	$('.showsectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('show');
+	});
+
+	$('.hidesectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('hide');
+	});
+
+	$('.testmodalbutton').on('click', function() {
+		$('.test.modal').modal('show');
+	});
+	$('.testbasicmodalbutton').on('click', function() {
+		$('.basic.modal').modal('show');
+	});
+	$('.testsmallmodalbutton').on('click', function() {
+		$('.small.modal').modal('show');
+	});
+	$('.testlargemodalbutton').on('click', function() {
+		$('.large.modal').modal('show');
+	});
+
+	$('.testcallbacksbutton').on('click', function() {
+		$('.testcallbacks.modal').modal('show');
+	});
+	$('.testcallbacks.modal').modal('setting', 'onDeny', function(){
+		window.alert('Denied!');
+	}).modal('setting', 'onApprove', function(){
+		window.alert('Approved!');
+	});
+
+	$('.testforcedbutton').on('click', function() {
+		$('.testforced.modal').modal('show');
+	});
+	$('.testforced.modal').modal('setting', 'closable', false);
+
+	$('.modaltransitionselection').dropdown({
+		onChange: function(value) {
+			$('.transitiontest.modal').modal('setting', 'transition', value).modal('show');
+		}
+	});
+
+	$('.readonly.rating').rating('disable');
+	$('.clearable.rating').rating('setting', 'clearable', true);
+
+	$('.direction .button').on("click", function() {
+		$action = $(this).data("animation") + " " + $(this).data("direction");
+		$('.shape').shape($action);
+	});
+
+	$('.testsidebar').on('click', function(){
+		$('.demo.sidebar').sidebar('setting', 'overlay', false).sidebar('toggle');
+	});
+	$('.testoverlaysidebar').on('click', function(){
+		$('.overlay.sidebar').sidebar('setting', 'overlay', true).sidebar('toggle');
+	});
+
+	$('.sidebardirection.button').on('click', function() {
+		$('.sidebar').filter('.' + $(this).data('direction') ).sidebar('toggle');
+	});
+
+	$transition = $('.transitionsexample.dropdown');
+	$transitionButton = $('.transitionsexample.button');
+	$transitionButton.on('click', function(event) {
+		$transition.dropdown('toggle');
+		event.stopImmediatePropagation();
+	});
+
+	$transition.dropdown({
+		onChange: function(value) {
+			$transition.dropdown('setting', 'transition', value);
+		}
+	});
+
+	$transitionelement = $(".transitionelement");
+	$(".testtransition.button").on("click", function() {
+		switch($(this).data("transition")) {
+			case "scale":
+				$transitionelement.transition('scale').transition('scale');
+				break;
+			case "fade":
+				$transitionelement.transition('fade').transition('fade');
+				break;
+			case "horizontal flip":
+				$transitionelement.transition('horizontal flip').transition('horizontal flip');
+				break;
+			case "vertical flip":
+				$transitionelement.transition('vertical flip').transition('vertical flip');
+				break;
+			case "pulse":
+				$transitionelement.transition('pulse');
+				break;
+			case "bounce":
+				$transitionelement.transition('bounce');
+				break;
+			case "flash":
+				$transitionelement.transition('flash');
+				break;
+			case "shake":
+				$transitionelement.transition('shake');
+				break;
+			case "tada":
+				$transitionelement.transition('tada');
+				break;
+			case "slide up":
+				$transitionelement.transition('slide up').transition('slide up');
+				break;
+			case "slide down":
+				$transitionelement.transition('slide down').transition('slide down');
+				break;
+			case "start loop":
+				$transitionelement.transition('set looping').transition('bounce', '2000ms');
+				break;
+			case "stop loop":
+				$transitionelement.transition('remove looping');
+				break;
+			case "flip then scale":
+				$transitionelement.transition('horizontal flip').transition('scale');
+				break;
+			case "callback":
+				$transitionelement.transition({
+					animation : 'scale',
+					duration  : '2s',
+					complete  : function() {
+						alert('done');
+					}
+				}).transition('scale');
+				break;
+		}
+	});
+
+	setTimeout(function(){
+		$("body > div > section").css("marginLeft","250px");
+		$("body > section").css("marginLeft","270px");
+	},1000);
+	
+});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+// Segment
+//
+// A segment is used to create a grouping of related content.
+//
+// .vertical - A vertical segment divides content vertically
+// .horizontal - A horizontal segment divides content horizontally
+// .piled - A segment can be formatted to look like a pile of pages
+// .stacked - A segment can be formatted to show it contains multiple pages
+// .disabled - A segment may show its content is disabled
+// .inverted - A segment can have its colors inverted for contrast
+// .raised - A segment may be formatted to raise above the page.
+// .blue - A segment can be colored
+// .red - A segment can be colored
+// .green - A segment can be colored
+// .yellow - A segment can be colored
+// .orange - A segment can be colored
+// .purple - A segment can be colored
+// .teal - A segment can be colored
+// .cobalt - A segment can be colored
+// .basic - A basic segment has no special formatting
+//
+// Markup:
+// <div class="ui {$modifiers} segment">
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+// </div>
+//
+// Styleguide 2.11
+
+.ui.yellow.segment
+	border-top 			0.2em solid $yellow
+
+.ui.cobalt.segment
+	border-top 			0.2em solid $cobalt
+
+// Inverted Segments
+//
+// These colors can be inverted
+//
+// .blue - An inverted segment can be colored
+// .red - An inverted segment can be colored
+// .green - An inverted segment can be colored
+// .yellow - An inverted segment can be colored
+// .orange - An inverted segment can be colored
+// .purple - An inverted segment can be colored
+// .teal - An inverted segment can be colored
+// .cobalt - An inverted segment can be colored
+//
+// Markup:
+// <div class="ui {$modifiers} inverted segment">
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+// </div>
+//
+// Styleguide 2.11.1
+
+.ui.inverted.cobalt.segment
+	background-color 			$cobalt !important
+	border-top 					none !important
+	color 						$white !important
+
+// Ordinal Segments
+//
+// A segment can be formatted to appear more or less noticable
+//
+// .inverted - Inverted colors may also be more or less noticable
+// .red - Ordinality can also be applied to coloured segments
+//
+// Markup:
+// <div class="ui primary {$modifiers} segment">
+//   <p>I'm here to tell you something, and you will probably read me first.</p>
+// </div>
+// <div class="ui secondary {$modifiers} segment">
+//   <p>I am pretty noticable but you might check out other content before you look at me.</p>
+// </div>
+// <div class="ui tertiary {$modifiers} segment">
+//   <p>If you notice me you must be looking very hard.</p>
+// </div>
+//
+// Styleguide 2.11.2
+
+// Floated Segments
+//
+// A segment cant sit to the left or right of other content
+//
+// Markup:
+// <div class="ui right floated segment">
+//   <p>This segment will appear to the right
+// </p></div>
+// <div class="ui left floated segment">
+//   This segment will appear to the left
+// </div>
+//
+// Styleguide 2.11.3
+
+// Text-Aligned Segments
+//
+// A segment cant have its text aligned to a side
+//
+// Markup:
+// <div class="ui right aligned segment">
+//   Right
+// </div>
+// <div class="ui left aligned segment">
+//   Left
+// </div>
+// <div class="ui center aligned segment">
+//   Center
+// </div>
+//
+// Styleguide 2.11.4
+
+// Attached Segments
+//
+// A segment can be attached to other content on a page
+//
+// Markup:
+// <div class="ui top attached segment">
+//   <p>This segment is on top</p>
+// </div>
+// <div class="ui attached segment">
+//   <p>This segment is attached on both sides</p>
+// </div>
+// <div class="ui bottom attached segment">
+//   <p>This segment is on bottom</p>
+// </div>
+//
+// Styleguide 2.11.5
+
+// Scrollable Segments
+//
+// A segment can be attached to other content on a page
+//
+// Markup:
+// <div class="ui scrollable segment">
+//   <p>Lorem ipsum dolor sit amet, vix oratio pertinax et. Sed in oporteat indoctum, senserit euripidis reprimique te pro. Regione consequat referrentur pro ne, an nec adhuc equidem. Ut antiopam tractatos qui. Singulis conceptam sed ex, ea sumo hinc scriptorem cum, ut impedit detracto apeirian vis. Ex quot lucilius mei, mea id nobis phaedrum suscipiantur, at mel ferri graece theophrastus. Nibh ponderum argumentum ea nec, sed ei probo doming. Usu partiendo dissentias definitiones in, mea id tantas laoreet, ex suas sensibus percipitur per. Et sed fastidii officiis salutandi. Has tota dignissim ad. Quo ex utroque molestie omittantur, et has primis omnesque pertinacia. In eam ludus civibus maiestatis. Mel primis scribentur ad, in eruditi antiopam vel, qui essent evertitur an. Cu vis fastidii adolescens mediocritatem, et liber convenire vel. Sed lucilius definitionem ut. Invenire inciderint mel te, cu tempor omnesque vim, has at tale discere maiestatis. An verear explicari eos. Vim ad habeo regione adolescens, mea mollis omnium et. Numquam admodum partiendo cu per, quo molestiae sententiae ne. In virtute deserunt recteque vim, eam omnesque comprehensam an. Melius latine placerat per te, vix cu nusquam dolores.</p>
+// </div>
+//
+// Styleguide 2.11.6
+
+.scrollable.segment
+	max-height 			15em
+	overflow-x 			hidden
+	overflow-y 			scroll
+	padding 			0
+
+.small.scrollable.segment
+	max-height 			10em
+
+.large.scrollable.segment
+	max-height 			20em

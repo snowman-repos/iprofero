@@ -1,0 +1,343 @@
+// Label
+//
+// Labels give descriptions to pieces of content
+//
+// Markup:
+// <div class="ui label">
+//   <i class="mail icon"></i> 23
+// </div>
+//
+// Styleguide 2.8
+
+// Detailed Labels
+//
+// A tag can optionally display a detail
+//
+// Markup:
+// <div class="ui label">
+//   Dogs
+//   <div class="detail">214</div>
+// </div>
+//
+// Styleguide 2.8.1
+
+// Removable Labels
+//
+// A tag can optionally be removable
+//
+// Markup:
+// <div class="ui label">
+//   Witty
+//   <i class="delete icon"></i>
+// </div>
+//
+// Styleguide 2.8.2
+
+// Image Labels
+//
+// A tag can optionally display an image
+//
+// Markup:
+// <a class="ui image label">
+//   <img src="http://placehold.it/200x200">
+//   dog@doggington.com
+//   <i class="delete icon"></i>
+// </a>
+// <a class="ui image label">
+//   <img src="http://placehold.it/200x200">
+//   james@thepooch.com
+//   <i class="delete icon"></i>
+// </a>
+// <a class="ui image label">
+//   <img src="http://placehold.it/200x200">
+//   kelly@bellyscratcher.com
+//   <i class="delete icon"></i>
+// </a>
+//
+// Styleguide 2.8.3
+
+.ui.label:first-child
+	vertical-align 				bottom
+
+// Corner Labels
+//
+// A label can position itself in the corner of an element
+//
+// Markup:
+// <div class="yellow ui message">A corner label must be positioned inside a container with position: relative to display properly</div>
+// <div class="ui segment">
+//   <div class="ui right red corner label">
+//     <i class="heart icon"></i>
+//   </div>
+//   <div class="ui left corner label">
+//     <div class="text">New</div>
+//   </div>
+//   This is a normal text segment
+// </div>
+// <div class="ui image">
+//   <a class="ui left corner label">
+//     <div class="text">New</div>
+//   </a>
+//   <a class="ui right red corner label">
+//     <i class="heart icon"></i>
+//   </a>
+//   <img src="http://placehold.it/200x200">
+// </div>
+//
+// Styleguide 2.8.4
+
+// Ribbon Labels
+//
+// A label can appear as a ribbon attaching itself to an element.
+//
+// Markup:
+// <div class="ui raised segment">
+// 	<div class="ui ribbon label">Dogs</div>
+// 	<p>Nice animals</p>
+// </div>
+//
+// Styleguide 2.8.5
+
+// Attached Labels
+//
+// A label can attach to a content segment
+//
+// Markup:
+// <div class="ui segment">
+// 	<div class="ui top attached label">HTML</div>
+// 	<p>some content</p>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui bottom attached label">CSS</div>
+// 	<p>some content</p>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui top right attached label">Code</div>
+// 	<p>some content</p>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui top left attached label">View</div>
+// 	<p>some content</p>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui bottom left attached label">User View</div>
+// 	<p>some content</p>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui bottom right attached label">Admin View</div>
+// 	<p>some content</p>
+// </div>
+//
+// Styleguide 2.8.6
+
+// Coloured Labels
+//
+// A label can have different colors
+//
+// Markup:
+// <a class="ui black label">
+//   First
+// </a>
+// <a class="ui green label">
+//   Fun
+// </a>
+// <a class="ui red label">
+//   Happy
+// </a>
+// <a class="ui yellow label">
+//   Sleepy
+// </a>
+// <a class="ui blue label">
+//   Smart
+// </a>
+// <a class="ui orange label">
+//   Radical
+// </a>
+// <a class="ui purple label">
+//   Insane
+// </a>
+// <a class="ui teal label">
+//   Exciting
+// </a>
+//
+// Styleguide 2.8.7
+
+.ui.yellow.labels .label,
+.ui.yellow.label
+	background-color				$yellow!important
+	border-color					$yellow!important
+	color							#FFF!important
+
+a.ui.yellow.labels .label:hover,
+a.ui.yellow.label:hover
+	background-color				darken($yellow, 8%)!important
+	border-color					darken($yellow, 8%)!important
+
+.ui.labels a.yellow.label:hover:before,
+.ui.yellow.labels a.label:hover:before,
+a.ui.yellow.label:hover:before
+	background-color				darken($yellow, 8%)!important
+
+.ui.labels .yellow.label:before,
+.ui.yellow.labels .label:before,
+.ui.yellow.label:before
+	background-color				$yellow!important
+
+// Horizontal Labels
+//
+// A horizontal label is formatted to label content along-side it horizontally
+//
+// Markup:
+// <div class="ui divided selection list">
+//   <a class="item">
+//     <div class="ui red horizontal label">Fruit</div>
+//     Kumquats
+//   </a>
+//   <a class="item">
+//     <div class="ui purple horizontal label">Candy</div>
+//     Ice Cream
+//   </a>
+//   <a class="item">
+//     <div class="ui red horizontal label">Fruit</div>
+//     Orange
+//   </a>
+//   <a class="item">
+//     <div class="ui horizontal label">Dog</div>
+//     Poodle
+//   </a>
+// </div>
+//
+// Styleguide 2.8.8
+
+// Circular Labels
+//
+// A label can be circular
+//
+// Markup:
+// <div class="ui segment">
+// 	<a class="ui black circular label">
+// 	  12
+// 	</a>
+// 	<a class="ui green circular label">
+// 	  11
+// 	</a>
+// 	<a class="ui red circular label">
+// 	  10
+// 	</a>
+// 	<a class="ui blue circular label">
+// 	  64
+// 	</a>
+// 	<a class="ui purple circular label">
+// 	  62
+// 	</a>
+// 	<a class="ui teal circular label">
+// 	  1
+// 	</a>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui black circular label"></div>
+// 	<div class="ui green circular label"></div>
+// 	<div class="ui red circular label"></div>
+// 	<div class="ui blue circular label"></div>
+// 	<div class="ui purple circular label"></div>
+// 	<div class="ui teal circular label"></div>
+// </div>
+//
+// Styleguide 2.8.9
+
+// Floating Labels
+//
+// A label can float above another element
+//
+// Markup:
+// <div class="ui compact menu">
+//   <a class="item">
+//     <i class="icon mail"></i> Messages
+//     <div class="floating ui red label">22</div>
+//   </a>
+//   <a class="item">
+//     <i class="icon users"></i> Friends
+//     <div class="floating ui teal label">22</div>
+//   </a>
+// </div>
+//
+// Styleguide 2.8.10
+
+// Pointing Labels
+//
+// A label can point to content next to it
+//
+// Markup:
+// <form class="ui fluid form">
+//   <div class="field">
+//     <input type="text" placeholder="First name">
+//     <div class="ui pointing label">
+//       Please enter a value
+//     </div>
+//   </div>
+//   <div class="ui simple divider"></div>
+//   <div class="field" placeholder="Last Name">
+//     <div class="ui pointing below label">
+//       Please enter a value
+//     </div>
+//     <input type="text">
+//   </div>
+//   <div class="ui simple divider"></div>
+//   <div class="inline field">
+//     <input type="text" placeholder="Username">
+//     <div class="ui pointing left label">
+//       That name is taken!
+//     </div>
+//   </div>
+//   <div class="ui simple divider"></div>
+//   <div class="inline field">
+//     <div class="ui pointing right label">
+//       Your password must be 6 characters or more
+//     </div>
+//     <input type="password">
+//   </div>
+// </form>
+//
+// Styleguide 2.8.11
+
+// Sized Labels
+//
+// A label can be small or large
+//
+// Markup:
+// <div class="ui small label">
+//   Fun
+// </div>
+// <div class="ui large label">
+//   Fun
+// </div>
+//
+// Styleguide 2.8.12
+
+// Label Groups
+//
+// Labels can be grouped together
+//
+// .large - Labels can share sizes together
+// .blue - Labels can share colors together
+// .circular - Labels can share shapes
+//
+// Markup:
+// <div class="ui segment">
+// 	<div class="ui {$modifiers} labels">
+// 	  <div class="ui label">
+// 	    Fun
+// 	  </div>
+// 	  <div class="ui label">
+// 	    Happy
+// 	  </div>
+// 	  <div class="ui label">
+// 	    Smart
+// 	  </div>
+// 	  <div class="ui label">
+// 	    Witty
+// 	  </div>
+// 	</div>
+// </div>
+//
+// Styleguide 2.8.13

@@ -1,0 +1,712 @@
+// Form
+//
+// A form is a collection of user input elements. Forms always include fields, and fields always contain form elements. Fields themselves may also include: inputs, standard form fields, labels, selection dropdowns, textareas, as well as: checkboxes, and message blocks. Validation messages use messages which are formatted for use inside forms.
+//
+// Markup:
+// <div class="ui form segment">
+//   <div class="field">
+//     <label>Username</label>
+//     <div class="ui left labeled icon input">
+//       <input type="text" placeholder="Username">
+//       <i class="user icon"></i>
+//       <div class="ui corner label">
+//         <i class="icon asterisk"></i>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="field">
+//     <label>Password</label>
+//     <div class="ui left labeled icon input">
+//       <input type="password">
+//       <i class="lock icon"></i>
+//       <div class="ui corner label">
+//         <i class="icon asterisk"></i>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="ui error message">
+//     <div class="header">We noticed some issues</div>
+//   </div>
+//   <div class="ui blue submit button">Login</div>
+// </div>
+//
+// Styleguide 3.4
+
+// Form Field
+//
+// A field is a form element containing a label and an input
+//
+// Markup:
+// <div class="ui form">
+//   <div class="field">
+//     <label>User Input</label>
+//     <input type="text">
+//   </div>
+// </div>
+//
+// Styleguide 3.4.1
+
+// Textarea
+// 
+// A textarea uses the default form element
+//
+// Markup:
+// <div class="ui form">
+//   <div class="field">
+//     <label>User Text</label>
+//     <textarea></textarea>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.3
+
+// Checkbox
+// 
+// UI Checkboxes are styled forms of standard form checkboxes.
+//
+// Markup:
+// <div class="ui form">
+//   <div class="inline field">
+//     <div class="ui checkbox">
+//       <input type="checkbox">
+//       <label>Checkbox</label>
+//     </div>
+//   </div>
+//   <div class="inline field">
+//     <div class="ui slider checkbox">
+//       <input type="checkbox">
+//       <label>Slider</label>
+//     </div>
+//     <label></label>
+//   </div>
+//   <div class="inline field">
+//     <div class="ui toggle checkbox">
+//       <input type="checkbox">
+//       <label>Slider</label>
+//     </div>
+//     <label></label>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.4
+
+// Select
+// 
+// A selection dropdown, a type of ui dropdown can be used to allow for a selection from multiple choices
+//
+// Markup:
+// <div class="ui selection dropdown">
+//   <input type="hidden" name="gender">
+//   <i class="dropdown icon"></i>
+//   <div class="default text">Gender</div>
+//   <div class="menu">
+//     <div class="item" data-value="male">Male</div>
+//     <div class="item" data-value="female">Female</div>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.5
+
+// Radio Boxes
+// 
+// Radio boxes are styled forms of standard form radio controls.
+//
+// Markup:
+// <div class="ui form">
+//   <div class="grouped inline fields">
+//     <div class="field">
+//       <div class="ui radio checkbox">
+//         <input type="radio" name="fruit" checked="">
+//         <label>Apples</label>
+//       </div>
+//     </div>
+//     <div class="field">
+//       <div class="ui radio checkbox">
+//         <input type="radio" name="fruit">
+//         <label>Oranges</label>
+//       </div>
+//     </div>
+//     <div class="field">
+//       <div class="ui radio checkbox">
+//         <input type="radio" name="fruit">
+//         <label>Pears</label>
+//       </div>
+//     </div>
+//     <div class="field">
+//       <div class="ui radio checkbox">
+//         <input type="radio" name="fruit">
+//         <label>Grapefruit</label>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.6
+
+// Text Block
+// 
+// Text blocks have special meaning inside a form tag. Any info, error, or warning message blocks found inside a form are hidden by default.
+//
+// Markup:
+// <div class="ui form">
+//   <div class="ui message">
+//     <div class="header">We had some issues</div>
+//     <ul class="list">
+//       <li>Please enter your first name</li>
+//       <li>Please enter your last name</li>
+//     </ul>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.7
+
+// Loading Form
+// 
+// If a form is in loading state, it will automatically show a loading indicator:
+//
+// Markup:
+// <div class="ui loading form segment">
+//   <div class="two fields">
+//     <div class="field">
+//       <label>First Name</label>
+//       <input placeholder="First Name" type="text">
+//     </div>
+//     <div class="field">
+//       <label>Last Name</label>
+//       <input placeholder="Last Name" type="text">
+//     </div>
+//   </div>
+//   <div class="field">
+//     <label>Username</label>
+//     <input placeholder="Username" type="text">
+//   </div>
+//   <div class="field">
+//     <label>Password</label>
+//     <input type="password">
+//   </div>
+//   <div class="inline field">
+//     <div class="ui checkbox">
+//       <input type="checkbox">
+//       <label>I agree to the terms and conditions</label>
+//     </div>
+//   </div>
+//   <div class="ui blue submit button">Submit</div>
+// </div>
+//
+// Styleguide 3.4.8
+
+.ui.form.loading:after
+	z-index 				10
+
+// Error State Form
+// 
+// If a form is in an error state, it will automatically show any error message blocks:
+//
+// Markup:
+// <div class="ui error form segment">
+//   <div class="ui error message">
+//     <div class="header">Action Forbidden</div>
+//     <p>You can only sign up for an account once with a given e-mail address.</p>
+//   </div>
+//   <div class="two fields">
+//     <div class="field">
+//       <label>First Name</label>
+//       <input placeholder="First Name" type="text">
+//     </div>
+//     <div class="field">
+//       <label>Last Name</label>
+//       <input placeholder="Last Name" type="text">
+//     </div>
+//   </div>
+//   <div class="field">
+//     <label>Username</label>
+//     <input placeholder="Username" type="text">
+//   </div>
+//   <div class="field">
+//     <label>Password</label>
+//     <input type="password">
+//   </div>
+//   <div class="inline field">
+//     <div class="ui checkbox">
+//       <input type="checkbox">
+//       <label>I agree to the Terms and Conditions</label>
+//     </div>
+//   </div>
+//   <div class="ui blue submit button">Submit</div>
+// </div>
+//
+// Styleguide 3.4.9
+
+// Warning State Form
+// 
+// If a form is in warning state, it will automatically show any warning message block:
+//
+// Markup:
+// <div class="ui warning form segment">
+//   <div class="ui warning message">
+//     <div class="header">Could you check something!</div>
+//     <ul class="list">
+//       <li>You forgot your <b>first name</b></li>
+//       <li>And also your <b>last name</b></li>
+//     </ul>
+//   </div>
+//   <div class="two error fields">
+//     <div class="field">
+//       <label>First Name</label>
+//       <input placeholder="First Name" type="text">
+//       <div class="ui red pointing above ui label">Enter a first name</div>
+//     </div>
+//     <div class="field">
+//       <label>Last Name</label>
+//       <input placeholder="Last Name" type="text">
+//       <div class="ui red pointing above ui label">Enter a last name</div>
+//     </div>
+//   </div>
+//   <div class="field">
+//     <label>Username</label>
+//     <input placeholder="Username" type="text">
+//   </div>
+//   <div class="field">
+//     <label>Password</label>
+//     <input type="password">
+//   </div>
+//   <div class="inline field">
+//     <div class="ui checkbox">
+//       <input type="checkbox">
+//       <label>I agree to the Terms and Conditions</label>
+//     </div>
+//   </div>
+//   <div class="ui blue submit button">Submit</div>
+// </div>
+//
+// Styleguide 3.4.10
+
+// Error Form Fields
+// 
+// Individual fields may contain an error state
+//
+// Markup:
+// <div class="ui form segment">
+//   <div class="two fields">
+//     <div class="field error">
+//       <label>First Name</label>
+//       <input placeholder="First Name" type="text">
+//     </div>
+//     <div class="field">
+//       <label>Last Name</label>
+//       <input placeholder="Last Name" type="text">
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.11
+
+// Disabled Form Fields
+// 
+// Individual fields may be disabled or read only
+//
+// Markup:
+// <div class="ui form segment">
+//   <div class="two fields">
+//     <div class="field">
+//       <label>First Name</label>
+//       <input placeholder="Read Only" readonly="readonly" type="text">
+//     </div>
+//     <div class="disabled field">
+//       <label>Last Name</label>
+//       <input placeholder="Disabled" disabled="disabled" type="text">
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.12
+
+// Fluid Forms
+// 
+// A form can take the width of its container
+//
+// Markup:
+// <div class="ui fluid form segment">
+//   <div class="two fields">
+//     <div class="field">
+//       <label>First Name</label>
+//       <input placeholder="First Name" type="text">
+//     </div>
+//     <div class="field">
+//       <label>Last Name</label>
+//       <input placeholder="Last Name" type="text">
+//     </div>
+//   </div>
+//   <div class="ui blue submit button">Submit</div>
+// </div>
+//
+// Styleguide 3.4.13
+
+// Sized Forms
+// 
+// A form can also be small or large
+//
+// Markup:
+// <div class="ui small form segment">
+//   <div class="two fields">
+//     <div class="field">
+//       <label>First Name</label>
+//       <input placeholder="First Name" type="text">
+//     </div>
+//     <div class="field">
+//       <label>Last Name</label>
+//       <input placeholder="Last Name" type="text">
+//     </div>
+//   </div>
+//   <div class="ui blue small submit button">Submit</div>
+// </div>
+// <div class="ui large form segment">
+//   <div class="two fields">
+//     <div class="field">
+//       <label>First Name</label>
+//       <input placeholder="First Name" type="text">
+//     </div>
+//     <div class="field">
+//       <label>Last Name</label>
+//       <input placeholder="Last Name" type="text">
+//     </div>
+//   </div>
+//   <div class="ui blue submit button">Submit</div>
+// </div>
+//
+// Styleguide 3.4.14
+
+// Inverted Forms
+// 
+// A form on a dark background may have to invert its color scheme
+//
+// Markup:
+// <div>
+//   <div class="ui inverted form">
+//     <div class="ui info message">
+//       <div class="header">We had some issues</div>
+//       <ul class="list">
+//         <li>Please enter your first name</li>
+//         <li>Please enter your last name</li>
+//       </ul>
+//     </div>
+//     <div class="two fields">
+//       <div class="field">
+//         <label>First Name</label>
+//         <input placeholder="First Name" type="text">
+//       </div>
+//       <div class="field">
+//         <label>Last Name</label>
+//         <input placeholder="Last Name" type="text">
+//       </div>
+//     </div>
+//     <div class="ui blue submit button">Submit</div>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.15
+
+// Inline Form Fields
+// 
+// A field can have its label next to instead of above it.
+//
+// Markup:
+// <div class="ui form">
+//     <div class="inline field">
+//       <label>Last name</label>
+//       <input type="text" placeholder="Full Name">
+//     </div>
+// </div>
+//
+// Styleguide 3.4.16
+
+// Date Form Fields
+// 
+// A field can let users know they are for dates
+//
+// Markup:
+// <div class="ui form">
+//   <div class="date field">
+//     <label>Birthday</label>
+//     <input type="text" placeholder="xx/xx/xxxx">
+//   </div>
+// </div>
+//
+// Styleguide 3.4.17
+
+// Form Field Groups
+// 
+// Fields can exist together side by side
+//
+// Markup:
+// <div class="ui form">
+//   <div class="ui three fields">
+//     <div class="field">
+//       <label>First name</label>
+//       <input type="text" placeholder="First Name">
+//     </div>
+//     <div class="field">
+//       <label>Middle name</label>
+//       <input type="text" placeholder="Middle Name">
+//     </div>
+//     <div class="field">
+//       <label>Last name</label>
+//       <input type="text" placeholder="Last Name">
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.18
+
+// Grouped Form Fields
+// 
+// Fields can be grouped to show related choices
+//
+// Markup:
+// <div class="ui form">
+//   <div class="grouped inline fields">
+//     <div class="field">
+//       <div class="ui radio checkbox">
+//         <input type="radio" name="fruit">
+//         <label></label>
+//       </div>
+//       <label> Apples</label>
+//     </div>
+//     <div class="field">
+//       <div class="ui radio checkbox">
+//         <input type="radio" name="fruit">
+//         <label></label>
+//       </div>
+//       <label> Oranges</label>
+//     </div>
+//     <div class="field">
+//       <div class="ui radio checkbox">
+//         <input type="radio" name="fruit">
+//         <label></label>
+//       </div>
+//       <label> Pears</label>
+//     </div>
+//     <div class="field">
+//       <div class="ui radio checkbox">
+//         <input type="radio" name="fruit">
+//         <label></label>
+//       </div>
+//       <label> Grapefruit</label>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.19
+
+// Inline Grouped Form Fields
+// 
+// Multiple fields may be inline in a row
+//
+// Markup:
+// <div class="small ui form">
+//   <div class="inline fields">
+//     <div class="field">
+//       <label>Phone Number</label>
+//       <input type="text" placeholder="(xxx)">
+//     </div>
+//     <div class="field">
+//       <input type="text" placeholder="xxx">
+//     </div>
+//     <div class="field">
+//       <input type="text" placeholder="xxxx">
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.4.20
+
+// Tags
+// 
+// Field in which user can add/remove tag elements
+//
+// Markup:
+// <div class="ngTagsInput">
+// 	<ul>
+// 		<li>
+// 			<span>HTML</span>
+// 			<button>×</button>
+// 		</li>
+// 		<li>
+// 			<span>CSS</span>
+// 			<button>×</button>
+// 		</li>
+// 	</ul>
+// 	<input type="text" placeholder="Add a tag">
+// </div>
+//
+// Styleguide 3.4.21
+
+.ngTagsInput
+	-webkit-appearance					none
+	background-color					$white
+	border								1px solid rgba($black, 0.15)
+	-webkit-border-radius				0.3125em
+	   -moz-border-radius				0.3125em
+	        border-radius				0.3125em
+	-webkit-box-shadow					0em 0em 0em 0em rgba(0, 0, 0, 0.3) inset
+	   -moz-box-shadow					0em 0em 0em 0em rgba(0, 0, 0, 0.3) inset
+	        box-shadow					0em 0em 0em 0em rgba(0, 0, 0, 0.3) inset
+	-webkit-box-sizing					border-box
+	   -moz-box-sizing					border-box
+	    -ms-box-sizing					border-box
+	box-sizing							border-box
+	color								rgba($black, 0.7)
+	font-size							0.875em
+	margin								0em
+	margin-bottom 						$base-spacing-unit
+	outline								none
+	overflow 							hidden
+	padding								0.25em 1.2em 0.85em
+	-webkit-tap-highlight-color			rgba(255, 255, 255, 0)
+	-webkit-transition					background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease
+	   -moz-transition					background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease
+	     -o-transition					background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease
+	    -ms-transition					background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease
+	        transition					background-color 0.3s ease-out, box-shadow 0.2s ease, border-color 0.2s ease
+
+.ngTagsInputList
+	list-style-type 					none
+	margin 								0px
+	overflow 							visible
+	padding 							0px
+
+.ngTagsInputList > li
+	background-color					#E8E8E8
+	border-color						#E8E8E8
+	-webkit-border-radius				0.325em
+	   -moz-border-radius				0.325em
+	        border-radius				0.325em
+	-webkit-box-sizing					border-box
+	   -moz-box-sizing					border-box
+	    -ms-box-sizing					border-box
+	box-sizing							border-box
+	color								rgba($black, 0.65)
+	display								inline-block
+	float								left
+	font-weight							normal
+	margin								0.5em 0.25em 0em
+	padding								0.5em 0 0.5em 0.8em
+	text-transform						uppercase
+	-webkit-transition					background 0.1s linear
+	   -moz-transition					background 0.1s linear
+	     -o-transition					background 0.1s linear
+	    -ms-transition					background 0.1s linear
+	        transition					background 0.1s linear
+	vertical-align						middle
+
+.ui.form .ngTagsInputList > li:first-child
+	margin-top 							0.5em
+
+.ngTagsInputList > li:hover
+	background-color					#E0E0E0
+	border-color						#E0E0E0
+	color								rgba($black, 0.7)
+
+tags-input.green .ngTagsInputList > li
+	background-color 					$green
+	border-color 						$green
+	color								rgba($white, 0.8)
+
+tags-input.green .ngTagsInputList > li:hover
+	color								$white
+
+	i.icon
+		opacity 						1
+
+.ngTagsInputList > li span
+	font								13px Arial, sans-serif
+
+.ngTagsInputList > li button
+	background							none
+	border								none
+	color								#585858
+	cursor								pointer
+	font								bold 16px Arial, sans-serif
+	margin								0px
+	vertical-align						middle
+
+tags-input.green .ngTagsInputList > li button
+	color 								$white
+
+.ngTagsInputList > li.selected
+	background							$red
+	color								$white
+
+	button
+		color							$white
+
+.ngTagsInputList > li button:active
+	color								$white
+
+.ngTagsInput input,
+.ngTagsInput input[type="text"],
+.ui.form .ngTagsInput input,
+.ui.form .ngTagsInput input[type="text"]
+	border								0px
+	float								left
+	font								13px Arial, sans-serif
+	height								21px
+	margin								0.5em 0.25em 0em
+	outline								none
+	padding								0.5em 0.8em
+
+.ui.form .ngTagsInput input,
+.ui.form .ngTagsInput input[type="text"]
+	height 								auto
+	padding 							1em
+	width 								auto
+
+.ngTagsInput input::-ms-clear
+	display								none
+
+.typeahead.dropdown-menu
+	background-color					$white
+	   -moz-border-radius				0px 0px 0.325em 0.325em
+	-webkit-border-radius				0px 0px 0.325em 0.325em
+	        border-radius				0px 0px 0.325em 0.325em
+	-webkit-box-shadow					0px 2px 3px 1px rgba(0, 0, 0, 0.1)
+	   -moz-box-shadow					0px 2px 3px 1px rgba(0, 0, 0, 0.1)
+	        box-shadow					0px 2px 3px 1px rgba(0, 0, 0, 0.1)
+	display								none
+	font-size							0.875em
+	margin								0em
+	padding								0
+	position							absolute
+	text-shadow							none
+	top									100%
+	-webkit-transition					opacity 0.2s ease
+	   -moz-transition					opacity 0.2s ease
+	     -o-transition					opacity 0.2s ease
+	    -ms-transition					opacity 0.2s ease
+	        transition					opacity 0.2s ease
+	white-space							nowrap
+	z-index								11
+
+	li
+		border							none
+		border-top						1px solid rgba($black, 0.05)
+		color							rgba($black, 0.75)
+		cursor							pointer
+		display							block
+		font-size						0.875em
+		font-size						0.875rem
+		font-weight						normal
+		height							auto
+		padding							0 !important
+		text-align						left
+		text-transform					none
+		-webkit-touch-callout			none
+
+	a
+		color							$text-colour
+		display							block
+		padding							0.85em 1em !important
+
+		&:focus,
+		&:hover
+			background-color			rgba($black, 0.02)

@@ -1,0 +1,220 @@
+// Modal
+// 
+// A modal displays content that temporarily blocks interactions with a web site
+//
+// Markup:
+// <div class="ui button testmodalbutton">Open Modal</button>
+// <div class="ui test modal">
+//   <i class="close icon"></i>
+//   <div class="header">
+//     Modal Title
+//   </div>
+//   <div class="content">
+//     <div class="left">
+//       Content can appear on left
+//     </div>
+//     <div class="right">
+//       Content can appear on right
+//     </div>
+//   </div>
+//   <div class="actions">
+//     <div class="ui button">Cancel</div>
+//     <div class="ui button">OK</div>
+//   </div>
+// </div>
+//
+// Styleguide 5.6
+
+// Basic Modal
+// 
+// A modal can reduce its complexity
+//
+// Markup:
+// <div class="ui button testbasicmodalbutton">Open Basic Modal</button>
+// <div class="ui basic modal transition visible active scrolling" style="margin-top: 1em; top: 1226px;">
+//   <div class="header">
+//     Change Your Homepage
+//   </div>
+//   <div class="content">
+//     <div class="left">
+//       <i class="home icon"></i>
+//     </div>
+//     <div class="right">
+//       <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+//     </div>
+//   </div>
+//   <div class="actions">
+//     <div class="two fluid ui buttons">
+//       <div class="ui negative labeled icon button">
+//         <i class="remove icon"></i>
+//         No
+//       </div>
+//       <div class="ui positive right labeled icon button">
+//         Yes
+//         <i class="checkmark icon"></i>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.6.1
+
+// Small Modals
+// 
+// A modal can vary in size
+//
+// Markup:
+// <div class="ui button testsmallmodalbutton">Open Small Modal</button>
+// <div class="ui small modal transition visible active">
+//   <i class="close icon"></i>
+//   <div class="header">
+//     Changing Your Thing
+//   </div>
+//   <div class="content">
+//     <p>Do you want to change that thing to something else?</p>
+//   </div>
+//   <div class="actions">
+//     <div class="ui negative button">
+//       No
+//     </div>
+//     <div class="ui positive right labeled icon button">
+//       Yes
+//       <i class="checkmark icon"></i>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.6.2
+
+// Large Modals
+// 
+// A modal can vary in size
+//
+// Markup:
+// <div class="ui button testlargemodalbutton">Open Large Modal</button>
+// <div class="ui large modal transition visible active">
+//   <i class="close icon"></i>
+//   <div class="header">
+//     Changing Your Thing
+//   </div>
+//   <div class="content">
+//     <p>Do you want to change that thing to something else?</p>
+//   </div>
+//   <div class="actions">
+//     <div class="ui negative button">
+//       No
+//     </div>
+//     <div class="ui positive right labeled icon button">
+//       Yes
+//       <i class="checkmark icon"></i>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.6.3
+
+// Modal Callbacks
+// 
+// Modals will automatically tie approve deny callbacks to any positive/approve or negative/deny buttons
+//
+// Markup:
+// <div class="ui button testcallbacksbutton">Open Modal</button>
+// <div class="ui basic testcallbacks modal transition visible active scrolling" style="margin-top: 1em; top: 1226px;">
+//   <div class="header">
+//     Change Your Homepage
+//   </div>
+//   <div class="content">
+//     <div class="left">
+//       <i class="home icon"></i>
+//     </div>
+//     <div class="right">
+//       <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+//     </div>
+//   </div>
+//   <div class="actions">
+//     <div class="two fluid ui buttons">
+//       <div class="ui negative labeled icon button">
+//         <i class="remove icon"></i>
+//         No
+//       </div>
+//       <div class="ui positive right labeled icon button">
+//         Yes
+//         <i class="checkmark icon"></i>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.6.4
+
+// Forced Choice Modals
+// 
+// You can disable a modal's dimmer from being closed by click to force a user to make a choice
+//
+// Markup:
+// <div class="ui button testforcedbutton">Open Modal</button>
+// <div class="ui basic testforced modal transition visible active scrolling" style="margin-top: 1em; top: 1226px;">
+//   <div class="header">
+//     Change Your Homepage
+//   </div>
+//   <div class="content">
+//     <div class="left">
+//       <i class="home icon"></i>
+//     </div>
+//     <div class="right">
+//       <p>Are you sure you want to change your homepage to <b>Poodle.com</b>?</p>
+//     </div>
+//   </div>
+//   <div class="actions">
+//     <div class="two fluid ui buttons">
+//       <div class="ui negative labeled icon button">
+//         <i class="remove icon"></i>
+//         No
+//       </div>
+//       <div class="ui positive right labeled icon button">
+//         Yes
+//         <i class="checkmark icon"></i>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.6.5
+
+// Modal Transitions
+// 
+// A dimmer can use any named ui transition.
+//
+// Markup:
+// <div class="ui selection dropdown modaltransitionselection">
+//   <input type="hidden" name="transition">
+//   <div class="default text">Choose transition</div>
+//   <i class="dropdown icon"></i>
+//   <div class="menu ui transition hidden">
+//     <div class="item">Horizontal Flip</div>
+//     <div class="item">Vertical Flip</div>
+//     <div class="item">Fade Up</div>
+//     <div class="item">Fade</div>
+//     <div class="item">Scale</div>
+//   </div>
+// </div>
+// <div class="ui transitiontest modal">
+//   <i class="close icon"></i>
+//   <div class="header">
+//     Modal Title
+//   </div>
+//   <div class="content">
+//     <div class="left">
+//       Content can appear on left
+//     </div>
+//     <div class="right">
+//       Content can appear on right
+//     </div>
+//   </div>
+//   <div class="actions">
+//     <div class="ui button">Cancel</div>
+//     <div class="ui button">OK</div>
+//   </div>
+// </div>
+//
+// Styleguide 5.6.6

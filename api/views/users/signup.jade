@@ -1,0 +1,46 @@
+extends auth
+
+block auth
+
+	//- Registration Form
+	.ui.white.segment
+		form.ui.fluid.form(action="/users", method="post", ng-submit="", validate)
+
+			.field
+				label(for="email") Email
+				.ui.left.labeled.icon.input
+					input#email(type="email", name="email", placeholder="e.g. joe.bloggs@agency.com", data-ng-required)
+					i.mail.icon
+					.ui.corner.label
+						i.asterisk.icon
+
+			.field
+				label(for="name") Full Name
+				.ui.left.labeled.icon.input
+					input#name(type="text", name="name", placeholder="e.g. Joe Bloggs", data-ng-required)
+					i.user.icon
+					.ui.corner.label
+						i.asterisk.icon
+
+			.field
+				label(for="email") Username
+				.ui.left.labeled.icon.input
+					input#username(type="text", name="username", placeholder="e.g. codewizard", data-ng-required)
+					i.user.icon
+					.ui.corner.label
+						i.asterisk.icon
+
+			.field
+				label(for="password") Password
+				.ui.left.labeled.icon.input
+					input#password(type="password", name="password", data-ng-required)
+					i.lock.icon
+					.ui.corner.label
+						i.asterisk.icon
+
+			.inline.field
+				input.ui.blue.submit.button(type='submit', value="sign up", dimmer)
+				| or 
+				a(href="/signin", target="_self") log in
+
+			.ui.error.message

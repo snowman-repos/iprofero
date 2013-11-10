@@ -1,0 +1,16 @@
+extends layouts/default
+
+block content
+	.ui.page.grid
+		.column
+			.ui.huge.info.attached.icon.message
+				i.frown.icon
+				.content
+					.header
+						| Whoops! 500 error
+					| That means something happened that the server didn't like
+
+			if (typeof error !== 'undefined')
+				.ui.attached.segment
+					pre
+						code!= error

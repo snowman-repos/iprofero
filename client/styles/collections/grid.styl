@@ -1,0 +1,882 @@
+// Grid
+// 
+// A grid is a structure used to harmonize negative space in a layout. A grid is made up of columns of content with gutters to provide negative space between columns.
+//
+// .filled - grids may have filled backgrounds
+// .rounded - grids may have rounded borders
+//
+// Markup:
+// <div class="ui grid">
+//   <div class="four wide column">
+//     <div class="ui segment">
+//     </div>
+//   </div>
+//   <div class="four wide column">
+//     <div class="ui segment">
+//     </div>
+//   </div>
+//   <div class="four wide column">
+//     <div class="ui segment">
+//     </div>
+//   </div>
+//   <div class="four wide column">
+//     <div class="ui segment">
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5
+
+.ui.celled.grid > .row > .column.collapsed
+	padding 				0
+
+.ui.filled.grid
+	background 				$white
+
+.ui.rounded.grid
+	-webkit-border-radius 	4px
+	   -moz-border-radius 	4px
+	        border-radius 	4px
+
+.ui.stackable.grid .row > .column:first-of-type
+	border-top 				none
+
+// Rows
+// 
+// A row is used to create vertical padding between groups of columns on a page. If no rows are specified columns will sit flush vertically.
+//
+// .compact - rows can have padding and margins removed
+//
+// Markup:
+// <div class="ui grid">
+//   <div class="{$modifiers} row">
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         A
+//       </div>
+//     </div>
+//   </div>
+//   <div class="{$modifiers} row">
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//        B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         B
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         B
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.1
+
+.ui.grid > .row.compact
+	margin 					0
+	padding 				0
+
+// Columns
+// 
+// Columns each contain gutters giving them equal vertical spacing from other columns. Columns by default do not take up their entire row height.
+//
+// Markup:
+// <div class="ui three column grid">
+//   <div class="column">
+//     <div class="ui segment">
+//       1
+//     </div>
+//   </div>
+//   <div class="column">
+//     <div class="ui segment">
+//       2
+//     </div>
+//   </div>
+//   <div class="column">
+//     <div class="ui segment">
+//       3
+//     </div>
+//   </div>
+//   <div class="column">
+//     <div class="ui segment">
+//       4
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.2
+
+// Page Grid
+// 
+// A page grid exists on the top level of a web site. It can change its left and right gutter size to be responsive to a browser's width. This means the gutters to left and right of grid columns will alter in size as a browser's resolution increases.
+//
+// .full - a full page grid has no margin/padding
+//
+// Markup:
+// <div class="ui two column {$modifiers} page grid">
+//   <div class="column">
+//     <div class="ui labeled vertical fluid inverted icon menu">
+//       <a class="item">
+//         <i class="icon mail"></i>
+//         Mail
+//       </a>
+//       <a class="item">
+//         <i class="icon lab"></i>
+//         Lab
+//       </a>
+//       <a class="item">
+//         <i class="icon star"></i>
+//         Favorites
+//       </a>
+//     </div>
+//   </div>
+//   <div class="column">
+//     <div class="ui segment">
+//       <b>Inbox</b>
+//       <p>Welcome to your inbox. Would you like to see more information?</p>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.3
+
+.ui.full.page.grid
+	margin 				0 !important
+	padding 			0 !important
+
+	> .column
+		padding 		0 !important
+
+// Divided Grid
+// 
+// A grid can have dividers between columns
+//
+// Markup:
+// <div class="ui six column divided grid">
+//   <div class="row">
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.4
+
+// Vertically Divided Grid
+// 
+// A grid can have dividers between rows
+//
+// Markup:
+// <div class="ui vertically divided grid">
+//   <div class="two column row">
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//   </div>
+//   <div class="three column row">
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.5
+
+// Celled Grid
+// 
+// A grid can have rows divided into cells
+//
+// Markup:
+// <div class="ui celled grid">
+//   <div class="row">
+//     <div class="two wide column" style="">
+//       <p>Lorem ipsum do</p>
+//     </div>
+//     <div class="three wide column" style="">
+//       <p>Lorem ipsum dolor </p>
+//     </div>
+//     <div class="seven wide column">
+//       <p>Lorem ipsum dolor sitos. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//   </div>
+//   <div class="row">
+//     <div class="five wide column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//      <div class="three wide column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//      <div class="two wide column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//     <div class="two wide column">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.6
+
+// Specifying Column Count Per Row
+// 
+// A grid can have a different number of columns per row
+//
+// Markup:
+// <div class="ui two column grid">
+//   <div class="column">
+//     <div class="ui fluid form segment">
+//       <h3 class="ui header">Log-in</h3>
+//       <div class="field">
+//         <label>Username</label>
+//         <input placeholder="Username" type="text">
+//       </div>
+//       <div class="field">
+//         <label>Password</label>
+//         <input type="password">
+//       </div>
+//       <div class="ui blue submit button">Login</div>
+//     </div>
+//   </div>
+//   <div class="column">
+//     <div class="ui fluid form segment">
+//       <h3 class="ui header">Register</h3>
+//       <div class="two fields">
+//         <div class="field">
+//           <label>First Name</label>
+//           <input placeholder="First Name" type="text">
+//         </div>
+//         <div class="field">
+//           <label>Last Name</label>
+//           <input placeholder="Last Name" type="text">
+//         </div>
+//       </div>
+//       <div class="field">
+//         <label>Username</label>
+//         <input placeholder="Username" type="text">
+//       </div>
+//       <div class="field">
+//         <label>Password</label>
+//         <input type="password">
+//       </div>
+//       <div class="inline field">
+//         <div class="ui checkbox">
+//           <input type="checkbox" id="terms">
+//           <label for="terms"></label>
+//         </div>
+//         <label>I agree to the terms and conditions</label>
+//       </div>
+//       <div class="ui blue submit button">Submit</div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.7
+
+// Relaxed Grids
+// 
+// A grid can increase its gutters to allow for more negative space
+//
+// Markup:
+// <div class="ui two column relaxed grid">
+//   <div class="column">
+//     <div class="ui fluid form segment">
+//       <h3 class="ui header">Log-in</h3>
+//       <div class="field">
+//         <label>Username</label>
+//         <input placeholder="Username" type="text">
+//       </div>
+//       <div class="field">
+//         <label>Password</label>
+//         <input type="password">
+//       </div>
+//       <div class="ui blue submit button">Login</div>
+//     </div>
+//   </div>
+//   <div class="column">
+//     <div class="ui fluid form segment">
+//       <h3 class="ui header">Register</h3>
+//       <div class="two fields">
+//         <div class="field">
+//           <label>First Name</label>
+//           <input placeholder="First Name" type="text">
+//         </div>
+//         <div class="field">
+//           <label>Last Name</label>
+//           <input placeholder="Last Name" type="text">
+//         </div>
+//       </div>
+//       <div class="field">
+//         <label>Username</label>
+//         <input placeholder="Username" type="text">
+//       </div>
+//       <div class="field">
+//         <label>Password</label>
+//         <input type="password">
+//       </div>
+//       <div class="inline field">
+//         <div class="ui checkbox">
+//           <input type="checkbox" id="terms">
+//           <label for="terms"></label>
+//         </div>
+//         <label>I agree to the terms and conditions</label>
+//       </div>
+//       <div class="ui blue submit button">Submit</div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.8
+
+.ui.relaxed.grid
+	margin 				0
+
+// Stackable Grids
+// 
+// A grid can have its columns stack on-top of each other after reaching mobile breakpoints
+//
+// Markup:
+// <div class="two column stackable ui grid">
+//   <div class="column">
+//     <div class="ui segment">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//   </div>
+//   <div class="column">
+//     <div class="ui segment">
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.9
+
+// Text-Aligned Grids
+// 
+// A grid can specify its text alignment
+//
+// Markup:
+// <div class="ui center aligned three column grid">
+//   <div class="row">
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Cats
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Dogs
+//         </div>
+//         <div class="item">
+//           Poodle
+//         </div>
+//         <div class="item">
+//           Cockerspaniel
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Monkeys
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.10
+
+// Vertically Aligned Grids
+// 
+// A grid can specify its vertical alignment to have all its columns vertically centered.
+//
+// Markup:
+// <div class="ui middle aligned three column grid">
+//   <div class="row">
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Cats
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Dogs
+//         </div>
+//         <div class="item">
+//           Poodle
+//         </div>
+//         <div class="item">
+//           Cockerspaniel
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Monkeys
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.11
+
+// Device-Responsive Rows
+// 
+// A grid can have its columns, or rows only show content for computer, tablet, or mobile.
+//
+// Markup:
+// <div class="ui grid">
+//   <div class="two column mobile only row">
+//     <div class="column">
+//       <div class="ui segment">
+//         Mobile
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         Mobile
+//       </div>
+//     </div>
+//   </div>
+//   <div class="three column row">
+//     <div class="computer only column">
+//       <div class="ui segment">
+//         Computer
+//       </div>
+//     </div>
+//     <div class="tablet mobile only column">
+//       <div class="ui segment">
+//         Tablet and Mobile
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         All Sizes
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         All Sizes
+//       </div>
+//     </div>
+//   </div>
+//   <div class="four column computer only row">
+//     <div class="column">
+//       <div class="ui segment">
+//         Computer
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         Computer
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         Computer
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         Computer
+//       </div>
+//     </div>
+//   </div>
+//   <div class="three column tablet only row">
+//     <div class="column">
+//       <div class="ui segment">
+//         Tablet
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         Tablet
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui segment">
+//         Tablet
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.12
+
+// Equal Height Columns
+// 
+// A row can specify that it is equal height so all of its columns appear the length of its longest column.
+//
+// Markup:
+// <div class="ui three column grid">
+//   <div class="equal height row">
+//     <div class="column" style="background-color:#F0F0FF;">
+//       <p>This is a short row</p>
+//     </div>
+//     <div class="column" style="background-color:#F0F0FF;">
+//       <p>This is a short row</p>
+//     </div>
+//     <div class="column" style="background-color:#F0F0FF;">
+//       <p>This is a very long row with lots of text in it and way more text than the other rows</p>
+//       <p>It might even span for multiplie paragraphs.</p>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.13
+
+// Vertically Aligned Columns
+// 
+// A row can also specify its vertical alignment to have its columns vertically centered.
+//
+// Markup:
+// <div class="ui three column grid">
+//   <div class="top aligned row">
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Cats
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Dogs
+//         </div>
+//         <div class="item">
+//           Poodle
+//         </div>
+//         <div class="item">
+//           Cockerspaniel
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Monkeys
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="middle aligned row">
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Dogs
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Dogs
+//         </div>
+//         <div class="item">
+//           Poodle
+//         </div>
+//         <div class="item">
+//           Cockerspaniel
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Monkeys
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="bottom aligned row">
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Cats
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Dogs
+//         </div>
+//         <div class="item">
+//           Poodle
+//         </div>
+//         <div class="item">
+//           Cockerspaniel
+//         </div>
+//       </div>
+//     </div>
+//     <div class="column">
+//       <div class="ui vertical fluid menu">
+//         <div class="header item">
+//           Monkeys
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.14
+
+// Floating Columns
+// 
+// A column can be "floated" to either the left or right of its row.
+//
+// Markup:
+// <div class="ui grid">
+//   <div class="left floated four wide column">
+//     <div class="ui vertical fluid menu">
+//       <div class="header item">
+//         Dogs
+//       </div>
+//       <div class="item">
+//         Poodle
+//       </div>
+//       <div class="item">
+//         Cockerspaniel
+//       </div>
+//     </div>
+//   </div>
+//   <div class="right floated four wide column">
+//     <div class="ui vertical fluid menu">
+//       <div class="header item">
+//         Cats
+//       </div>
+//       <div class="item">
+//         Abysinnian
+//       </div>
+//       <div class="item">
+//         Sphynx
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.15
+
+// Specific Column Widths
+// 
+// A column can vary in width taking up more than a single grid column.
+//
+// Markup:
+// <div class="ui grid">
+//   <div class="three wide column">
+//     <div class="ui segment"><b>Colume One</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis sapien.</div>
+//   </div>
+//   <div class="six wide column">
+//     <div class="ui segment"><b>Colume Two</b> Aliquam lobortis commodo sem ac accumsan. Vestibulum non faucibus lorem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur sed lorem lorem. Nam augue erat, dignissim nec aliquam vel, congue et sapien. Integer viverra justo vel nibh suscipit commodo. Nullam ut turpis nibh, in luctus risus. Sed ut risus nec dui mattis porta. Nam nisi magna, ornare mollis congue a, suscipit at nisl.</div>
+//   </div>
+//   <div class="three wide column">
+//     <div class="ui segment"><b>Colume Three</b> Donec semper mollis condimentum. Aenean eget rutrum magna. Mauris ornare nibh scelerisque turpis lobortis dignissim. Etiam eleifend justo eget quam semper vulputate. Nulla et risus convallis velit molestie iaculis. Aliquam erat volutpat. </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.5.16

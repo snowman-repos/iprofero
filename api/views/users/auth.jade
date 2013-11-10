@@ -1,0 +1,42 @@
+extends ../layouts/default
+
+block content
+
+		.ui.inverted.page.dimmer
+			.ui.text.loader Please wait
+
+		//- List of Social Network Login Buttons
+		.ui.top.aligned.relaxed.stackable.page.grid.basic.segment.margin.top
+			.two.column.equal.height.row
+				.column
+					.ui.fluid.vertical.buttons(login-buttons)
+						a.ui.facebook.fluid.button(href="/auth/facebook", target="_self", dimmer)
+							i.facebook.icon
+							| facebook
+						a.ui.twitter.fluid.button(href="/auth/twitter", target="_self", dimmer)
+							i.twitter.icon
+							| twitter
+						a.ui.linkedin.fluid.button(href="/auth/linkedin", target="_self", dimmer)
+							i.linkedin.icon
+							| linkedin
+						a.ui.google.fluid.button(href="/auth/google", target="_self", dimmer)
+							i.google.plus.icon
+							| google
+						a.ui.github.fluid.button(href="/auth/github", target="_self", dimmer)
+							i.github.icon
+							| github
+						a.ui.weibo.fluid.button(href="/auth/weibo", target="_self", dimmer)
+							i.weibo.icon
+							| weibo
+				.ui.vertical.divider.computer.tablet.only or
+				.ui.horizontal.divider.mobile.only or
+				.column
+					if (errors.length !== 0)
+						.ui.error.message(dismissable)
+							i.close.icon
+							.header Uh-oh...
+							ul.list
+								each error in errors
+									li= error.type
+
+					block auth

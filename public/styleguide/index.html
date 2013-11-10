@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>iProfero Styleguide v0.0.1</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel='stylesheet' href='/lib/semantic-ui/css/semantic.css' />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar kss-fixed">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">iProfero Styleguide</a></h1>
+            <h2 class="kss-doc-subtitle">v0.0.1</h2>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="0">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Base</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Elements</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Collections</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Views</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Modules</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Templates</span></a></li>
+              
+            </ul>
+            
+            
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          <section id="section-0" class="kss-section kss-overview">
+            <h1>iProfero Living Styleguide</h1>
+<p>This styleguide is for the purpose of specifying and showcasing all the styles used throughout the project. The styleguide is automatically generated from the project stylesheets (stylus files) using KSS.
+
+</p>
+<p>The project uses Semantic UI (<a href="http://semantic-ui.com/"><a href="http://semantic-ui.com/">http://semantic-ui.com/</a></a>).
+
+</p>
+<h2>Coding Style:</h2>
+<h3>General Rules</h3>
+<ul>
+<li>TAB indentation</li>
+<li>Property declarations in alphabetical order</li>
+<li>Style properties to be vertically aligned throughout the style sheet</li>
+<li>No colons or semi colons in declarations</li>
+<li>No curly braces</li>
+<li>Style blocks to be separated by at least 2 line breaks</li>
+<li>Use <code>//</code> for comment blocks, not <code>/* */</code></li>
+<li>Use <code>rem</code> or <code>em</code> for font sizes, not <code>px</code>, with a <code>px</code> fallback</li>
+<li>Never use ID selectors, only classes (IDs for JS only)</li>
+<li>No more than 3 nested selectors</li>
+<li>Class names <code>disabled</code>, <code>mousedown</code>, <code>danger</code>, <code>hover</code>, <code>selected</code>, and <code>active</code> should <strong>always</strong> be namespaced, e.g. <code>button.hover</code></li>
+<li>Multi-line</li>
+<li>Indent vendor-prefixed declarations so that their values are aligned</li>
+<li>English spelling :)</li>
+<li>Tags in comments: ^tag</li>
+<li>No widths, ever. Everything should be fluid with widths handled by the grid system.</li>
+<li>Heights for images and sprites only. Height may be controlled using <code>line-height</code></li>
+<li>NEVER style grid/container elements, and especially don&apos;t apply box-model properties. Style elements inside instead</li>
+<li>Only use shorthand declarations when you don&apos;t need to be explicit. e.g. use <code>margin-bottom 0</code> instead of <code>margin 0</code></li>
+<li>Use <code>!important</code> on helper classes only and use preemptively, not reactively</li>
+<li>No magic numbers e.g. <code>margin-top 47px</code> - every hard-coded measurement you set is a commitment you might not necessarily want to keep</li>
+<li>DEBUGGING: If you run into a CSS problem take code away before you start adding more in a bid to fix it. The problem exists in CSS that is already written, more CSS isn’t the right answer! Don&apos;t use <code>overflow hidden</code> to hide quirks - <strong>fix the problem, not its symptoms</strong></li>
+<li>STYLUS: avoid nesting! use it only where it would be required in vanilla CSS. BEM notation can help avoid nesting</li>
+</ul>
+<h3>Source Order</h3>
+<ul>
+<li>Reset - ground zero</li>
+<li>Elements - unclassed <code>h1</code>, unclassed <code>ul</code> etc.</li>
+<li>Objects and Abstractions - generic, underlying patterns</li>
+<li>Components - full components constructed from objects and their extensions</li>
+<li>Style trumps - error states, debug code etc.</li>
+</ul>
+<p>As you go down the CSS document, each section should inherit from previous sections. There should be less undoing of styles, less specificity problems and all-round better architected stylesheets.
+
+</p>
+<h3>Class Naming Conventions</h3>
+<ul>
+<li>Never reference <code>-js</code> suffixed class names from style sheets - these are exclusively for JS files</li>
+<li>Use the <code>-is</code> suffix for classes shared between CSS and JavaScript</li>
+<li>Try to use &quot;semantic&quot; class names that offer meaning</li>
+<li>Follow BEM naming conventions - hyphen or underscore delimited class names</li>
+<li>Class names should be as short as possible, but as long as they need to be</li>
+<li>Using BEM notation generally removes the need for nested or overqualified selectors</li>
+<li>Be explicit; target the element you want to affect, not its parent. <strong>Never assume that markup won’t change. Write selectors that target what you want, not what happens to be there already</strong></li>
+<li>Make sure your key selector is never an element/type selector or object/abstraction class. We never really want to see selectors like <code>.sidebar ul{}</code> or <code>.footer .media{}</code> in our stylesheets</li>
+</ul>
+<pre><code>.block
+.block__element
+.block__element--modifier</code></pre>
+<p>e.g.
+</p>
+<pre><code>.person
+.person--woman
+.person__hand
+.person__hand--left</code></pre>
+
+          </section>
+          
+        </article>
+        <!-- <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer> -->
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <script src="/lib/semantic-ui/javascript/semantic.js">
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    <script>
+
+// attach ready event
+$(document).ready(function() {
+
+	$(".toggle.button").state({
+		text: {
+			inactive : 'Vote',
+			active   : 'Voted'
+		},
+		className: {
+			inactive : 'inactive',
+			active : 'active'
+		}
+	});
+
+	$('#datepicker').datepicker();
+
+	$('.ui.checkbox').checkbox();
+	$('.ui.dropdown').dropdown();
+	$('.ui.accordion').accordion();
+	$('.ui.modal').modal();
+	$('[data-content]').popup();
+	$('.ui.rating').rating();
+	$('.shape').shape();
+	// $('.ui.sidebar').sidebar();
+
+	$('.enablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('enable');
+	});
+	$('.disablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('disable');
+	});
+	$('.togglethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('toggle');
+	});
+
+	$('.toggledimmer').on('click', function() {
+		$('.page.dimmer').dimmer('toggle');
+	});
+
+	$('.showsectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('show');
+	});
+
+	$('.hidesectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('hide');
+	});
+
+	$('.testmodalbutton').on('click', function() {
+		$('.test.modal').modal('show');
+	});
+	$('.testbasicmodalbutton').on('click', function() {
+		$('.basic.modal').modal('show');
+	});
+	$('.testsmallmodalbutton').on('click', function() {
+		$('.small.modal').modal('show');
+	});
+	$('.testlargemodalbutton').on('click', function() {
+		$('.large.modal').modal('show');
+	});
+
+	$('.testcallbacksbutton').on('click', function() {
+		$('.testcallbacks.modal').modal('show');
+	});
+	$('.testcallbacks.modal').modal('setting', 'onDeny', function(){
+		window.alert('Denied!');
+	}).modal('setting', 'onApprove', function(){
+		window.alert('Approved!');
+	});
+
+	$('.testforcedbutton').on('click', function() {
+		$('.testforced.modal').modal('show');
+	});
+	$('.testforced.modal').modal('setting', 'closable', false);
+
+	$('.modaltransitionselection').dropdown({
+		onChange: function(value) {
+			$('.transitiontest.modal').modal('setting', 'transition', value).modal('show');
+		}
+	});
+
+	$('.readonly.rating').rating('disable');
+	$('.clearable.rating').rating('setting', 'clearable', true);
+
+	$('.direction .button').on("click", function() {
+		$action = $(this).data("animation") + " " + $(this).data("direction");
+		$('.shape').shape($action);
+	});
+
+	$('.testsidebar').on('click', function(){
+		$('.demo.sidebar').sidebar('setting', 'overlay', false).sidebar('toggle');
+	});
+	$('.testoverlaysidebar').on('click', function(){
+		$('.overlay.sidebar').sidebar('setting', 'overlay', true).sidebar('toggle');
+	});
+
+	$('.sidebardirection.button').on('click', function() {
+		$('.sidebar').filter('.' + $(this).data('direction') ).sidebar('toggle');
+	});
+
+	$transition = $('.transitionsexample.dropdown');
+	$transitionButton = $('.transitionsexample.button');
+	$transitionButton.on('click', function(event) {
+		$transition.dropdown('toggle');
+		event.stopImmediatePropagation();
+	});
+
+	$transition.dropdown({
+		onChange: function(value) {
+			$transition.dropdown('setting', 'transition', value);
+		}
+	});
+
+	$transitionelement = $(".transitionelement");
+	$(".testtransition.button").on("click", function() {
+		switch($(this).data("transition")) {
+			case "scale":
+				$transitionelement.transition('scale').transition('scale');
+				break;
+			case "fade":
+				$transitionelement.transition('fade').transition('fade');
+				break;
+			case "horizontal flip":
+				$transitionelement.transition('horizontal flip').transition('horizontal flip');
+				break;
+			case "vertical flip":
+				$transitionelement.transition('vertical flip').transition('vertical flip');
+				break;
+			case "pulse":
+				$transitionelement.transition('pulse');
+				break;
+			case "bounce":
+				$transitionelement.transition('bounce');
+				break;
+			case "flash":
+				$transitionelement.transition('flash');
+				break;
+			case "shake":
+				$transitionelement.transition('shake');
+				break;
+			case "tada":
+				$transitionelement.transition('tada');
+				break;
+			case "slide up":
+				$transitionelement.transition('slide up').transition('slide up');
+				break;
+			case "slide down":
+				$transitionelement.transition('slide down').transition('slide down');
+				break;
+			case "start loop":
+				$transitionelement.transition('set looping').transition('bounce', '2000ms');
+				break;
+			case "stop loop":
+				$transitionelement.transition('remove looping');
+				break;
+			case "flip then scale":
+				$transitionelement.transition('horizontal flip').transition('scale');
+				break;
+			case "callback":
+				$transitionelement.transition({
+					animation : 'scale',
+					duration  : '2s',
+					complete  : function() {
+						alert('done');
+					}
+				}).transition('scale');
+				break;
+		}
+	});
+
+	setTimeout(function(){
+		$("body > div > section").css("marginLeft","250px");
+		$("body > section").css("marginLeft","270px");
+	},1000);
+	
+});
+    </script>
+  </body>
+</html>

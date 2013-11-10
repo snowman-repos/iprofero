@@ -1,0 +1,151 @@
+// Image
+//
+// An image is a graphic representation of something
+//
+// Markup:
+// <img class="ui medium image" src="http://placehold.it/200x200">
+//
+// Styleguide 2.6
+
+// Image Link
+//
+// An image can be formatted to link to other content
+//
+// Markup:
+// <a href="http://google.com" class="ui small image">
+//   <img src="http://placehold.it/200x200">
+// </a>
+//
+// Styleguide 2.6.1
+
+// Disabled Image
+//
+// An image can show that it is disabled and cannot be selected
+//
+// Markup:
+// <img class="medium disabled ui image" src="http://placehold.it/200x200">
+//
+// Styleguide 2.6.2
+
+// Avatar Images
+//
+// An image may be formatted to appear inline with text as an avatar
+//
+// .tiny - avatars can be tiny
+// .large - avatars can be large
+//
+// Markup:
+// <img class="ui {$modifiers} avatar image" src="http://placehold.it/200x200">
+//
+// Styleguide 2.6.3
+
+.ui.tiny.avatar.image
+	height 				1em
+	width 				1em
+
+.ui.large.avatar.image
+	height 				5em
+	width 				5em
+
+// Logo
+// 
+// A small logo image to show in a menu
+//
+// Markup:
+// <img class="ui logo image" src="http://placehold.it/200x200">
+//
+// Styleguide 2.6.4
+
+.logo
+	height					1em
+	width 					auto
+
+// Rounded Images
+//
+// An image may appear rounded
+//
+// Markup:
+// <img class="rounded ui image" src="http://placehold.it/200x200">
+//
+// Styleguide 2.6.5
+
+// Circular Images
+//
+// An image may appear circular
+//
+// Markup:
+// <img class="circular ui image" src="http://placehold.it/200x200">
+//
+// Styleguide 2.6.6
+
+// Floated Images
+//
+// An image can sit to the left or right of other content
+//
+// Markup:
+// <div class="ui segment">
+// <img class="ui small left floated image" src="http://placehold.it/200x200">
+// <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem, est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix. Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas an. Mei ex natum rebum iisque.</p>
+// <img class="ui small right floated image" src="http://placehold.it/200x200">
+// <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis in.</p>
+//  <p>Eu quo homero blandit intellegebat. Incorrupte consequuntur mei id. Mei ut facer dolores adolescens, no illum aperiri quo, usu odio brute at. Qui te porro electram, ea dico facete utroque quo. Populo quodsi te eam, wisi everti eos ex, eum elitr altera utamur at. Quodsi convenire mnesarchum eu per, quas minimum postulant per id.</p>
+// </div>
+//
+// Styleguide 2.6.7
+
+// Sized Images
+//
+// An image may be formatted to be different sizes
+//
+// Markup:
+// <div class="ui segment">
+// 	<img class="ui tiny image" src="http://placehold.it/200x200">
+// </div>
+// <div class="ui segment">
+// 	<img class="ui mini image" src="http://placehold.it/200x200">
+// </div>
+// <div class="ui segment">
+// 	<img class="ui small image" src="http://placehold.it/200x200">
+// </div>
+// <div class="ui segment">
+// 	<img class="ui large image" src="http://placehold.it/200x200">
+// </div>
+// <div class="ui segment">
+// 	<img class="ui huge image" src="http://placehold.it/200x200">
+// </div>
+//
+// Styleguide 2.6.8
+
+// Image Groups
+//
+// A group of images can be formatted to have the same size.
+//
+// Markup:
+// <div class="ui small images">
+//   <img class="ui image" src="http://placehold.it/200x200">
+//   <img class="ui image" src="http://placehold.it/200x200">
+//   <img class="ui image" src="http://placehold.it/200x200">
+//   <img class="ui image" src="http://placehold.it/200x200">
+// </div>
+//
+// Styleguide 2.6.9
+
+// Link Images
+// 
+// Images can be placed inside links
+//
+// Markup:
+// <a href=""><img class="ui link image" src="http://placehold.it/200x200"></a>
+//
+// Styleguide 2.6.10
+
+a
+	.ui.link.image
+		// transition			$slow-transition
+
+	&:focus,
+	&:hover
+
+		.ui.link.image
+			opacity 		0.8
+			// transition		$slow-transition

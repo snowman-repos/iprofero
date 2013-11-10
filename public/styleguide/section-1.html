@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>iProfero Styleguide v0.0.1</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel='stylesheet' href='/lib/semantic-ui/css/semantic.css' />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar kss-fixed">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">iProfero Styleguide</a></h1>
+            <h2 class="kss-doc-subtitle">v0.0.1</h2>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="1">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Base</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Elements</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Collections</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Views</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Modules</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Templates</span></a></li>
+              
+            </ul>
+            
+            <ul class="kss-menu-child">
+              
+              
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.1"><span class="kss-ref">1.1</span><span class="kss-name">Animations</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.2"><span class="kss-ref">1.2</span><span class="kss-name">Colours</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.3"><span class="kss-ref">1.3</span><span class="kss-name">Layout</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-1.4"><span class="kss-ref">1.4</span><span class="kss-name">Typography</span></a></li>
+              
+              
+            </ul>
+            
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          
+          <section id="section-1" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">1</span> Base</h1>
+            
+            
+            <div class="kss-description">
+              <p>Settings for the front-end framework</p>
+
+            </div>
+            
+            
+          </section>
+          
+          <section id="section-1.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.1</span> Animations</h1>
+            
+            
+            <div class="kss-description">
+              <p>These are the animations used throughout the application. These animate all style properties with ease-in-out. Check the stylesheet for more details.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="{$modifiers}" style="height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.fast-transition-demo</div>
+                  <div class="kss-modifier-description">
+                    <p>0.1s</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="fast-transition-demo" style="height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.slow-transition-demo</div>
+                  <div class="kss-modifier-description">
+                    <p>0.3s</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="slow-transition-demo" style="height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;{$modifiers}&quot; style=&quot;height: 45px; width: 45px;&quot;&gt;&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.2</span> Colours</h1>
+            
+            
+            <div class="kss-description">
+              <p>These are the colours used throughout the app.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div style="background-color:{$modifiers}; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#ffffff</div>
+                  <div class="kss-modifier-description">
+                    <p>$white</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#ffffff; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#000000</div>
+                  <div class="kss-modifier-description">
+                    <p>$black</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#000000; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#f4f4f4</div>
+                  <div class="kss-modifier-description">
+                    <p>$very-light-grey</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#f4f4f4; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#d4d4d4</div>
+                  <div class="kss-modifier-description">
+                    <p>$light-grey</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#d4d4d4; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#ababab</div>
+                  <div class="kss-modifier-description">
+                    <p>$grey</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#ababab; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#97989d</div>
+                  <div class="kss-modifier-description">
+                    <p>$dark-grey</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#97989d; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#2f323b</div>
+                  <div class="kss-modifier-description">
+                    <p>$very-dark-grey</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#2f323b; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#5BBD72</div>
+                  <div class="kss-modifier-description">
+                    <p>$green</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#5BBD72; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#ff6b6b</div>
+                  <div class="kss-modifier-description">
+                    <p>$red</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#ff6b6b; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#f05940</div>
+                  <div class="kss-modifier-description">
+                    <p>$orange</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#f05940; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#f8cb00</div>
+                  <div class="kss-modifier-description">
+                    <p>$yellow</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#f8cb00; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#65c3df</div>
+                  <div class="kss-modifier-description">
+                    <p>$blue</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#65c3df; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#a48ad4</div>
+                  <div class="kss-modifier-description">
+                    <p>$purple</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#a48ad4; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#00b5ad</div>
+                  <div class="kss-modifier-description">
+                    <p>$teal</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#00b5ad; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#303342</div>
+                  <div class="kss-modifier-description">
+                    <p>$cobalt</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#303342; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#1e202c</div>
+                  <div class="kss-modifier-description">
+                    <p>$dark-cobalt</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#1e202c; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#f3565d</div>
+                  <div class="kss-modifier-description">
+                    <p>$graph-red</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#f3565d; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#fc9d9b</div>
+                  <div class="kss-modifier-description">
+                    <p>$graph-pink</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#fc9d9b; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#facdae</div>
+                  <div class="kss-modifier-description">
+                    <p>$graph-yellow</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#facdae; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#9fc2c4</div>
+                  <div class="kss-modifier-description">
+                    <p>$graph-green</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#9fc2c4; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#8297a8</div>
+                  <div class="kss-modifier-description">
+                    <p>$graph-blue</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#8297a8; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#53aabd</div>
+                  <div class="kss-modifier-description">
+                    <p>$mono-graph-green1</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#53aabd; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#54b5c5</div>
+                  <div class="kss-modifier-description">
+                    <p>$mono-graph-green2</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#54b5c5; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#53bbc4</div>
+                  <div class="kss-modifier-description">
+                    <p>$mono-graph-green3</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#53bbc4; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#3eb6c6</div>
+                  <div class="kss-modifier-description">
+                    <p>$mono-graph-green4</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#3eb6c6; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">#288fa0</div>
+                  <div class="kss-modifier-description">
+                    <p>$mono-graph-green5</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background-color:#288fa0; border: 2px solid #e9e9e9; height: 45px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div style=&quot;background-color:{$modifiers}; border: 2px solid #e9e9e9; height: 45px; width: 45px;&quot;&gt;&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.3</span> Layout</h1>
+            
+            
+            <div class="kss-description">
+              <p>The base spacing unit for the application:</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div style="background: #ccc; height: 45px; margin: {$modifiers}; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">25px</div>
+                  <div class="kss-modifier-description">
+                    <p>$base-spacing-unit</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div style="background: #ccc; height: 45px; margin: 25px; width: 45px;"></div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div style=&quot;background: #ccc; height: 45px; margin: {$modifiers}; width: 45px;&quot;&gt;&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-1.4" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">1.4</span> Typography</h1>
+            
+            
+            <div class="kss-description">
+              <p>Fonts etc.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <h2>The quick brown fox jumps over the lazy dog</h2>
+<p><i>The quick brown fox jumps over the lazy dog</i></p>
+<p>The quick brown fox jumps over the lazy dog</p>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;h2&gt;The quick brown fox jumps over the lazy dog&lt;/h2&gt;
+&lt;p&gt;&lt;i&gt;The quick brown fox jumps over the lazy dog&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          
+        </article>
+        <!-- <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer> -->
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <script src="/lib/semantic-ui/javascript/semantic.js">
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    <script>
+
+// attach ready event
+$(document).ready(function() {
+
+	$(".toggle.button").state({
+		text: {
+			inactive : 'Vote',
+			active   : 'Voted'
+		},
+		className: {
+			inactive : 'inactive',
+			active : 'active'
+		}
+	});
+
+	$('#datepicker').datepicker();
+
+	$('.ui.checkbox').checkbox();
+	$('.ui.dropdown').dropdown();
+	$('.ui.accordion').accordion();
+	$('.ui.modal').modal();
+	$('[data-content]').popup();
+	$('.ui.rating').rating();
+	$('.shape').shape();
+	// $('.ui.sidebar').sidebar();
+
+	$('.enablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('enable');
+	});
+	$('.disablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('disable');
+	});
+	$('.togglethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('toggle');
+	});
+
+	$('.toggledimmer').on('click', function() {
+		$('.page.dimmer').dimmer('toggle');
+	});
+
+	$('.showsectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('show');
+	});
+
+	$('.hidesectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('hide');
+	});
+
+	$('.testmodalbutton').on('click', function() {
+		$('.test.modal').modal('show');
+	});
+	$('.testbasicmodalbutton').on('click', function() {
+		$('.basic.modal').modal('show');
+	});
+	$('.testsmallmodalbutton').on('click', function() {
+		$('.small.modal').modal('show');
+	});
+	$('.testlargemodalbutton').on('click', function() {
+		$('.large.modal').modal('show');
+	});
+
+	$('.testcallbacksbutton').on('click', function() {
+		$('.testcallbacks.modal').modal('show');
+	});
+	$('.testcallbacks.modal').modal('setting', 'onDeny', function(){
+		window.alert('Denied!');
+	}).modal('setting', 'onApprove', function(){
+		window.alert('Approved!');
+	});
+
+	$('.testforcedbutton').on('click', function() {
+		$('.testforced.modal').modal('show');
+	});
+	$('.testforced.modal').modal('setting', 'closable', false);
+
+	$('.modaltransitionselection').dropdown({
+		onChange: function(value) {
+			$('.transitiontest.modal').modal('setting', 'transition', value).modal('show');
+		}
+	});
+
+	$('.readonly.rating').rating('disable');
+	$('.clearable.rating').rating('setting', 'clearable', true);
+
+	$('.direction .button').on("click", function() {
+		$action = $(this).data("animation") + " " + $(this).data("direction");
+		$('.shape').shape($action);
+	});
+
+	$('.testsidebar').on('click', function(){
+		$('.demo.sidebar').sidebar('setting', 'overlay', false).sidebar('toggle');
+	});
+	$('.testoverlaysidebar').on('click', function(){
+		$('.overlay.sidebar').sidebar('setting', 'overlay', true).sidebar('toggle');
+	});
+
+	$('.sidebardirection.button').on('click', function() {
+		$('.sidebar').filter('.' + $(this).data('direction') ).sidebar('toggle');
+	});
+
+	$transition = $('.transitionsexample.dropdown');
+	$transitionButton = $('.transitionsexample.button');
+	$transitionButton.on('click', function(event) {
+		$transition.dropdown('toggle');
+		event.stopImmediatePropagation();
+	});
+
+	$transition.dropdown({
+		onChange: function(value) {
+			$transition.dropdown('setting', 'transition', value);
+		}
+	});
+
+	$transitionelement = $(".transitionelement");
+	$(".testtransition.button").on("click", function() {
+		switch($(this).data("transition")) {
+			case "scale":
+				$transitionelement.transition('scale').transition('scale');
+				break;
+			case "fade":
+				$transitionelement.transition('fade').transition('fade');
+				break;
+			case "horizontal flip":
+				$transitionelement.transition('horizontal flip').transition('horizontal flip');
+				break;
+			case "vertical flip":
+				$transitionelement.transition('vertical flip').transition('vertical flip');
+				break;
+			case "pulse":
+				$transitionelement.transition('pulse');
+				break;
+			case "bounce":
+				$transitionelement.transition('bounce');
+				break;
+			case "flash":
+				$transitionelement.transition('flash');
+				break;
+			case "shake":
+				$transitionelement.transition('shake');
+				break;
+			case "tada":
+				$transitionelement.transition('tada');
+				break;
+			case "slide up":
+				$transitionelement.transition('slide up').transition('slide up');
+				break;
+			case "slide down":
+				$transitionelement.transition('slide down').transition('slide down');
+				break;
+			case "start loop":
+				$transitionelement.transition('set looping').transition('bounce', '2000ms');
+				break;
+			case "stop loop":
+				$transitionelement.transition('remove looping');
+				break;
+			case "flip then scale":
+				$transitionelement.transition('horizontal flip').transition('scale');
+				break;
+			case "callback":
+				$transitionelement.transition({
+					animation : 'scale',
+					duration  : '2s',
+					complete  : function() {
+						alert('done');
+					}
+				}).transition('scale');
+				break;
+		}
+	});
+
+	setTimeout(function(){
+		$("body > div > section").css("marginLeft","250px");
+		$("body > section").css("marginLeft","270px");
+	},1000);
+	
+});
+    </script>
+  </body>
+</html>

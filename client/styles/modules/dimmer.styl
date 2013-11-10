@@ -1,0 +1,78 @@
+// Dimmer
+// 
+// Dimmers hide distractions to focus user's attention on particular content. Any element can be dimmed using a dimmer. If a dimmer does not exist inside the element it will be created on first use. If a dimmer is already included on the page, instead of calling dimmer on the section you would like to dim, you can can invoke behaviors directly on the dimmer.
+//
+// Markup:
+// <div class="ui button toggledimmer">turn on page dimmer</div>
+// <div class="ui page dimmer">
+//   <div class="content">
+//     <div class="center">
+//       <h2 class="ui inverted icon header">
+//         <i class="icon circular inverted emphasized green mail"></i>
+//         You're all signed up for the weekly dog tips newsletter!
+//         <div class="sub header">Your first edition will be sent on January 22</div>
+//       </h2>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 5.3
+
+// Content Dimmer
+// 
+// A dimmer can display content. Content must be included inside `.content .center` to display centered correctly in the modal.
+//
+// Markup:
+// <div class="ui segment dimmable" style="display: block;">
+//   <h4 class="ui dividing header">
+//     <i class="photo icon"></i>Dog Photos
+//   </h4>
+//   <img src="http://placehold.it/200x200">
+//   <img src="http://placehold.it/200x200">
+//   <div class="ui dogs dimmer hidden">
+//     <div class="content">
+//       <div class="center">
+//         <h2 class="ui inverted icon header">
+//           <i class="icon circular inverted emphasized red heart"></i>
+//           Your poodle photo uploaded successfully!
+//         </h2>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+// <div class="ui icon buttons" style="display: inline-block;">
+//   <div class="ui showsectiondimmer button"><i class="plus icon"></i></div>
+//   <div class="ui hidesectiondimmer button"><i class="minus icon"></i></div>
+// </div>
+//
+// Styleguide 5.3.1
+
+// Dimmer states
+// 
+// Dimmers have various states
+// 
+// .active - An active dimmer will dim its parent container
+// .disabled - A disabled dimmer cannot be activated
+// .inverted.active - A dimmer can be formatted to have its colors inverted
+//
+// Markup:
+// <div class="ui segment">
+//   <div class="ui {$modifiers} dimmer"></div>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+// </div>
+//
+// Styleguide 5.3.2
+
+// Simple Dimmer
+// 
+// A dimmer can be controlled without javascript. Having any parent element receive the class ui dimmable dimmed will trigger the dimmer to display.
+//
+// Markup:
+// <div class="ui dimmable dimmed segment">
+//   <div class="ui simple dimmer"></div>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+// </div>
+//
+// Styleguide 5.3.4

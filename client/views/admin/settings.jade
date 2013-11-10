@@ -1,0 +1,157 @@
+.page-container(data-ng-controller='AdminController', data-ng-init='settings()')
+	.ui.page.grid.top.bottom.margin
+		.column
+			.ui.huge.header
+				i.settings.icon
+				| Admin Settings
+	.ui.two.column.stackable.page.grid
+		.row
+			.column
+				.ui.green.header
+					i.user.icon
+					| Job Titles
+
+				.ui.segment
+					.ui.relaxed.divided.list
+						.item(data-ng-repeat="job in jobs | orderBy:'title'")
+							.circular.ui.basic.small.red.icon.button.right.floated(data-ng-click="removeJob('{{job._id}}')")
+								i.remove.icon
+							.content(data-ng-bind="job.title")
+
+				.fluid.ui.input
+					input(type="text", on-enter="addJob('{{newJob}}')", data-ng-model="newJob", placeholder="Add new Job Title...", tabindex="1")
+
+			.column
+				.ui.teal.header 
+					i.users.icon
+					| Teams
+
+				.ui.segment
+					.ui.relaxed.divided.list
+						.item(data-ng-repeat="team in teams | orderBy:'name'")
+							.circular.ui.basic.small.red.icon.button.right.floated(data-ng-click="removeTeam('{{team._id}}')")
+								i.remove.icon
+							.content(data-ng-bind="team.name")
+
+				.fluid.ui.input
+					input(type="text", on-enter="addTeam('{{newTeam}}')", data-ng-model="newTeam", placeholder="Add new Team...", tabindex="2")
+		.row
+			.column
+				.ui.blue.header
+					i.keyboard.icon
+					| Technologies
+
+				.ui.segment
+					.ui.relaxed.divided.list
+						.item(data-ng-repeat="technology in technologies | orderBy:'name'")
+							.circular.ui.basic.small.red.icon.button.right.floated(data-ng-click="removeTechnology('{{technology._id}}')")
+								i.remove.icon
+							.content(data-ng-bind="technology.name")
+
+				.fluid.ui.input
+					input(type="text", on-enter="addTechnology('{{newTechnology}}')", data-ng-model="newTechnology", placeholder="Add new Technology...", tabindex="3")
+
+			.column
+				.ui.purple.header
+					i.certificate.icon
+					| Skills
+
+				.ui.segment
+					.ui.relaxed.divided.list
+						.item(data-ng-repeat="skill in skills | orderBy:'name'")
+							.circular.ui.basic.small.red.icon.button.right.floated(data-ng-click="removeSkill('{{skill._id}}')")
+								i.remove.icon
+							.content(data-ng-bind="skill.name")
+
+				.fluid.ui.input
+					input(type="text", on-enter="addSkill('{{newSkill}}')", data-ng-model="newSkill", placeholder="Add new Skill...", tabindex="4")
+
+	.ui.page.grid.top.margin
+		.row
+			.column
+
+				.ui.orange.header
+					i.bolt.icon
+					| Activities
+				.ui.segment
+
+					table.basic.ui.padded.sortable.table.segment
+						thead
+							tr
+								th(data-ng-click="predicate = 'name'; reverse=!reverse")
+									| name
+									i.alphabet.sort.icon.right(data-ng-class="{'descending':reverse}", data-ng-show="predicate == 'name'")
+								th(data-ng-click="predicate = 'billable'; reverse=!reverse")
+									| billable?
+									i.sort.icon.right(data-ng-class="{'descending':reverse, 'ascending':!reverse}", data-ng-show="predicate == 'billable'")
+								th(data-ng-click="predicate = 'rate'; reverse=!reverse")
+									| rate
+									i.order.sort.icon.right(data-ng-class="{'descending':reverse, 'ascending':!reverse}", data-ng-show="predicate == 'rate'")
+								th(data-ng-click="predicate = 'parent.name'; reverse=!reverse")
+									| parent
+									i.alphabet.sort.icon.right(data-ng-class="{'descending':reverse}", data-ng-show="predicate == 'parent.name'")
+								th
+
+						tbody
+							tr(data-ng-repeat='activity in activities | orderBy:predicate:reverse')
+								td(data-ng-class="{'disabled':activity.name == ''}")
+									div(click-to-edit="activity.name", resource="activity", default="'no name'")
+								td(data-ng-switch="activity.billable")
+									i.pointer.green.check.icon(data-ng-switch-when="true", data-ng-click="activity.billable = false")
+									i.pointer.disabled.remove.icon(data-ng-switch-when="false", data-ng-click="activity.billable = true")
+								td(data-ng-class="{'disabled': activity.rate == '' || activity.rate == 0}")
+									div(click-to-edit="activity.rate", resource="activity", default="0")
+								td
+									.pointer(data-ng-bind="activity.parent.name", data-ng-hide="changeparent", data-ng-click="changeparent = true")
+									i.pointer.disabled.plus.icon(data-ng-show="activity.parent.name == '' && !changeparent", data-ng-click="changeparent = true")
+									div(data-ng-show="changeparent")
+										.ui.selection.dropdown(dropdown)
+											input(type="hidden", data-ng-model="activity.parent.name")
+											.default.text(data-ng-bind="activity.parent.name || 'Parent Activity'")
+											i.dropdown.icon
+											.menu
+												.item(data-ng-repeat="a in activities", data-ng-class="{'active':a.name == activity.parent.name}", data-value="{{a.name}}", data-ng-click="activity.parent.id = a._id; activity.parent.name = a.name; $parent.changeparent = false; $parent.updateParent({{activity}}, {{a}})", data-ng-hide="a._id == activity._id") {{ a.name }}
+											a.ui.small.basic.circular.icon.button.margin.left(data-ng-show="activity.parent.id", data-ng-click="activity.parent.id = ''; activity.parent.name = '';")
+												i.small.remove.link.icon
+								td
+									.circular.ui.basic.small.red.icon.button(data-ng-click="removeActivity('{{activity._id}}')")
+										i.remove.link.icon
+
+				form.ui.form.segment
+
+					.ui.tiny.disabled.header Add Activity
+
+					.field
+						label(for="name") Name:
+						.ui.left.labeled.input
+							input#name(name="name", type="text", placeholder="e.g. Design, Planning, etc.", data-ng-model="new_activity.name")
+							.ui.corner.label
+								i.asterisk.icon
+
+					.inline-field.top.bottom.margin
+						.ui.slider.checkbox
+							input#billable(name="billable", type="checkbox", data-ng-model="new_activity.billable", checkbox)
+							label(for="billable") Is this activity billable?
+
+					.field.rate(data-ng-show="new_activity.billable")
+						label(for="rate") Hourly rate:
+						.ui.left.labeled.icon.input
+							input#rate(name="rate", type="text", placeholder="0", data-ng-model="new_activity.rate", valid-number)
+							i.yuan.icon
+							.ui.corner.label
+								i.asterisk.icon
+
+					.field
+						label(for="parent") Parent activity:
+						.ui.selection.dropdown(dropdown)
+							input#parent(name="parent", type="hidden", data-ng-model="new_activity.parent.name")
+							.default.text(data-ng-bind="new_activity.parent.name || 'Parent Activity'")
+							i.dropdown.icon
+							.menu
+								.item(data-ng-repeat="activity in activities", data-ng-class="{'active':activity.name == new_activity.parent.name}", data-value="{{activity.name}}", data-ng-click="new_activity.parent.id = activity._id; new_activity.parent.name = activity.name;") {{ activity.name }}
+						a.ui.small.basic.circular.icon.button.margin.left(data-ng-show="new_activity.parent.id", data-ng-click="new_activity.parent.id = ''; new_activity.parent.name = '';")
+							i.small.remove.link.icon
+
+					.ui.right.labeled.green.icon.button(data-ng-click="addActivity()")
+						i.plus.icon
+						| Add Activity

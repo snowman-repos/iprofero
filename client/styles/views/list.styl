@@ -1,0 +1,572 @@
+// List
+// 
+// A list is a group of related content items ordered consecutively
+//
+// Markup:
+// <div class="ui divided list">
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Schnoodle</div>
+//       Your new dog
+//     </div>
+//     <div class="list">
+//       <div class="item">
+//         <i class="mail outline icon"></i>
+//         <div class="content">
+//           <a class="header">Thanks for being my owner</a>
+//           <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+//         </div>
+//       </div>
+//       <div class="item">
+//         <i class="mail outline icon"></i>
+//         <div class="content">
+//           <a class="header">What a walk</a>
+//           <div class="description">Man i am so tired that walk today really was too far...</div>
+//         </div>
+//       </div>
+//       <div class="item">
+//         <i class="map icon"></i>
+//         <div class="content">
+//           <a class="header">Sorry about your old dog</a>
+//           <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Ragamuffin</div>
+//       Your old dog.
+//     </div>
+//     <div class="list">
+//       <div class="item">
+//         <i class="photo icon"></i>
+//         <div class="content">
+//           <a class="header">Was on a walk today</a>
+//           <div class="description">Here's a picture of me on the farm with a cow...</div>
+//         </div>
+//       </div>
+//       <div class="item">
+//         <i class="mail outline icon"></i>
+//         <div class="content">
+//           <a class="header">Ruff Ruff</a>
+//           <div class="description">I know i usually message you in english but i wanted to see how your dog language was progressing...</div>
+//         </div>
+//       </div>
+//       <div class="item">
+//         <i class="mail outline icon"></i>
+//         <div class="content">
+//           <a class="header">Reaching Out</a>
+//           <div class="description">Hey its your old dog, been a while since you sent me to the farm...</div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.4
+
+.ui.list .item > .right.floated.icon
+	padding 					0.8em
+
+.ui.list .item > .ui.basic.red.button,
+.ui.table .ui.basic.red.button
+
+	&:active,
+	.active,
+	&:focus,
+	&:hover
+		color 					$red !important
+
+// Bulleted List
+// 
+// A list can mark items with a bullet. For convenience, a simple bulleted list can also use ul tag.
+//
+// Markup:
+// <div class="ui bulleted list">
+//   <div class="item">Cats</div>
+//   <div class="item">Horses</div>
+//   <div class="item">Dogs
+//     <div class="list">
+//       <div class="item">Labradoodles</div>
+//       <div class="item">Shiba Inu</div>
+//       <div class="item">Mastiff</div>
+//     </div>
+//   </div>
+// </div>
+// <ul class="ui list">
+//   <li>Cats</li>
+//   <li>Horses</li>
+//   <li>Dogs</li>
+//     <ul>
+//       <li>Labradoodles</li>
+//       <li>Shiba Inu</li>
+//       <li>Mastiff</li>
+//     </ul>
+// </ul>
+//
+// Styleguide 4.4.1
+
+// Ordered List
+// 
+// A list can be ordered numerically. For convenience, a simple ordered list can also use the ol tag.
+//
+// Markup:
+// <div class="ui ordered list">
+//   <div class="item">Getting Started</div>
+//   <div class="item">Introduction</div>
+//   <div class="item">Languages
+//     <div class="list">
+//       <div class="item">HTML</div>
+//       <div class="item">Javascript</div>
+//       <div class="item">CSS</div>
+//     </div>
+//   </div>
+// </div>
+// <ol class="ui list">
+//   <li>Cats</li>
+//   <li>Horses</li>
+//   <li>Dogs</li>
+//     <ol>
+//       <li>Labradoodles</li>
+//       <li>Shiba Inu</li>
+//       <li>Mastiff</li>
+//     </ol>
+// </ol>
+//
+// Styleguide 4.4.2
+
+// Link List
+// 
+// A link list is specially formatted for page links
+//
+// Markup:
+// <div class="ui link list">
+//   <a class="item">Home</a>
+//   <a class="item">About</a>
+//   <a class="item">Jobs</a>
+//   <a class="item">Team</a>
+// </div>
+//
+// Styleguide 4.4.3
+
+// Icon List
+// 
+// A list item can have an icon
+//
+// Markup:
+// <div class="ui list">
+//   <a class="item">
+//     <i class="right triangle icon"></i>
+//     How do you know your dog likes you?
+//   </a>
+//   <a class="item">
+//     <i class="right triangle icon"></i>
+//     When is it ok to send your dog to a farm?
+//   </a>
+//   <a class="item">
+//     <i class="right triangle icon"></i>
+//     Can you get your dog back from a farm if you really want him back?
+//   </a>
+//   <a class="item">
+//     <i class="right triangle icon"></i>
+//     Is trespassing on a farm a misdemeanor offence?
+//   </a>
+// </div>
+//
+// Styleguide 4.4.4
+
+// Content List
+// 
+// A list can have groups of content that can be floated left or right
+//
+// Markup:
+// <div class="ui divided list">
+//   <div class="item">
+//     <div class="right floated tiny teal ui button">View Listing</div>
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">New York Dog Fair</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <div class="right floated tiny teal ui button">View Listing</div>
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Dog Appreciation Day</div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.4.5
+
+// External Link List
+// 
+// A list can contain items that link
+//
+// Markup:
+// <div class="ui list">
+//   <a class="item">What is a FAQ?</a>
+//   <a class="item">How does one go about reading answers to questions in a FAQ</a>
+//   <a class="item">How do you close a web browser?</a>
+//   <a class="item">What is the most popular FAQ question?</a>
+// </div>
+//
+// Styleguide 4.4.6
+
+// List with Headers
+// 
+// A list item can contain a header
+//
+// Markup:
+// <div class="ui list">
+//   <div class="item">
+//     <div class="header">New York City</div>
+//     A lovely city
+//   </div>
+//   <div class="item">
+//     <div class="header">Chicago</div>
+//     Also quite a lovely city
+//   </div>
+//   <div class="item">
+//     <div class="header">Los Angeles</div>
+//     Sometimes can be a lovely city
+//   </div>
+//   <div class="item">
+//     <div class="header">San Francisco</div>
+//     What a lovely city
+//   </div>
+// </div>
+//
+// Styleguide 4.4.7
+
+// List with Descriptions
+// 
+// A list item can contain a description
+//
+// Markup:
+// <div class="ui divided list">
+//   <div class="item">
+//     <i class="circular map marker icon"></i>
+//     <div class="content">
+//       <a class="header">New York City</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="circular map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Chicago</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="circular map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Los Angeles</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="circular map marker icon"></i>
+//     <div class="content">
+//       <a class="header">San Francisco</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.4.8
+
+// Horizontal Lists
+// 
+// A list can be formatted horizontally
+//
+// Markup:
+// <div class="ui horizontal list">
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Snickerdoodle</div>
+//       An excellent companion
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Poodle</div>
+//       A poodle, its pretty basic
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Paulo</div>
+//       He's also a dog
+//     </div>
+//   </div>
+// </div>
+// <div class="ui ordered horizontal list">
+//   <div class="item">New York City</div>
+//   <div class="item">Chicago</div>
+//   <div class="item">Los Angeles</div>
+//   <div class="item">San Francisco</div>
+// </div>
+// <div class="ui horizontal bulleted list">
+//   <div class="item">
+//     Apples
+//   </div>
+//   <div class="item">
+//     Pears
+//   </div>
+//   <div class="item">
+//     Oranges
+//   </div>
+//   <div class="item">
+//     Soursop
+//   </div>
+// </div>
+//
+// Styleguide 4.4.9
+
+.ui.horizontal.list > a.item
+	text-decoration 		none
+	vertical-align 			top
+
+	&:hover,
+	&.hover,
+	&:focus,
+	&.focus
+		.content
+			text-decoration underline
+
+	.header
+		font-weight 		400
+
+	.header + span
+		font-size 			0.8em
+
+// Selection List
+// 
+// A selection list formats list items as possible choices
+//
+// Markup:
+// <div class="ui selection list">
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Snickerdoodle</div>
+//       An excellent companion
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Poodle</div>
+//       A poodle, its pretty basic
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Paulo</div>
+//       He's also a dog
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.4.10
+
+// Relaxed Lists
+// 
+// A list can relax its padding to provide more negative space
+//
+// Markup:
+// <div class="ui relaxed divided list">
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">New York City</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Chicago</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Los Angeles</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+// </div>
+// <div class="ui very relaxed divided list">
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">New York City</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Chicago</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Los Angeles</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+// </div>
+// <div class="ui relaxed horizontal divided list">
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">New York City</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Chicago</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Los Angeles</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+// </div>
+// <div class="ui very relaxed horizontal divided list">
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">New York City</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Chicago</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+//   <div class="item">
+//     <i class="map marker icon"></i>
+//     <div class="content">
+//       <a class="header">Los Angeles</a>
+//       <div class="description">A lovely city</div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.4.11
+
+// Divided Lists
+// 
+// A list can show divisions between content
+//
+// Markup:
+// <div class="ui divided list">
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Snickerdoodle</div>
+//       An excellent companion
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Poodle</div>
+//       A poodle, its pretty basic
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Paulo</div>
+//       He's also a dog
+//     </div>
+//   </div>
+// </div>
+// <div class="ui divided horizontal list">
+//   <div class="item">About Us</div>
+//   <div class="item">Contact</div>
+//   <div class="item">Support</div>
+// </div>
+//
+// Styleguide 4.4.12
+
+// Celled Lists
+// 
+// A list can divide its items into cells
+//
+// Markup:
+// <div class="ui celled list">
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Snickerdoodle</div>
+//       An excellent companion
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Poodle</div>
+//       A poodle, its pretty basic
+//     </div>
+//   </div>
+//   <div class="item">
+//     <img src="http://placehold.it/200x200">
+//     <div class="content">
+//       <div class="header">Paulo</div>
+//       He's also a dog
+//     </div>
+//   </div>
+// </div>
+// <div class="ui celled horizontal list">
+//   <div class="item">About Us</div>
+//   <div class="item">Contact</div>
+//   <div class="item">Support</div>
+// </div>
+//
+// Styleguide 4.4.13
+
+// Sized Lists
+// 
+// A list can vary in size
+//
+// .mini - mini
+// .tiny - tiny
+// .small - small
+// .large - large
+// .huge - huge
+// .massive - massive
+//
+// Markup:
+// <div class="ui {$modifiers} horizontal list">
+//   <div class="item">About Us</div>
+//   <div class="item">Contact</div>
+//   <div class="item">Support</div>
+// </div>
+//
+// Styleguide 4.4.14

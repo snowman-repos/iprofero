@@ -1,0 +1,157 @@
+.page-container(data-ng-controller='ProjectsController', data-ng-init="edit()")
+
+	.ui.page.one.column.grid.top.margin
+
+		.row
+			.column
+
+				.ui.large.header Edit Project: 
+					span(data-ng-bind="project.name")
+
+				.ui.form.segment
+
+					.field
+						label(for="name") Project Name:
+						.ui.left.labeled.input
+							input#name(name="name", type="text", placeholder="e.g. Summer Campaign", data-ng-model="project.name")
+							.ui.corner.label
+								i.asterisk.icon
+
+					.field
+						label(for="client") Client:
+						.ui.left.labeled.input
+							input#client(name="client", type="text", placeholder="e.g. Acme Industries", data-ng-model="project.client")
+							.ui.corner.label
+								i.asterisk.icon
+
+					.field
+						label(for="description") Description:
+						textarea#description(name="description", placeholder="what the project involves, what the objectives are, how we're going to do it etc...", data-ng-model="project.description")
+
+					.inline-field.top.bottom.margin(data-ng-hide="projects.length == 1")
+						.ui.slider.checkbox
+							input#hasparent(name="hasparent", type="checkbox", data-ng-model="hasparent", checkbox)
+							label(for="hasparent") Is this project a sub-project?
+
+					.inline.field(data-ng-show="hasparent")
+						label(for="parent") Parent project:
+						.ui.selection.dropdown(dropdown)
+							input#parent(name="parent", type="hidden", data-ng-model="project.parent")
+							.default.text(data-ng-bind="project.parent.name || 'Parent Project'")
+							i.dropdown.icon
+							.menu
+								.item(data-ng-repeat="otherproject in projects", data-ng-class="{'active':otherproject._id==project.parent.id}", data-ng-hide="otherproject._id == project._id", data-value="{{otherproject.name}}", data-ng-click="project.parent.id = otherproject._id; project.parent.name = otherproject.name;") {{ otherproject.name }}
+						a.ui.small.basic.circular.icon.button.margin.left(data-ng-show="project.parent.id", data-ng-click="project.parent.id = ''; project.parent.name = '';")
+							i.small.remove.link.icon
+
+					.inline.field
+						label(for="accountmanager") Account Manager:
+						.ui.selection.dropdown(dropdown)
+							input#accountmanager(name="accountmanager", type="hidden", data-ng-model="project.account_manager")
+							.default.text(data-ng-bind="project.account_manager.name || 'Account Manager'")
+							i.dropdown.icon
+							.menu
+								.item(data-ng-repeat="person in people", data-ng-class="{'active':person._id == project.account_manager}", data-value="{{person._id}}", data-ng-click="project.account_manager.id = person._id; project.account_manager.name = person.name; peopleValues[person._id] = true;") {{ person.name }}
+						a.ui.small.basic.circular.icon.button.margin.left(data-ng-show="project.account_manager.id", data-ng-click="peopleValues[project.account_manager.id] = false; project.account_manager.id = ''; project.account_manager.name = '';")
+							i.small.remove.link.icon
+
+
+					.inline.field
+						label(for="projectmanager") Project Manager:
+						.ui.selection.dropdown(dropdown)
+							input#projectmanager(name="projectmanager", type="hidden", data-ng-model="project.project_manager")
+							.default.text(data-ng-bind="project.project_manager.name || 'Project Manager'")
+							i.dropdown.icon
+							.menu
+								.item(data-ng-repeat="person in people", data-ng-class="{'active':person._id == project.project_manager}", data-value="{{person._id}}", data-ng-click="project.project_manager.id = person._id; project.project_manager.name = person.name; peopleValues[person._id] = true;") {{ person.name }}
+						a.ui.small.basic.circular.icon.button.margin.left(data-ng-show="project.project_manager.id", data-ng-click="peopleValues[project.project_manager.id] = false; project.project_manager.id = ''; project.project_manager.name = '';")
+							i.small.remove.link.icon
+
+					.field.top.bottom.margin
+						label Who else is partipating in this project?
+						.scrollable.ui.segment.bottom.margin
+							multiple-people-select(objects="people", values="peopleValues")
+
+					.field
+						label(for="github") Github Repo Name:
+						.ui.input
+							input#github(name="github", type="text", placeholder="Github Repo Name", data-ng-model="project.github")
+
+					.field
+						label(for="technologies") What technologies are used in this project?
+						tags-input#technologies(name="technologies", ng-model="technologies", list="technologySuggestions", placeholder="Add a technology...", replace-spaces-with-dashes="false", add-on-comma="true", add-on-space="false")
+
+					.field
+						label(for="development_url") Development URL:
+						.ui.input
+							input#development_url(name="development_url", type="text", placeholder="http://developmentbrand.com:xxxx", data-ng-model="project.urls.development")
+
+					.field
+						label(for="testing_url") Testing URL:
+						.ui.input
+							input#testing_url(name="testing_url", type="text", placeholder="http://testing.brand.com:xxxx", data-ng-model="project.urls.testing")
+
+					.field
+						label(for="staging_url") Staging URL:
+						.ui.input
+							input#staging_url(name="staging_url", type="text", placeholder="http://staging.brand.com", data-ng-model="project.urls.staging")
+
+					.field
+						label(for="production_url") Production URL:
+						.ui.input
+							input#production_url(name="production_url", type="text", placeholder="http://brand.com", data-ng-model="project.urls.production")
+
+				.ui.inverted.form.segment(data-ng-if="isAdmin")
+
+					.field
+						label(for="quote") Quotation
+							i
+								small  (link to vTiger):
+						.ui.input
+							input#quote(name="quote", type="text", placeholder="http://intranet.proferochina.com/quotes/....", data-ng-model="project.quote")
+
+					.field
+						label(for="purchase_order") Purchase Order:
+						.ui.input
+							input#purchase_order(name="purchase_order", type="text", placeholder="XXXXXX-X", data-ng-model="project.purchase_order")
+
+					.field
+						label(for="quote") Invoice
+							i
+								small  (link to vTiger):
+						.ui.input
+							input#invoice(name="invoice", type="text", placeholder="http://intranet.proferochina.com/invoices/....", data-ng-model="project.invoice")
+
+					.inline.fields
+						.field
+							label(for="amount") Quoted Amount:
+						.field
+							.ui.selection.dropdown(dropdown)
+								input#currency(name="currency", type="hidden", data-ng-model="project.revenue.currency")
+								.default.text
+									i.icon(data-ng-class="project.revenue.currency || 'yuan'")
+								i.dropdown.icon
+								.ui.icon.menu
+									a.active.item(data-value="yuan", data-ng-class="{'active':project.revenue.currency=='yuan'}", data-ng-click="project.revenue.currency = 'yuan'")
+										i.yuan.icon
+									a.item(data-value="dollar", data-ng-class="{'active':project.revenue.currency=='dollar'}", data-ng-click="project.revenue.currency = 'dollar'")
+										i.dollar.icon
+									a.item(data-value="euro", data-ng-class="{'active':project.revenue.currency=='euro'}", data-ng-click="project.revenue.currency = 'euro'")
+										i.euro.icon
+									a.item(data-value="pound", data-ng-class="{'active':project.revenue.currency=='pound'}", data-ng-click="project.revenue.currency = 'pound'")
+										i.pound.icon
+									a.item(data-value="rupee", data-ng-class="{'active':project.revenue.currency=='rupee'}", data-ng-click="project.revenue.currency = 'rupee'")
+										i.rupee.icon
+									a.item(data-value="yen", data-ng-class="{'active':project.revenue.currency=='yen'}", data-ng-click="project.revenue.currency = 'yen'")
+										i.yen.icon
+									a.item(data-value="won", data-ng-class="{'active':project.revenue.currency=='won'}", data-ng-click="project.revenue.currency = 'won'")
+										i.won.icon
+
+						.field
+							.ui.input
+								input#amount(name="amount", type="text", placeholder="0,000.00", data-ng-model="project.revenue.amount")
+
+				.ui.basic.segment
+					.ui.fluid.green.icon.button(data-ng-click="update()")
+						i.save.icon
+						| Save Changes to Project

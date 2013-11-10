@@ -1,0 +1,25 @@
+body
+	background-color 		$background-colour !important
+	margin 					0 !important
+	padding 				0 !important
+
+a
+	color 					$blue
+	transition 				$fast-transition
+
+	&:focus,
+	&:hover
+		color 				lighten(@color, 10%)
+		text-decoration 	none
+		transition 			$fast-transition
+
+	&:active
+		color 				darken(@color, 15%)
+
+.main-container
+	margin					0px 0px 3em
+	padding-top				43px
+	padding-bottom			30px
+
+.pointer
+	cursor 					pointer

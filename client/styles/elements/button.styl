@@ -1,0 +1,428 @@
+// Button
+//
+// Buttons indicate a possible user action. Buttons may be grouped, contain only icons, icons with text, and may be separated by conditionals. They may also be attached to other content elements.
+// 
+// :hover - A button can change to show a user has hovered their mouse
+// :active - A button can show it is currently the active user selection
+// :focus - A button can change when pressed using touch or mouse events
+// .disabled - A button can show it is currently unable to be interacted with
+// .loading - A button can show a loading indicator
+//
+// Markup:
+// 	<div class="ui button {$modifiers}">
+// 		Button
+// 	</div>
+//
+// Styleguide 2.1.0
+
+// Icon Buttons
+//
+// A button can have only an icon
+// 
+// Markup:
+// <div class="ui icon button">
+// 	<i class="cloud icon"></i>
+// </div>
+// 
+// Styleguide 2.1.1
+
+// Labeled Icon Buttons
+//
+// A button can have an icon and a label
+// 
+// Markup:
+// <div class="ui labeled icon button">
+// 	<i class="pause icon"></i>
+// 	Pause
+// </div>
+// <div class="ui right labeled icon button">
+// 	<i class="right arrow icon"></i>
+// 	Next
+// </div>
+// 
+// Styleguide 2.1.2
+
+// Social Buttons
+//
+// A button can be formatted to link to a social website
+// 
+// Markup:
+// <div class="ui facebook button">
+//   <i class="facebook icon"></i>
+//   Log-in with Facebook
+// </div>
+// <div class="ui twitter button">
+//   <i class="twitter icon"></i>
+//   Sign-up with Twitter
+// </div>
+// 
+// Styleguide 2.1.3
+
+.ui.linkedin.button
+	background-color		#1d87bd //linkedin colour
+	color 					$white
+
+	&:focus,
+	&:hover
+		background-color 	lighten(@background-color, 8%)
+
+	&:active
+		background-color 	darken(@background-color, 8%)
+
+.ui.google.button
+	background-color		#dc4b39 //google plus colour
+	color 					$white
+
+	&:focus,
+	&:hover
+		background-color 	lighten(@background-color, 8%)
+
+	&:active
+		background-color 	darken(@background-color, 8%)
+
+.ui.github.button
+	background-color		#5C6166 //github colour
+	color 					$white
+
+	&:focus,
+	&:hover
+		background-color 	lighten(@background-color, 8%)
+
+	&:active
+		background-color 	darken(@background-color, 8%)
+
+.ui.weibo.button
+	background-color		#eb182c //weibo colour
+	color 					$white
+
+	&:focus,
+	&:hover
+		background-color 	lighten(@background-color, 8%)
+
+	&:active
+		background-color 	darken(@background-color, 8%)
+
+// Grouped Buttons
+//
+// Buttons can exist together as a group
+// 
+// Markup:
+// <div class="ui buttons">
+//   <div class="ui button">One</div>
+//   <div class="ui button">Two</div>
+//   <div class="ui button">Three</div>
+// </div>
+// 
+// Styleguide 2.1.4
+
+// Conditional Buttons
+//
+// Button groups can be separated by conditionals
+// 
+// Markup:
+// <div class="ui buttons">
+//   <div class="ui button">Cancel</div>
+//   <div class="or"></div>
+//   <div class="ui positive button">Save</div>
+// </div>
+// 
+// Styleguide 2.1.5
+
+// Sized Buttons
+//
+// A button can have different sizes:
+// 
+// Markup:
+// <div class="mini ui button">
+//   Mini
+// </div>
+// <div class="tiny ui button">
+//   Tiny
+// </div>
+// <div class="small ui button">
+//   Small
+// </div>
+// <div class="medium ui button">
+//   Medium
+// </div>
+// <div class="large ui button">
+//   Large
+// </div>
+// <div class="big ui button">
+//   Big
+// </div>
+// <div class="huge ui button">
+//   Huge
+// </div>
+// <div class="massive ui button">
+//   Massive
+// </div>
+// 
+// Styleguide 2.1.6
+
+// Ordinality Buttons
+//
+// A button can be formatted to show different levels of emphasis
+// 
+// Markup:
+// <div class="ui primary button">
+//   Add to Cart
+// </div>
+// <div class="ui secondary button">
+//   Save
+// </div>
+// 
+// Styleguide 2.1.7
+
+// Basic Buttons
+//
+// A basic button removes all unnecessary formatting
+// 
+// Markup:
+// <div class="ui basic button">
+//   <i class="icon user"></i>
+//   Add Friend
+// </div>
+// <div class="ui basic button">
+//   <i class="icon globe"></i>
+//   Change Language
+// </div>
+// 
+// Styleguide 2.1.8
+
+// Coloured Buttons
+//
+// A button can have different colours:
+// 
+// .black - black
+// .green - green
+// .red - red
+// .yellow - yellow
+// .blue - blue
+// .purple - purple
+// .teal - teal
+// .orange - orange
+// 
+// Markup:
+// <a class="ui {$modifiers} button">Button</a>
+// 
+// Styleguide 2.1.9
+
+.ui.yellow.buttons .button,
+.ui.yellow.button
+	background-color				$yellow
+	color							$white
+
+.ui.yellow.buttons .button:hover,
+.ui.yellow.buttons .button:hover,
+.ui.yellow.button:hover,
+.ui.yellow.buttons .active.button,
+.ui.yellow.button.active
+	background-color				darken($yellow, 8%)
+	color							$white
+
+.ui.cobalt.buttons .button:active,
+.ui.cobalt.button:active
+	background-color				darken($cobalt, 15%)
+	color							$white
+
+.ui.cobalt.buttons .button,
+.ui.cobalt.button
+	background-color				$cobalt
+	color							$white
+
+.ui.cobalt.buttons .button:hover,
+.ui.cobalt.buttons .button:hover,
+.ui.cobalt.button:hover,
+.ui.cobalt.buttons .active.button,
+.ui.cobalt.button.active
+	background-color				darken($cobalt, 8%)
+	color							$white
+
+.ui.cobalt.buttons .button:active,
+.ui.cobalt.button:active
+	background-color				darken($cobalt, 15%)
+	color							$white
+
+// Toggle Buttons
+//
+// A button can be formatted to toggle on and off
+// 
+// Markup:
+// <div class="ui toggle button">
+//   Vote
+// </div>
+// <script>
+// 	$(".toggle").state({
+// 		text: {
+// 			inactive : 'Vote',
+// 			active   : 'Voted'
+// 		},
+// 		className: {
+// 			inactive : 'inactive',
+// 			active : 'active'
+// 		}
+// 	});
+// </script>
+// 
+// Styleguide 2.1.10
+
+// Feedback Buttons
+//
+// A button can be positive or negative:
+// 
+// Markup:
+// <div class="positive ui button">Positive Button</div>
+// <div class="negative ui button">Negative Button</div>
+// 
+// Styleguide 2.1.11
+
+// Fluid Buttons
+//
+// A button can fit parent container:
+// 
+// Markup:
+// <div class="fluid ui button">Fits container</div>
+// 
+// Styleguide 2.1.12
+
+.ui.fluid.vertical.buttons,
+.ui.fluid.vertical.buttons > .button
+	width 							100%
+
+// Circular Buttons
+//
+// A button can be circular:
+// 
+// Markup:
+// <div class="circular ui button">Rounded</div>
+// <div class="circular ui icon button">
+//   <i class="icon settings"></i></div>
+// 
+// Styleguide 2.1.13
+
+// Vertically Attached Buttons
+//
+// A button can be attached to the top or bottom of other content
+// 
+// Markup:
+// <div class="ui top attached button">Top</div>
+// <div class="ui attached segment"></div>
+// <div class="bottom attached ui button">Bottom</div>
+// 
+// Styleguide 2.1.14
+
+// Horizontally Attached Buttons
+//
+// A button can be attached to the left or right of other content
+// 
+// Markup:
+// <div class="ui left attached button">Left</div>
+// <div class="right attached ui button">Right</div>
+// 
+// Styleguide 2.1.15
+
+// Vertically Grouped Buttons
+//
+// Groups can be formatted to appear vertically
+// 
+// Markup:
+// <div class="ui vertical buttons">
+//   <div class="ui button">Top</div>
+//   <div class="ui button">Middle</div>
+//   <div class="ui button">Bottom</div>
+// </div>
+// 
+// Styleguide 2.1.16
+
+// Icon Grouped Buttons
+//
+// Groups can be formatted as icons
+// 
+// Markup:
+// <div class="ui icon buttons">
+//   <div class="ui button">
+//     <i class="pause icon"></i></div>
+//   <div class="ui button">
+//     <i class="play icon"></i></div>
+//   <div class="ui button">
+//     <i class="shuffle icon"></i></div>
+// </div>
+// 
+// Styleguide 2.1.17
+
+// Labeled Icon Grouped Buttons
+//
+// Groups can be formatted as labeled icons
+// 
+// Markup:
+// <div class="ui vertical labeled icon buttons">
+//   <div class="ui button">
+//     <i class="pause icon"></i>
+//     Pause
+//   </div>
+//   <div class="ui button">
+//     <i class="play icon"></i>
+//     Play
+//   </div>
+//   <div class="ui button">
+//     <i class="shuffle icon"></i>
+//     Shuffle
+//   </div>
+// </div>
+// 
+// Styleguide 2.1.18
+
+// Fluid Grouped Buttons
+//
+// Groups can be divided evenly to fit parent
+// 
+// Markup:
+// <div class="five fluid ui buttons">
+//   <div class="ui button">One</div>
+//   <div class="ui button">Two</div>
+//   <div class="ui button">Three</div>
+//   <div class="ui button">Four</div>
+//   <div class="ui button">Five</div>
+// </div>
+// 
+// Styleguide 2.1.19
+
+// Coloured Grouped Buttons
+//
+// Groups can have a shared colour
+// 
+// Markup:
+// <div class="blue ui buttons">
+//   <div class="ui button">One</div>
+//   <div class="ui button">Two</div>
+//   <div class="ui button">Three</div>
+// </div>
+// 
+// Styleguide 2.1.20
+
+// Basic Grouped Buttons
+//
+// A button group can be formatted to remove extra formatting
+// 
+// Markup:
+// <div class="ui basic buttons">
+//   <div class="ui button">One</div>
+//   <div class="ui button">Two</div>
+//   <div class="ui button">Three</div>
+// </div>
+// 
+// Styleguide 2.1.21
+
+// Sized Grouped Buttons
+//
+// Groups can have a shared size
+// 
+// Markup:
+// <div class="large ui buttons">
+//   <div class="ui button">One</div>
+//   <div class="ui button">Two</div>
+//   <div class="ui button">Three</div>
+// </div>
+// 
+// Styleguide 2.1.22

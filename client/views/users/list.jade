@@ -1,0 +1,39 @@
+.page-container(data-ng-controller='UsersController', data-ng-init='find()')			
+
+	.ui.page.one.column.grid
+
+		.row
+			.center.aligned.column.top.bottom.margin
+
+				.ui.icon.header
+					i.circular.user.icon
+					span(data-ng-bind="users.length")
+					span(ng-pluralize, count="users.length", when="{'1': ' Person', 'other': ' People'}")
+
+		.row
+			.column
+
+				table.ui.padded.sortable.table.segment
+					thead
+						tr
+							th(data-ng-click="predicate = 'name'; reverse=!reverse")
+								| name
+								i.alphabet.sort.icon.right(data-ng-class="{'descending':reverse}", data-ng-show="predicate == 'name'")
+							th(data-ng-click="predicate = 'team'; reverse=!reverse")
+								| team
+								i.alphabet.sort.icon.right(data-ng-class="{'descending':reverse}", data-ng-show="predicate == 'team'")
+							th(data-ng-click="predicate = 'email'; reverse=!reverse")
+								| email
+								i.alphabet.sort.icon.right(data-ng-class="{'descending':reverse}", data-ng-show="predicate == 'email'")
+					tbody
+						tr(data-ng-repeat='user in users | orderBy:predicate:reverse')
+							td
+								a(data-ng-href='#!/profile/{{user._id}}')
+									img.ui.large.link.image.avatar(data-ng-src="{{user.avatar}}", data-ng-if="user.avatar")
+									i.large.black.circular.user.link.icon(data-ng-if="!user.avatar")
+									.ui.inline.link.header(data-ng-bind="user.name")
+							td(data-ng-bind="user.team")
+							td
+								a(href="mailto:{{user.email}}", title="email {{user.name}}")
+									i.mail.icon
+									span(data-ng-bind="user.email")

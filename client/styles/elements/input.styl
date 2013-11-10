@@ -1,0 +1,174 @@
+// Input
+//
+// Inputs allow a user to enter information
+//
+// .error - An input field can show the data contains errors
+// :focus - An input field can show a user is currently interacting with it
+//
+// Markup:
+// <div class="ui input {$modifiers}">
+//   <input type="text" placeholder="Search...">
+// </div>
+//
+// Styleguide 2.7
+
+.ui.form input[type="text"]
+	padding 				1em
+
+// Loading Input
+//
+// An icon input field can show that it is currently loading data
+//
+// Markup:
+// <div class="ui icon input loading">
+//   <input type="text" placeholder="Search...">
+//   <i class="icon"></i>
+// </div>
+//
+// Styleguide 2.7.1
+
+// Icon Inputs
+//
+// An input can be formatted with an icon
+//
+// Markup:
+// <div class="ui segment">
+// 	<div class="ui icon input">
+// 	  <input type="text" placeholder="Search...">
+// 	  <i class="search icon"></i>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui left icon input">
+// 	  <input type="text" placeholder="Search users...">
+// 	  <i class="users icon"></i>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui icon input">
+// 	  <input type="text" placeholder="Search...">
+// 	  <i class="circular search icon"></i>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui icon input">
+// 	  <input type="text" placeholder="Search...">
+// 	  <i class="inverted search icon"></i>
+// 	</div>
+// </div>
+//
+// Styleguide 2.7.2
+
+// Labeled Inputs
+//
+// An input can be formatted with a label
+//
+// Markup:
+// <div class="ui segment">
+// 	<div class="ui labeled input">
+// 	  <input type="text" placeholder="Search...">
+// 	  <div class="ui corner label">
+// 	    <i class="asterisk icon"></i>
+// 	  </div>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui labeled input">
+// 	  <input type="text" placeholder="Search...">
+// 	  <div class="ui corner label">
+// 	    <div class="text">New</div>
+// 	  </div>
+// 	</div>
+// </div>
+//
+// Styleguide 2.7.3
+
+// Action Inputs
+//
+// An input can be formatted to alert the user to an action they may perform
+//
+// Markup:
+// <div class="ui segment">
+// 	<div class="ui action input">
+// 	  <input type="text" placeholder="Search...">
+// 	  <div class="ui button">Search</div>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui action input">
+// 	  <input type="text" placeholder="Username">
+// 	  <div class="ui teal button"><i class="user icon"></i> Add users</div>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui action input">
+// 	  <input type="text" placeholder="Search...">
+// 	  <div class="ui icon button"><i class="search icon"></i></div>
+// 	</div>
+// </div>
+//
+// Styleguide 2.7.4
+
+.ui.action.input > .button:first-of-type
+	border-top-right-radius 		0
+	border-bottom-right-radius 		0
+
+.ui.action.input > .button:last-of-type
+	border-top-right-radius 		0.2em
+	border-bottom-right-radius 		0.2em
+
+// Fluid Inputs
+//
+// An input can take the size of its container
+//
+// Markup:
+// <div class="ui fluid icon input">
+//   <input type="text" placeholder="Search a very wide input...">
+//   <i class="search icon"></i>
+// </div>
+//
+// Styleguide 2.7.5
+
+// Sized Inputs
+//
+// An input can vary in size
+//
+// Markup:
+// <div class="ui segment">
+// 	<div class="ui mini icon input">
+// 	  <input type="text" placeholder="Search mini...">
+// 	  <i class="search icon"></i>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui small icon input">
+// 	  <input type="text" placeholder="Search small...">
+// 	  <i class="search icon"></i>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui large icon input">
+// 	  <input type="text" placeholder="Search large...">
+// 	  <i class="search icon"></i>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui big icon input">
+// 	  <input type="text" placeholder="Search big...">
+// 	  <i class="search icon"></i>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui huge icon input">
+// 	  <input type="text" placeholder="Search huge...">
+// 	  <i class="search icon"></i>
+// 	</div>
+// </div>
+// <div class="ui segment">
+// 	<div class="ui massive icon input">
+// 	  <input type="text" placeholder="Search massive...">
+// 	  <i class="search icon"></i>
+// 	</div>
+// </div>
+//
+// Styleguide 2.7.6

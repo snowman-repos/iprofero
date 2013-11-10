@@ -1,0 +1,22 @@
+// Dropbox
+// 
+// Dropboxes are areas where files may be dropped
+//
+// Markup:
+// <div class="dropbox">
+// 	<i class="large move icon"></i>
+// 	<p class="disabled">drop file here</p>
+// </div>
+//
+// Styleguide 2.3
+
+.dropbox
+	border			3px dashed $grey
+	padding			$base-spacing-unit
+	text-align		center
+	transition		$slow-transition
+
+	&:active,
+	&:hover
+		background	rgba($white,0.6)
+		transition	$slow-transition

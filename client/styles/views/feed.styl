@@ -1,0 +1,252 @@
+// Feed
+// 
+// A feed presents user activity chronologically
+//
+// Markup:
+// <h4>Feed</h4>
+// <div class="ui piled feed segment">
+//   <h2 class="ui header">
+//     Recent Activity
+//   </h2>
+//   <div class="event">
+//     <div class="label">
+//       <img src="http://placehold.it/200x200">
+//     </div>
+//     <div class="content">
+//       <div class="date">
+//         Just moments ago
+//       </div>
+//       <div class="summary">
+//          <a>Sally Poodle</a> added you as a friend
+//       </div>
+//     </div>
+//   </div>
+//   <div class="event">
+//     <div class="label">
+//       <i class="circular pencil icon"></i>
+//     </div>
+//     <div class="content">
+//       <div class="date">
+//         3 days ago
+//       </div>
+//       <div class="summary">
+//         You submitted a new post to the page
+//       </div>
+//       <div class="extra text">
+//         I am a dog and I do not know how to make a post
+//       </div>
+//     </div>
+//   </div>
+//   <div class="event">
+//     <div class="label">
+//       <i class="circular photo icon"></i>
+//     </div>
+//     <div class="content">
+//       <div class="date">
+//         3 days ago
+//       </div>
+//       <div class="summary">
+//         <a>Sally Poodle</a> added <a>2 new photos</a> of you
+//       </div>
+//       <div class="extra images">
+//         <img src="http://placehold.it/200x200">
+//         <img src="http://placehold.it/200x200">
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.2
+
+// Feed Event
+// 
+// An event can contain a label
+//
+// Markup:
+// <h4>Label</h4>
+// <div class="ui feed segment">
+//   <div class="event">
+//     <div class="label">
+//       <img src="http://placehold.it/200x200">
+//     </div>
+//     <div class="content">
+//       <div class="summary">
+//          <a>Sally Poodle</a> added you as a friend
+//       </div>
+//     </div>
+//   </div>
+//   <div class="event">
+//     <div class="label">
+//       <i class="circular pencil icon"></i>
+//     </div>
+//     <div class="content">
+//       <div class="summary">
+//         You submitted a new post to the page
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.2.1
+
+// Feed Event with Date
+// 
+// An event can contain a date
+//
+// Markup:
+// <h4>Date</h4>
+// <div class="ui feed segment">
+//   <div class="event">
+//     <div class="label">
+//       <img src="http://placehold.it/200x200">
+//     </div>
+//     <div class="content">
+//       <div class="date">
+//         3 days ago
+//       </div>
+//       <div class="summary">
+//          <a>Sally Poodle</a> added you as a friend
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.2.2
+
+// Feed Event with Additional Information
+// 
+// An event can contain additional content explaining the event
+//
+// Markup:
+// <h4>Additional information</h4>
+// <div class="ui feed segment">
+//   <div class="event">
+//     <div class="label">
+//       <img src="http://placehold.it/200x200">
+//     </div>
+//     <div class="content">
+//       <div class="date">
+//         3 days ago
+//       </div>
+//       <div class="summary">
+//          <a>Sally Poodle</a> added 2 photos of you
+//       </div>
+//       <div class="extra images">
+//         <img src="http://placehold.it/200x200">
+//         <img src="http://placehold.it/200x200">
+//       </div>
+//     </div>
+//   </div>
+//   <div class="event">
+//     <div class="label">
+//       <img src="http://placehold.it/200x200">
+//     </div>
+//     <div class="content">
+//       <div class="date">
+//         3 days ago
+//       </div>
+//       <div class="summary">
+//          <a>Sally Poodle</a> created a post
+//       </div>
+//       <div class="extra text">
+//         I am a dog and I do not know how to make a post
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.2.3
+
+// Different Sized Feeds
+// 
+// A feed can have different sizes
+//
+// Markup:
+// <div class="ui grid">
+//   <div class="ten wide column">
+//     <div class="ui small piled feed segment">
+//       <h4 class="ui header">My Activity</h4>
+//       <div class="event">
+//         <div class="label">
+//           <img src="http://placehold.it/200x200">
+//         </div>
+//         <div class="content">
+//           <div class="date">
+//             Just moments ago
+//           </div>
+//           <div class="summary">
+//              <a>Sally Poodle</a> added you as a friend
+//           </div>
+//         </div>
+//       </div>
+//       <div class="event">
+//         <div class="label">
+//           <i class="circular pencil icon"></i>
+//         </div>
+//         <div class="content">
+//           <div class="date">
+//             3 days ago
+//           </div>
+//           <div class="summary">
+//             You submitted a new post to the page
+//           </div>
+//           <div class="extra text">
+//             I am a dog and I do not know how to make a post
+//           </div>
+//         </div>
+//       </div>
+//       <div class="event">
+//         <div class="label">
+//           <i class="circular photo icon"></i>
+//         </div>
+//         <div class="content">
+//           <div class="date">
+//             3 days ago
+//           </div>
+//           <div class="summary">
+//             <a>Sally Poodle</a> added <a>2 new photos</a> of you
+//           </div>
+//           <div class="extra images">
+//             <img src="http://placehold.it/200x200">
+//             <img src="http://placehold.it/200x200">
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="six wide column">
+//     <div class="ui small   feed segment">
+//       <h4 class="ui header">Followers Activity</h4>
+//       <div class="event">
+//         <div class="content">
+//           <div class="summary">
+//              <a>Sally Poodle</a> added <a>hotpup202</a> as a friend
+//           </div>
+//         </div>
+//       </div>
+//       <div class="event">
+//         <div class="content">
+//           <div class="summary">
+//              <a>Dally Doodle</a> added <a>hotpup202</a> as a friend
+//           </div>
+//         </div>
+//       </div>
+//       <div class="event">
+//         <div class="content">
+//           <div class="summary">
+//              <a>Sally Poodle</a> added <a>sixpack dog</a> as a friend
+//           </div>
+//         </div>
+//       </div>
+//       <div class="event">
+//         <div class="content">
+//           <div class="summary">
+//              <a>Dally Doodle</a> added <a>hotpup202</a> as a friend
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 4.2.4

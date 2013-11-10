@@ -1,0 +1,81 @@
+// Masthead
+// 
+// A masthead is a large display area at the top of a page
+//
+// .red - red
+// .green - green
+// .yellow - yellow
+// .orange - orange
+// .blue - blue
+// .purple - purple
+// .teal - teal
+//
+// Markup:
+// <div class="masthead {$modifiers} segment">
+// 	<div class="ui page grid">
+// 		<div class="column">
+// 				<h1 class="ui header">iProfero
+// 					<div class="sub header">Agency Management Toolset</div>
+// 				</h1>
+// 				<a class="ui black large labeled icon button" href="signin" target="_self">
+// 					<i class="sign in icon"></i> Get Started
+// 				</a>
+// 		</div>
+// 	</div>
+// </div>
+// <div class="ui divider"></div>
+// <div class="masthead {$modifiers} segment">
+// 	<h1 class="ui header">iProfero
+// 		<div class="sub header">Agency Management Toolset</div>
+// 	</h1>
+// </div>
+//
+// Styleguide 3.6
+
+.masthead
+	background-color 				$white
+	border-bottom 					none
+	margin-bottom 					0px
+	overflow 						hidden
+	padding 						50px 0px
+	position 						relative
+	text-align 						center
+
+	h1.ui.header
+		font-size 					5rem
+
+		.sub.header
+			font-size 				2rem
+
+.masthead.red
+	background-color 				$red
+
+.masthead.green
+	background-color 				$green
+
+.masthead.yellow
+	background-color 				$yellow
+
+.masthead.orange
+	background-color 				$orange
+
+.masthead.blue
+	background-color 				$blue
+
+.masthead.teal
+	background-color 				$teal
+
+.masthead.purple
+	background-color 				$purple
+
+.masthead.red,
+.masthead.green,
+.masthead.yellow,
+.masthead.orange,
+.masthead.blue,
+.masthead.teal,
+.masthead.purple
+	color 							rgba($white, 0.9)
+
+	.ui.header .sub.header
+		color 						rgba($white, 0.8)

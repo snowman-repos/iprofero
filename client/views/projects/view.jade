@@ -1,0 +1,126 @@
+.page-container(data-ng-controller='ProjectsController', data-ng-init='view()')
+
+	.ui.page.grid
+		.row.bottom.top.margin
+			.column
+				.ui.breadcrumb(data-ng-if="project.parent.id != ''")
+					a.section(href="#!/projects/{{project.parent.id}}", data-ng-bind="project.parent.name")
+					i.right.arrow.icon.divider
+					.active.section(data-ng-bind="project.name")
+				h1.ui.massive.header
+					span(click-to-edit-headline="project.name", default="'no name'", data-ng-if="isAdmin")
+					span(data-ng-bind="project.name", data-ng-if="!isAdmin")
+					.disabled.sub.header
+						span(click-to-edit-headline="project.client", default="'no client yet'", data-ng-if="isAdmin")
+						span(data-ng-bind="project.client", data-ng-if="!isAdmin")
+					a.ui.floated.right.labeled.cobalt.icon.button(href="#!/projects/edit/{{project._id}}", data-ng-if="isAdmin")
+						i.pencil.icon
+						| Edit Project
+				.ui.
+
+		.row.compact
+				.column
+					.ui.celled.relaxed.stackable.filled.rounded.grid
+						.row(data-ng-if="project.description")
+							.sixteen.wide.column
+								p(data-ng-bind="project.description")
+						.row
+							.twelve.wide.column
+								.ui.relaxed.stackable.grid
+									.row(data-ng-if="project.account_manager.id != '' || project.project_manager.id != ''")
+										.eight.wide.column(data-ng-if="project.account_manager.id != ''")
+											.ui.tiny.header Account Manager:
+											.ui.horizontal.list
+												a.item(href="#!/people/{{project.account_manager.id}}")
+													img.ui.avatar.image(data-ng-src="project.account_manager.avatar", data-ng-if="project.account_manager.avatar")
+													i.large.user.icon(data-ng-if="!project.account_manager.avatar")
+													.content
+														.header(data-ng-bind="project.account_manager.name")
+
+										.eight.wide.column(data-ng-if="project.project_manager.id != ''")
+											.ui.tiny.header Project Manager:
+											.ui.horizontal.list
+												a.item(href="#!/people/{{project.project_manager.id}}")
+													img.ui.avatar.image(data-ng-src="project.project_manager.avatar", data-ng-if="project.project_manager.avatar")
+													i.large.user.icon(data-ng-if="!project.project_manager.avatar")
+													.content
+														.header(data-ng-bind="project.project_manager.name")
+									.row
+										.column
+											.ui.tiny.header Participants:
+											.ui.horizontal.list
+												a.item(href="#!/people/{{participant._id}}", data-ng-repeat="participant in participants")
+													img.ui.avatar.image(data-ng-src="{{participant.avatar}}", data-ng-if="participant.avatar")
+													i.large.user.icon(data-ng-if="!participant.avatar")
+													.content
+														.header(data-ng-bind="participant.name")
+														span(data-ng-bind="participant.job_title || 'job title'")
+													
+
+									.row
+										.column
+											.ui.tiny.header Technologies used:
+											.basic.segment
+												.ui.teal.label(data-ng-repeat="technology in project.technologies", data-ng-bind="technology")
+
+
+							.four.wide.column
+								a.ui.labeled.icon.floated.fluid.teal.button.bottom.margin(href="https://github.com/Profero-China/{{project.github}}", data-ng-class="{'disabled':!project.github}")
+									i.github.icon
+									| Github Repo
+								.ui.vertical.fluid.buttons
+									a.ui.labeled.icon.floated.button(href="{{project.urls.development}}", data-ng-class="{'disabled':!project.urls.development}")
+										i.external.url.icon
+										| Development URL
+									a.ui.labeled.icon.floated.button(href="{{project.urls.testing}}", data-ng-class="{'disabled':!project.urls.testing}")
+										i.external.url.icon
+										| Testing URL
+									a.ui.labeled.icon.floated.button(href="{{project.urls.staging}}", data-ng-class="{'disabled':!project.urls.staging}")
+										i.external.url.icon
+										| Staging URL
+									a.ui.labeled.icon.floated.button(href="{{project.urls.production}}", data-ng-class="{'disabled':!project.urls.production}")
+										i.external.url.icon
+										| Production URL
+
+						.row(data-ng-if="project.sub_projects.length != 0")
+							.sixteen.wide.column
+
+								.ui.tiny.header Sub-Projects:
+
+								.ui.divided.horizontal.list
+									a.item(href="#!/projects/{{subproject.id}}", data-ng-repeat="subproject in project.sub_projects", data-ng-bind="subproject.name")
+
+	.ui.admin.page.grid.top.margin(data-ng-if="isAdmin")
+		.row
+			.column
+				table.ui.inverted.cobalt.padded.definition.table.segment
+					tbody
+						tr
+							td Quote:
+							td
+								a(href="project.quote")
+									i.external.url.icon
+									span(data-ng-bind="project.quote")
+
+						tr
+							td Purchase Order
+							td
+								a(href="project.purchase_order")
+									i.external.url.icon
+									span(data-ng-bind="project.purchase_order")
+						tr
+							td Invoice
+							td
+								a(href="project.invoice")
+									i.external.url.icon
+									span(data-ng-bind="project.invoice")
+						tr
+							td Revenue:
+							td
+								.ui.large.header
+									i.icon(data-ng-class="project.revenue.currency")
+									.content(data-ng-bind="project.revenue.amount")
+
+				.ui.red.labeled.icon.button(data-ng-click="remove()")
+					i.remove.icon
+					| Delete project

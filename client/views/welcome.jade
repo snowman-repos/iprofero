@@ -1,0 +1,158 @@
+div.page-container(data-ng-controller="IndexController", data-ng-init="welcome()")
+	.masthead.segment
+		h1.ui.header Welcome
+			div.sub.header to iProfero
+	
+	//- form.ui.fluid.form(action="/skills", method="post")
+	//- 	.field
+	//- 		label(for="name") Skill
+	//- 		.ui.left.labeled.icon.input
+	//- 			input#name(type="text", name="name", placeholder="e.g. HTML", data-ng-required)
+	//- 			i.tag.icon
+	//- 			.ui.corner.label
+	//- 				i.asterisk.icon
+	//- 	.inline.field
+	//- 		input.ui.blue.submit.button(type='submit', value="add")
+
+	.ui.relaxed.welcome.page.grid
+		.column
+			.ui.four.steps
+				.ui.step(data-ng-class="{'active':step==1, 'disabled':step!=1}")
+					| Basic Info 
+				.ui.step(data-ng-class="{'active':step==2, 'disabled':step!=2}")
+					| Work Info
+				.ui.step(data-ng-class="{'active':step==3, 'disabled':step!=3}")
+					| Personal Info
+				.ui.step(data-ng-class="{'active':step==4, 'disabled':step!=4}")
+					| Projects
+			
+			.ui.basic.segment(data-ng-show="step==1")
+	
+				form.ui.fluid.form(validate-welcome="1")
+					
+					.ui.celled.two.column.grid
+						.ui.column
+
+							.field
+								label(for="email") Email
+								.ui.left.labeled.icon.input
+									input#email(type="email", name="email", placeholder="e.g. joe.bloggs@agency.com", data-ng-required, data-ng-model="user.email")
+									i.mail.icon
+									.ui.corner.label
+										i.asterisk.icon
+					
+							.field.phone
+								label(for="telephone") Phone number
+								.ui.left.labeled.icon.input
+									input#telephone(type="text", name="telephone", placeholder="xxx-xxxx-xxxx", data-ng-required, data-ng-model="user.contact.telephone", ui-mask="999-9999-9999")
+									i.phone.icon
+									.ui.corner.label
+										i.asterisk.icon
+				
+							.field
+								label(for="job_title") Job Title
+								.ui.selection.fluid.dropdown(dropdown)
+									input#job_title(type="hidden", name="job_title", data-ng-required)
+									.default.text(data-ng-bind="user.job_title")
+									i.dropdown.icon
+									.menu
+										.item(data-ng-repeat="job in jobs", data-ng-class="{'active':job.title==user.job_title}", data-ng-click="user.job_title = job.title") {{ job.title }}
+	
+						.ui.column
+				
+							.field
+								label(for="team") Team:
+								.ui.selection.fluid.dropdown(dropdown)
+									input#team(type="hidden", name="team", data-ng-required)
+									.default.text(data-ng-bind="user.team")
+									i.dropdown.icon
+									.menu
+										.item(data-ng-repeat="team in teams", data-ng-class="{'active':team.name==user.team}", data-ng-click="user.team = team.name") {{ team.name }}
+
+							.field
+								label(for="skype") Skype username
+								.ui.left.labeled.icon.input
+									input#skype(type="text", name="skype", placeholder="joebloggs", data-ng-model="user.contact.skype")
+									i.skype.icon
+				
+							.field
+								label(for="github") Github username
+								.ui.left.labeled.icon.input
+									input#github(type="text", name="github", placeholder="joebloggs", data-ng-model="user.contact.github")
+									i.github.icon
+					
+					.ui.top.margin.grid
+						.center.aligned.column
+							.ui.right.labeled.green.icon.button
+								i.right.arrow.icon
+								| Next
+	
+			.ui.basic.segment(data-ng-show="step==2")
+	
+				form.ui.fluid.form(validate-welcome="2")
+					
+					.ui.celled.grid
+						.ui.column
+	
+							.field
+								label(for="salary") Salary
+								.ui.left.labeled.icon.input
+									input#salary(type="password", name="salary", data-ng-required, data-ng-model="user.salary")
+									i.yuan.icon
+									.ui.corner.label
+										i.asterisk.icon
+					
+							.field
+								label(for="startdate") When did you start working at Profero?
+								.ui.left.labeled.icon.input
+									input(date-time, month, year, min-view="month", max-view="year", format="MMMM, yyyy", data-ng-model="user.employment_period.start")
+									i.calender.icon
+									.ui.corner.label
+										i.asterisk.icon
+					
+					.ui.top.margin.grid
+						.center.aligned.column
+							.ui.right.labeled.green.icon.button
+								i.right.arrow.icon
+								| Next
+	
+			.ui.basic.segment(data-ng-show="step==3")
+	
+				div(validate-welcome="3")
+					.ui.celled.grid
+						.ui.column
+		
+							.field
+								label(for="skills") Skills:
+								tags-input(data-ng-model="skills", list="skillSuggestions", placeholder="Add a skill", replace-spaces-with-dashes="false", add-on-comma="true", add-on-space="false")
+	
+							.field.bottom.margin
+								label(for="website") Your website:
+								.ui.fluid.icon.input
+									input#website(type="text", name="website", placeholder="http://yoursite.com", data-ng-model="user.website")
+									i.desktop.icon
+	
+					.ui.top.margin.grid
+							.center.aligned.column
+								.ui.right.labeled.green.icon.button
+									i.right.arrow.icon
+									| Next
+	
+			.ui.basic.segment(data-ng-show="step==4")
+	
+				form.ui.fluid.form(validate-welcome="4")
+	
+					.ui.celled.grid
+						.ui.column
+	
+							.field
+								label What projects have you worked on?
+								.scrollable.ui.segment.bottom.margin
+									multiple-project-select(objects="projects", values="projectsValues")
+
+
+					.ui.top.margin.grid
+						.center.aligned.column
+							.ui.right.labeled.blue.icon.button
+								i.right.arrow.icon
+								| Finish

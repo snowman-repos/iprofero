@@ -1,0 +1,3802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>iProfero Styleguide v0.0.1</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel='stylesheet' href='/lib/semantic-ui/css/semantic.css' />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar kss-fixed">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">iProfero Styleguide</a></h1>
+            <h2 class="kss-doc-subtitle">v0.0.1</h2>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="4">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-1.html"><span class="kss-ref">1</span><span class="kss-name">Base</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-2.html"><span class="kss-ref">2</span><span class="kss-name">Elements</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-3.html"><span class="kss-ref">3</span><span class="kss-name">Collections</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-4.html"><span class="kss-ref">4</span><span class="kss-name">Views</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-5.html"><span class="kss-ref">5</span><span class="kss-name">Modules</span></a></li>
+              
+              <li class="kss-menu-item"><a href="section-6.html"><span class="kss-ref">6</span><span class="kss-name">Templates</span></a></li>
+              
+            </ul>
+            
+            <ul class="kss-menu-child">
+              
+              
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.1"><span class="kss-ref">4.1</span><span class="kss-name">Comment</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.1.1"><span class="kss-ref">4.1.1</span><span class="kss-name">Basic Single Comment</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.1.2"><span class="kss-ref">4.1.2</span><span class="kss-name">Comment with Metadata</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.1.3"><span class="kss-ref">4.1.3</span><span class="kss-name">Comment with Actions</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.1.4"><span class="kss-ref">4.1.4</span><span class="kss-name">Comment with a Reply Form</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.1.5"><span class="kss-ref">4.1.5</span><span class="kss-name">Threaded Comment List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.1.6"><span class="kss-ref">4.1.6</span><span class="kss-name">Minimal Comments Thread</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.2"><span class="kss-ref">4.2</span><span class="kss-name">Feed</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.2.1"><span class="kss-ref">4.2.1</span><span class="kss-name">Feed Event</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.2.2"><span class="kss-ref">4.2.2</span><span class="kss-name">Feed Event with Date</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.2.3"><span class="kss-ref">4.2.3</span><span class="kss-name">Feed Event with Additional Information</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.2.4"><span class="kss-ref">4.2.4</span><span class="kss-name">Different Sized Feeds</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.3"><span class="kss-ref">4.3</span><span class="kss-name">Item</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.3.1"><span class="kss-ref">4.3.1</span><span class="kss-name">Basic Item List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.3.2"><span class="kss-ref">4.3.2</span><span class="kss-name">Stackable Items</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.3.4"><span class="kss-ref">4.3.4</span><span class="kss-name">Connected Items</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.3.5"><span class="kss-ref">4.3.5</span><span class="kss-name">Item Column Count</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4"><span class="kss-ref">4.4</span><span class="kss-name">List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.1"><span class="kss-ref">4.4.1</span><span class="kss-name">Bulleted List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.2"><span class="kss-ref">4.4.2</span><span class="kss-name">Ordered List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.3"><span class="kss-ref">4.4.3</span><span class="kss-name">Link List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.4"><span class="kss-ref">4.4.4</span><span class="kss-name">Icon List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.5"><span class="kss-ref">4.4.5</span><span class="kss-name">Content List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.6"><span class="kss-ref">4.4.6</span><span class="kss-name">External Link List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.7"><span class="kss-ref">4.4.7</span><span class="kss-name">List with Headers</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.8"><span class="kss-ref">4.4.8</span><span class="kss-name">List with Descriptions</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.9"><span class="kss-ref">4.4.9</span><span class="kss-name">Horizontal Lists</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.10"><span class="kss-ref">4.4.10</span><span class="kss-name">Selection List</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.11"><span class="kss-ref">4.4.11</span><span class="kss-name">Relaxed Lists</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.12"><span class="kss-ref">4.4.12</span><span class="kss-name">Divided Lists</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.13"><span class="kss-ref">4.4.13</span><span class="kss-name">Celled Lists</span></a></li>
+              
+              
+              
+              <li class="kss-menu-item"><a href="#section-4.4.14"><span class="kss-ref">4.4.14</span><span class="kss-name">Sized Lists</span></a></li>
+              
+              
+            </ul>
+            
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          
+          
+          <section id="section-4" class="kss-section kss-depth-1">
+            <h1 class="kss-title"><span class="kss-ref">4</span> Views</h1>
+            
+            
+            <div class="kss-description">
+              <p>Components made up of combinations of base elements and collections.</p>
+
+            </div>
+            
+            
+          </section>
+          
+          <section id="section-4.1" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">4.1</span> Comment</h1>
+            
+            
+            <div class="kss-description">
+              <p>A comment view is used to display lists of user feedback to site content</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui two column grid">
+  <div class="column">
+    <div class="ui piled blue segment">
+      <h2 class="ui header">
+        <i class="icon inverted circular blue comment"></i> Comments
+      </h2>
+      <div class="ui comments">
+        <div class="comment">
+          <a class="avatar">
+            <img src="http://placehold.it/200x200">
+          </a>
+          <div class="content">
+            <a class="author">Dog Doggington</a>
+            <div class="metadata">
+              <span class="date">2 days ago</span>
+            </div>
+            <div class="text">
+              I think this is a great idea and i am voting on it
+            </div>
+            <div class="actions">
+              <a class="reply">Reply</a>
+              <a class="delete">Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <a class="avatar">
+            <img src="http://placehold.it/200x200">
+          </a>
+          <div class="content">
+            <a class="author">Pawfin Dog</a>
+            <div class="metadata">
+              <span class="date">2 days ago</span>
+            </div>
+            <div class="text">
+              I think this is a great idea and i am voting on it
+            </div>
+            <div class="actions">
+              <a class="reply">Reply</a>
+              <a class="delete">Delete</a>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <a class="avatar">
+            <img src="http://placehold.it/200x200">
+          </a>
+          <div class="content">
+            <a class="author">Dog Doggington</a>
+            <div class="metadata">
+              <span class="date">2 days ago</span>
+            </div>
+            <div class="text">
+              I think this is a great idea and i am voting on it
+            </div>
+            <div class="actions">
+              <a class="reply">Reply</a>
+              <a class="delete">Delete</a>
+            </div>
+          </div>
+        </div>
+        <form class="ui reply form">
+          <div class="field">
+            <textarea></textarea>
+          </div>
+          <div class="ui fluid blue labeled submit icon button">
+            <i class="icon edit"></i> Add Reply
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui two column grid&quot;&gt;
+  &lt;div class=&quot;column&quot;&gt;
+    &lt;div class=&quot;ui piled blue segment&quot;&gt;
+      &lt;h2 class=&quot;ui header&quot;&gt;
+        &lt;i class=&quot;icon inverted circular blue comment&quot;&gt;&lt;/i&gt; Comments
+      &lt;/h2&gt;
+      &lt;div class=&quot;ui comments&quot;&gt;
+        &lt;div class=&quot;comment&quot;&gt;
+          &lt;a class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+          &lt;/a&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+            &lt;div class=&quot;metadata&quot;&gt;
+              &lt;span class=&quot;date&quot;&gt;2 days ago&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text&quot;&gt;
+              I think this is a great idea and i am voting on it
+            &lt;/div&gt;
+            &lt;div class=&quot;actions&quot;&gt;
+              &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+              &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;comment&quot;&gt;
+          &lt;a class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+          &lt;/a&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;a class=&quot;author&quot;&gt;Pawfin Dog&lt;/a&gt;
+            &lt;div class=&quot;metadata&quot;&gt;
+              &lt;span class=&quot;date&quot;&gt;2 days ago&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text&quot;&gt;
+              I think this is a great idea and i am voting on it
+            &lt;/div&gt;
+            &lt;div class=&quot;actions&quot;&gt;
+              &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+              &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;comment&quot;&gt;
+          &lt;a class=&quot;avatar&quot;&gt;
+            &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+          &lt;/a&gt;
+          &lt;div class=&quot;content&quot;&gt;
+            &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+            &lt;div class=&quot;metadata&quot;&gt;
+              &lt;span class=&quot;date&quot;&gt;2 days ago&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text&quot;&gt;
+              I think this is a great idea and i am voting on it
+            &lt;/div&gt;
+            &lt;div class=&quot;actions&quot;&gt;
+              &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+              &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;form class=&quot;ui reply form&quot;&gt;
+          &lt;div class=&quot;field&quot;&gt;
+            &lt;textarea&gt;&lt;/textarea&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;ui fluid blue labeled submit icon button&quot;&gt;
+            &lt;i class=&quot;icon edit&quot;&gt;&lt;/i&gt; Add Reply
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.1.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.1.1</span> Basic Single Comment</h1>
+            
+            
+            <div class="kss-description">
+              <p>A comment can contain an image or avatar</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui comments">
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Dog Doggington</a>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui comments&quot;&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.1.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.1.2</span> Comment with Metadata</h1>
+            
+            
+            <div class="kss-description">
+              <p>A comment can contain metadata about the comment, an arbitrary amount of metadata may be defined.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui comments">
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Dog Doggington</a>
+      <div class="metadata">
+        <div class="date">2 days ago</div>
+        <div class="stars">
+          <i class="icon star"></i>
+          <i class="icon star"></i>
+          <i class="icon star"></i>
+          <i class="icon empty star"></i>
+          <i class="icon empty star"></i>
+        </div>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui comments&quot;&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;div class=&quot;date&quot;&gt;2 days ago&lt;/div&gt;
+        &lt;div class=&quot;stars&quot;&gt;
+          &lt;i class=&quot;icon star&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon star&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon star&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon empty star&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon empty star&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.1.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.1.3</span> Comment with Actions</h1>
+            
+            
+            <div class="kss-description">
+              <p>A comment can contain an list of actions a user may perform related to this comment.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui comments">
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Dog Doggington</a>
+      <div class="metadata">
+        <div class="date">2 days ago</div>
+        <div class="stars">
+          <i class="icon star"></i>
+          <i class="icon star"></i>
+          <i class="icon star"></i>
+          <i class="icon empty star"></i>
+          <i class="icon empty star"></i>
+        </div>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+        <a class="delete">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui comments&quot;&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;div class=&quot;date&quot;&gt;2 days ago&lt;/div&gt;
+        &lt;div class=&quot;stars&quot;&gt;
+          &lt;i class=&quot;icon star&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon star&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon star&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon empty star&quot;&gt;&lt;/i&gt;
+          &lt;i class=&quot;icon empty star&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+      &lt;div class=&quot;actions&quot;&gt;
+        &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+        &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.1.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.1.4</span> Comment with a Reply Form</h1>
+            
+            
+            <div class="kss-description">
+              <p>A comment can contain a form to reply to a comment. This may have arbitrary content.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui comments">
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Dog Doggington</a>
+      <div class="metadata">
+        <div class="date">2 days ago</div>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+      <div class="actions">
+        <a class="reply active">Reply</a>
+        <a class="delete">Delete</a>
+      </div>
+      <form class="ui reply form">
+        <div class="field">
+          <textarea></textarea>
+        </div>
+        <div class="ui button teal submit labeled icon">
+          <i class="icon edit"></i> Add Reply
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui comments&quot;&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;div class=&quot;date&quot;&gt;2 days ago&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+      &lt;div class=&quot;actions&quot;&gt;
+        &lt;a class=&quot;reply active&quot;&gt;Reply&lt;/a&gt;
+        &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;form class=&quot;ui reply form&quot;&gt;
+        &lt;div class=&quot;field&quot;&gt;
+          &lt;textarea&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;ui button teal submit labeled icon&quot;&gt;
+          &lt;i class=&quot;icon edit&quot;&gt;&lt;/i&gt; Add Reply
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.1.5" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.1.5</span> Threaded Comment List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A comment list can be threaded to showing the relationship between conversations</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui threaded comments">
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Dog Doggington</a>
+      <div class="metadata">
+        <span class="date">2 days ago</span>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+        <a class="delete">Delete</a>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="comment">
+        <a class="avatar">
+          <img src="http://placehold.it/200x200">
+        </a>
+        <div class="content">
+          <a class="author">Pawfin Dog</a>
+          <div class="metadata">
+            <span class="date">1 day ago</span>
+          </div>
+          <div class="text">
+            I think this is a great idea and i am voting on it
+          </div>
+          <div class="actions">
+            <a class="reply">Reply</a>
+            <a class="delete">Delete</a>
+          </div>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <a class="avatar">
+              <img src="http://placehold.it/200x200">
+            </a>
+            <div class="content">
+              <a class="author">Dog Doggington</a>
+              <div class="metadata">
+                <span class="date">20 minutes ago</span>
+              </div>
+              <div class="text">
+                I think this is a great idea and i am voting on it
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+                <a class="delete">Delete</a>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <a class="avatar">
+              <img src="http://placehold.it/200x200">
+            </a>
+            <div class="content">
+              <a class="author">Dog Doggington</a>
+              <div class="metadata">
+                <span class="date">20 minutes ago</span>
+              </div>
+              <div class="text">
+                Also pizza.
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+                <a class="delete">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comment">
+        <a class="avatar">
+          <img src="http://placehold.it/200x200">
+        </a>
+        <div class="content">
+          <a class="author">Dog Doggington</a>
+          <div class="metadata">
+            <span class="date">2 days ago</span>
+          </div>
+          <div class="text">
+            I think this is a great idea and i am voting on it
+          </div>
+          <div class="actions">
+            <a class="reply">Reply</a>
+            <a class="delete">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Dog Doggington</a>
+      <div class="metadata">
+        <span class="date">20 hours ago</span>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+      </div>
+    </div>
+  </div>
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Pawfin Dog</a>
+      <div class="metadata">
+        <span class="date">15 hours ago</span>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui threaded comments&quot;&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;span class=&quot;date&quot;&gt;2 days ago&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+      &lt;div class=&quot;actions&quot;&gt;
+        &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+        &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;comments&quot;&gt;
+      &lt;div class=&quot;comment&quot;&gt;
+        &lt;a class=&quot;avatar&quot;&gt;
+          &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;author&quot;&gt;Pawfin Dog&lt;/a&gt;
+          &lt;div class=&quot;metadata&quot;&gt;
+            &lt;span class=&quot;date&quot;&gt;1 day ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;text&quot;&gt;
+            I think this is a great idea and i am voting on it
+          &lt;/div&gt;
+          &lt;div class=&quot;actions&quot;&gt;
+            &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+            &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;comments&quot;&gt;
+          &lt;div class=&quot;comment&quot;&gt;
+            &lt;a class=&quot;avatar&quot;&gt;
+              &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+            &lt;/a&gt;
+            &lt;div class=&quot;content&quot;&gt;
+              &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+              &lt;div class=&quot;metadata&quot;&gt;
+                &lt;span class=&quot;date&quot;&gt;20 minutes ago&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;text&quot;&gt;
+                I think this is a great idea and i am voting on it
+              &lt;/div&gt;
+              &lt;div class=&quot;actions&quot;&gt;
+                &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+                &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;comment&quot;&gt;
+            &lt;a class=&quot;avatar&quot;&gt;
+              &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+            &lt;/a&gt;
+            &lt;div class=&quot;content&quot;&gt;
+              &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+              &lt;div class=&quot;metadata&quot;&gt;
+                &lt;span class=&quot;date&quot;&gt;20 minutes ago&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;text&quot;&gt;
+                Also pizza.
+              &lt;/div&gt;
+              &lt;div class=&quot;actions&quot;&gt;
+                &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+                &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;comment&quot;&gt;
+        &lt;a class=&quot;avatar&quot;&gt;
+          &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+          &lt;div class=&quot;metadata&quot;&gt;
+            &lt;span class=&quot;date&quot;&gt;2 days ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;text&quot;&gt;
+            I think this is a great idea and i am voting on it
+          &lt;/div&gt;
+          &lt;div class=&quot;actions&quot;&gt;
+            &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+            &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;span class=&quot;date&quot;&gt;20 hours ago&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+      &lt;div class=&quot;actions&quot;&gt;
+        &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Pawfin Dog&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;span class=&quot;date&quot;&gt;15 hours ago&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+      &lt;div class=&quot;actions&quot;&gt;
+        &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.1.6" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.1.6</span> Minimal Comments Thread</h1>
+            
+            
+            <div class="kss-description">
+              <p>Comments can hide extra information unless a user shows intent to interact with a comment.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui minimal comments">
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Dog Doggington</a>
+      <div class="metadata">
+        <span class="date">2 days ago</span>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+        <a class="delete">Delete</a>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="comment">
+        <a class="avatar">
+          <img src="http://placehold.it/200x200">
+        </a>
+        <div class="content">
+          <a class="author">Pawfin Dog</a>
+          <div class="metadata">
+            <span class="date">1 day ago</span>
+          </div>
+          <div class="text">
+            I think this is a great idea and i am voting on it
+          </div>
+          <div class="actions">
+            <a class="reply">Reply</a>
+            <a class="delete">Delete</a>
+          </div>
+        </div>
+        <div class="comments">
+          <div class="comment">
+            <a class="avatar">
+              <img src="http://placehold.it/200x200">
+            </a>
+            <div class="content">
+              <a class="author">Dog Doggington</a>
+              <div class="metadata">
+                <span class="date">20 minutes ago</span>
+              </div>
+              <div class="text">
+                I think this is a great idea and i am voting on it
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+                <a class="delete">Delete</a>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <a class="avatar">
+              <img src="http://placehold.it/200x200">
+            </a>
+            <div class="content">
+              <a class="author">Dog Doggington</a>
+              <div class="metadata">
+                <span class="date">20 minutes ago</span>
+              </div>
+              <div class="text">
+                Also pizza.
+              </div>
+              <div class="actions">
+                <a class="reply">Reply</a>
+                <a class="delete">Delete</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="comment">
+        <a class="avatar">
+          <img src="http://placehold.it/200x200">
+        </a>
+        <div class="content">
+          <a class="author">Dog Doggington</a>
+          <div class="metadata">
+            <span class="date">2 days ago</span>
+          </div>
+          <div class="text">
+            I think this is a great idea and i am voting on it
+          </div>
+          <div class="actions">
+            <a class="reply">Reply</a>
+            <a class="delete">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Dog Doggington</a>
+      <div class="metadata">
+        <span class="date">20 hours ago</span>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+      </div>
+    </div>
+  </div>
+  <div class="comment">
+    <a class="avatar">
+      <img src="http://placehold.it/200x200">
+    </a>
+    <div class="content">
+      <a class="author">Pawfin Dog</a>
+      <div class="metadata">
+        <span class="date">15 hours ago</span>
+      </div>
+      <div class="text">
+        I think this is a great idea and i am voting on it
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui minimal comments&quot;&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;span class=&quot;date&quot;&gt;2 days ago&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+      &lt;div class=&quot;actions&quot;&gt;
+        &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+        &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;comments&quot;&gt;
+      &lt;div class=&quot;comment&quot;&gt;
+        &lt;a class=&quot;avatar&quot;&gt;
+          &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;author&quot;&gt;Pawfin Dog&lt;/a&gt;
+          &lt;div class=&quot;metadata&quot;&gt;
+            &lt;span class=&quot;date&quot;&gt;1 day ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;text&quot;&gt;
+            I think this is a great idea and i am voting on it
+          &lt;/div&gt;
+          &lt;div class=&quot;actions&quot;&gt;
+            &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+            &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;comments&quot;&gt;
+          &lt;div class=&quot;comment&quot;&gt;
+            &lt;a class=&quot;avatar&quot;&gt;
+              &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+            &lt;/a&gt;
+            &lt;div class=&quot;content&quot;&gt;
+              &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+              &lt;div class=&quot;metadata&quot;&gt;
+                &lt;span class=&quot;date&quot;&gt;20 minutes ago&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;text&quot;&gt;
+                I think this is a great idea and i am voting on it
+              &lt;/div&gt;
+              &lt;div class=&quot;actions&quot;&gt;
+                &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+                &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;comment&quot;&gt;
+            &lt;a class=&quot;avatar&quot;&gt;
+              &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+            &lt;/a&gt;
+            &lt;div class=&quot;content&quot;&gt;
+              &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+              &lt;div class=&quot;metadata&quot;&gt;
+                &lt;span class=&quot;date&quot;&gt;20 minutes ago&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;text&quot;&gt;
+                Also pizza.
+              &lt;/div&gt;
+              &lt;div class=&quot;actions&quot;&gt;
+                &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+                &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;comment&quot;&gt;
+        &lt;a class=&quot;avatar&quot;&gt;
+          &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+          &lt;div class=&quot;metadata&quot;&gt;
+            &lt;span class=&quot;date&quot;&gt;2 days ago&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;text&quot;&gt;
+            I think this is a great idea and i am voting on it
+          &lt;/div&gt;
+          &lt;div class=&quot;actions&quot;&gt;
+            &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+            &lt;a class=&quot;delete&quot;&gt;Delete&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Dog Doggington&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;span class=&quot;date&quot;&gt;20 hours ago&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+      &lt;div class=&quot;actions&quot;&gt;
+        &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;comment&quot;&gt;
+    &lt;a class=&quot;avatar&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;author&quot;&gt;Pawfin Dog&lt;/a&gt;
+      &lt;div class=&quot;metadata&quot;&gt;
+        &lt;span class=&quot;date&quot;&gt;15 hours ago&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;text&quot;&gt;
+        I think this is a great idea and i am voting on it
+      &lt;/div&gt;
+      &lt;div class=&quot;actions&quot;&gt;
+        &lt;a class=&quot;reply&quot;&gt;Reply&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.2" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">4.2</span> Feed</h1>
+            
+            
+            <div class="kss-description">
+              <p>A feed presents user activity chronologically</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <h4>Feed</h4>
+<div class="ui piled feed segment">
+  <h2 class="ui header">
+    Recent Activity
+  </h2>
+  <div class="event">
+    <div class="label">
+      <img src="http://placehold.it/200x200">
+    </div>
+    <div class="content">
+      <div class="date">
+        Just moments ago
+      </div>
+      <div class="summary">
+         <a>Sally Poodle</a> added you as a friend
+      </div>
+    </div>
+  </div>
+  <div class="event">
+    <div class="label">
+      <i class="circular pencil icon"></i>
+    </div>
+    <div class="content">
+      <div class="date">
+        3 days ago
+      </div>
+      <div class="summary">
+        You submitted a new post to the page
+      </div>
+      <div class="extra text">
+        I am a dog and I do not know how to make a post
+      </div>
+    </div>
+  </div>
+  <div class="event">
+    <div class="label">
+      <i class="circular photo icon"></i>
+    </div>
+    <div class="content">
+      <div class="date">
+        3 days ago
+      </div>
+      <div class="summary">
+        <a>Sally Poodle</a> added <a>2 new photos</a> of you
+      </div>
+      <div class="extra images">
+        <img src="http://placehold.it/200x200">
+        <img src="http://placehold.it/200x200">
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;h4&gt;Feed&lt;/h4&gt;
+&lt;div class=&quot;ui piled feed segment&quot;&gt;
+  &lt;h2 class=&quot;ui header&quot;&gt;
+    Recent Activity
+  &lt;/h2&gt;
+  &lt;div class=&quot;event&quot;&gt;
+    &lt;div class=&quot;label&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        Just moments ago
+      &lt;/div&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+         &lt;a&gt;Sally Poodle&lt;/a&gt; added you as a friend
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;event&quot;&gt;
+    &lt;div class=&quot;label&quot;&gt;
+      &lt;i class=&quot;circular pencil icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        3 days ago
+      &lt;/div&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+        You submitted a new post to the page
+      &lt;/div&gt;
+      &lt;div class=&quot;extra text&quot;&gt;
+        I am a dog and I do not know how to make a post
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;event&quot;&gt;
+    &lt;div class=&quot;label&quot;&gt;
+      &lt;i class=&quot;circular photo icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        3 days ago
+      &lt;/div&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+        &lt;a&gt;Sally Poodle&lt;/a&gt; added &lt;a&gt;2 new photos&lt;/a&gt; of you
+      &lt;/div&gt;
+      &lt;div class=&quot;extra images&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.2.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.2.1</span> Feed Event</h1>
+            
+            
+            <div class="kss-description">
+              <p>An event can contain a label</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <h4>Label</h4>
+<div class="ui feed segment">
+  <div class="event">
+    <div class="label">
+      <img src="http://placehold.it/200x200">
+    </div>
+    <div class="content">
+      <div class="summary">
+         <a>Sally Poodle</a> added you as a friend
+      </div>
+    </div>
+  </div>
+  <div class="event">
+    <div class="label">
+      <i class="circular pencil icon"></i>
+    </div>
+    <div class="content">
+      <div class="summary">
+        You submitted a new post to the page
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;h4&gt;Label&lt;/h4&gt;
+&lt;div class=&quot;ui feed segment&quot;&gt;
+  &lt;div class=&quot;event&quot;&gt;
+    &lt;div class=&quot;label&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+         &lt;a&gt;Sally Poodle&lt;/a&gt; added you as a friend
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;event&quot;&gt;
+    &lt;div class=&quot;label&quot;&gt;
+      &lt;i class=&quot;circular pencil icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+        You submitted a new post to the page
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.2.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.2.2</span> Feed Event with Date</h1>
+            
+            
+            <div class="kss-description">
+              <p>An event can contain a date</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <h4>Date</h4>
+<div class="ui feed segment">
+  <div class="event">
+    <div class="label">
+      <img src="http://placehold.it/200x200">
+    </div>
+    <div class="content">
+      <div class="date">
+        3 days ago
+      </div>
+      <div class="summary">
+         <a>Sally Poodle</a> added you as a friend
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;h4&gt;Date&lt;/h4&gt;
+&lt;div class=&quot;ui feed segment&quot;&gt;
+  &lt;div class=&quot;event&quot;&gt;
+    &lt;div class=&quot;label&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        3 days ago
+      &lt;/div&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+         &lt;a&gt;Sally Poodle&lt;/a&gt; added you as a friend
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.2.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.2.3</span> Feed Event with Additional Information</h1>
+            
+            
+            <div class="kss-description">
+              <p>An event can contain additional content explaining the event</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <h4>Additional information</h4>
+<div class="ui feed segment">
+  <div class="event">
+    <div class="label">
+      <img src="http://placehold.it/200x200">
+    </div>
+    <div class="content">
+      <div class="date">
+        3 days ago
+      </div>
+      <div class="summary">
+         <a>Sally Poodle</a> added 2 photos of you
+      </div>
+      <div class="extra images">
+        <img src="http://placehold.it/200x200">
+        <img src="http://placehold.it/200x200">
+      </div>
+    </div>
+  </div>
+  <div class="event">
+    <div class="label">
+      <img src="http://placehold.it/200x200">
+    </div>
+    <div class="content">
+      <div class="date">
+        3 days ago
+      </div>
+      <div class="summary">
+         <a>Sally Poodle</a> created a post
+      </div>
+      <div class="extra text">
+        I am a dog and I do not know how to make a post
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;h4&gt;Additional information&lt;/h4&gt;
+&lt;div class=&quot;ui feed segment&quot;&gt;
+  &lt;div class=&quot;event&quot;&gt;
+    &lt;div class=&quot;label&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        3 days ago
+      &lt;/div&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+         &lt;a&gt;Sally Poodle&lt;/a&gt; added 2 photos of you
+      &lt;/div&gt;
+      &lt;div class=&quot;extra images&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;event&quot;&gt;
+    &lt;div class=&quot;label&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;date&quot;&gt;
+        3 days ago
+      &lt;/div&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+         &lt;a&gt;Sally Poodle&lt;/a&gt; created a post
+      &lt;/div&gt;
+      &lt;div class=&quot;extra text&quot;&gt;
+        I am a dog and I do not know how to make a post
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.2.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.2.4</span> Different Sized Feeds</h1>
+            
+            
+            <div class="kss-description">
+              <p>A feed can have different sizes</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui grid">
+  <div class="ten wide column">
+    <div class="ui small piled feed segment">
+      <h4 class="ui header">My Activity</h4>
+      <div class="event">
+        <div class="label">
+          <img src="http://placehold.it/200x200">
+        </div>
+        <div class="content">
+          <div class="date">
+            Just moments ago
+          </div>
+          <div class="summary">
+             <a>Sally Poodle</a> added you as a friend
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="label">
+          <i class="circular pencil icon"></i>
+        </div>
+        <div class="content">
+          <div class="date">
+            3 days ago
+          </div>
+          <div class="summary">
+            You submitted a new post to the page
+          </div>
+          <div class="extra text">
+            I am a dog and I do not know how to make a post
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="label">
+          <i class="circular photo icon"></i>
+        </div>
+        <div class="content">
+          <div class="date">
+            3 days ago
+          </div>
+          <div class="summary">
+            <a>Sally Poodle</a> added <a>2 new photos</a> of you
+          </div>
+          <div class="extra images">
+            <img src="http://placehold.it/200x200">
+            <img src="http://placehold.it/200x200">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="six wide column">
+    <div class="ui small   feed segment">
+      <h4 class="ui header">Followers Activity</h4>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Sally Poodle</a> added <a>hotpup202</a> as a friend
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Dally Doodle</a> added <a>hotpup202</a> as a friend
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Sally Poodle</a> added <a>sixpack dog</a> as a friend
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             <a>Dally Doodle</a> added <a>hotpup202</a> as a friend
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui grid&quot;&gt;
+  &lt;div class=&quot;ten wide column&quot;&gt;
+    &lt;div class=&quot;ui small piled feed segment&quot;&gt;
+      &lt;h4 class=&quot;ui header&quot;&gt;My Activity&lt;/h4&gt;
+      &lt;div class=&quot;event&quot;&gt;
+        &lt;div class=&quot;label&quot;&gt;
+          &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;div class=&quot;date&quot;&gt;
+            Just moments ago
+          &lt;/div&gt;
+          &lt;div class=&quot;summary&quot;&gt;
+             &lt;a&gt;Sally Poodle&lt;/a&gt; added you as a friend
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;event&quot;&gt;
+        &lt;div class=&quot;label&quot;&gt;
+          &lt;i class=&quot;circular pencil icon&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;div class=&quot;date&quot;&gt;
+            3 days ago
+          &lt;/div&gt;
+          &lt;div class=&quot;summary&quot;&gt;
+            You submitted a new post to the page
+          &lt;/div&gt;
+          &lt;div class=&quot;extra text&quot;&gt;
+            I am a dog and I do not know how to make a post
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;event&quot;&gt;
+        &lt;div class=&quot;label&quot;&gt;
+          &lt;i class=&quot;circular photo icon&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;div class=&quot;date&quot;&gt;
+            3 days ago
+          &lt;/div&gt;
+          &lt;div class=&quot;summary&quot;&gt;
+            &lt;a&gt;Sally Poodle&lt;/a&gt; added &lt;a&gt;2 new photos&lt;/a&gt; of you
+          &lt;/div&gt;
+          &lt;div class=&quot;extra images&quot;&gt;
+            &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+            &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;six wide column&quot;&gt;
+    &lt;div class=&quot;ui small   feed segment&quot;&gt;
+      &lt;h4 class=&quot;ui header&quot;&gt;Followers Activity&lt;/h4&gt;
+      &lt;div class=&quot;event&quot;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;div class=&quot;summary&quot;&gt;
+             &lt;a&gt;Sally Poodle&lt;/a&gt; added &lt;a&gt;hotpup202&lt;/a&gt; as a friend
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;event&quot;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;div class=&quot;summary&quot;&gt;
+             &lt;a&gt;Dally Doodle&lt;/a&gt; added &lt;a&gt;hotpup202&lt;/a&gt; as a friend
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;event&quot;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;div class=&quot;summary&quot;&gt;
+             &lt;a&gt;Sally Poodle&lt;/a&gt; added &lt;a&gt;sixpack dog&lt;/a&gt; as a friend
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;event&quot;&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;div class=&quot;summary&quot;&gt;
+             &lt;a&gt;Dally Doodle&lt;/a&gt; added &lt;a&gt;hotpup202&lt;/a&gt; as a friend
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.3" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">4.3</span> Item</h1>
+            
+            
+            <div class="kss-description">
+              <p>An item view presents related site content.  Items must manually be given a width and height that match up to the content that it displays. Content must also be truncated so that each item will not exceed the maximum height.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui items">
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="like ui corner label">
+        <i class="like icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Cute Dog</div>
+      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+      <div class="extra">
+          199 votes
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="like ui corner label">
+        <i class="like icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="meta">5 days ago</div>
+      <div class="name">Faithful Dog</div>
+      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+      <div class="extra">
+          311 votes
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="like ui corner label">
+        <i class="like icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Silly Dog</div>
+      <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+      <div class="extra">
+          522 votes
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui items&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;like ui corner label&quot;&gt;
+        &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+      &lt;div class=&quot;extra&quot;&gt;
+          199 votes
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;like ui corner label&quot;&gt;
+        &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;meta&quot;&gt;5 days ago&lt;/div&gt;
+      &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+      &lt;div class=&quot;extra&quot;&gt;
+          311 votes
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;like ui corner label&quot;&gt;
+        &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;name&quot;&gt;Silly Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.&lt;/p&gt;
+      &lt;div class=&quot;extra&quot;&gt;
+          522 votes
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.3.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.3.1</span> Basic Item List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A basic item list.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui text items">
+  <div class="item">
+    <div class="content">
+      <div class="meta">2 days ago</div>
+      <div class="name">Cute Dog</div>
+      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+    </div>
+    <div class="extra">
+        199 votes
+    </div>
+  </div>
+  <div class="item">
+    <div class="content">
+      <div class="meta">5 days ago</div>
+      <div class="name">Faithful Dog</div>
+      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+    </div>
+    <div class="extra">
+        311 votes
+    </div>
+  </div>
+  <div class="item">
+    <div class="content">
+      <div class="meta">1 week ago</div>
+      <div class="name">Silly Dog</div>
+      <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    </div>
+    <div class="extra">
+        522 votes
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui text items&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;meta&quot;&gt;2 days ago&lt;/div&gt;
+      &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;extra&quot;&gt;
+        199 votes
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;meta&quot;&gt;5 days ago&lt;/div&gt;
+      &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;extra&quot;&gt;
+        311 votes
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;meta&quot;&gt;1 week ago&lt;/div&gt;
+      &lt;div class=&quot;name&quot;&gt;Silly Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;extra&quot;&gt;
+        522 votes
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.3.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.3.2</span> Stackable Items</h1>
+            
+            
+            <div class="kss-description">
+              <p>An item view can have its items take the full width when below a browser resolution threshold to allow for content to display properly at small sizes</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui stackable items">
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="like ui corner label">
+        <i class="like icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Cute Dog</div>
+      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+      <div class="extra">
+          199 votes
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="like ui corner label">
+        <i class="like icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="meta">5 days ago</div>
+      <div class="name">Faithful Dog</div>
+      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+      <div class="extra">
+          311 votes
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui stackable items&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;like ui corner label&quot;&gt;
+        &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+      &lt;div class=&quot;extra&quot;&gt;
+          199 votes
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;like ui corner label&quot;&gt;
+        &lt;i class=&quot;like icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;meta&quot;&gt;5 days ago&lt;/div&gt;
+      &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+      &lt;div class=&quot;extra&quot;&gt;
+          311 votes
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.3.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.3.4</span> Connected Items</h1>
+            
+            
+            <div class="kss-description">
+              <p>An item list can be automatically sized to be even height. Connected item lists cannot display extra information. A connected row must also assume an arbitrary column width unless specified.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui connected items">
+  <div class="row">
+    <div class="item">
+      <div class="image">
+        <img src="http://placehold.it/200x200">
+      </div>
+      <div class="content">
+        <div class="name">Cute Dog</div>
+        <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image">
+        <img src="http://placehold.it/200x200">
+      </div>
+      <div class="content">
+        <div class="name">Faithful Dog</div>
+        <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image">
+        <img src="http://placehold.it/200x200">
+      </div>
+      <div class="content">
+        <div class="name">Silly Dog</div>
+        <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui six connected items">
+  <div class="row">
+    <div class="item">
+      <div class="content">
+        <div class="name">Cute Dog</div>
+        <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="content">
+        <div class="name">Faithful Dog</div>
+        <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="content">
+        <div class="name">Silly Dog</div>
+        <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="content">
+        <div class="name">Cute Dog</div>
+        <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="content">
+        <div class="name">Faithful Dog</div>
+        <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="content">
+        <div class="name">Silly Dog</div>
+        <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui connected items&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;image&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;image&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;image&quot;&gt;
+        &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Silly Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui six connected items&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Silly Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;div class=&quot;name&quot;&gt;Silly Dog&lt;/div&gt;
+        &lt;p class=&quot;description&quot;&gt;Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.3.5" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.3.5</span> Item Column Count</h1>
+            
+            
+            <div class="kss-description">
+              <p>An item list can list how many columns should exist in a row</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui four {$modifiers} items">
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="star ui corner label">
+        <i class="star icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Cute Dog</div>
+      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="star ui corner label">
+        <i class="star icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Faithful Dog</div>
+      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="star ui corner label">
+        <i class="star icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Silly Dog</div>
+      <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="star ui corner label">
+        <i class="star icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Happy Dog</div>
+      <p class="description">Happy dogs are pretty interesting if you are an unhappy person.</p>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.connected</div>
+                  <div class="kss-modifier-description">
+                    <p>A connected item list with a specified column count</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui four connected items">
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="star ui corner label">
+        <i class="star icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Cute Dog</div>
+      <p class="description">This dog has some things going for it. Its pretty cute and looks like it'd be fun to cuddle up with.</p>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="star ui corner label">
+        <i class="star icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Faithful Dog</div>
+      <p class="description">Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.</p>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="star ui corner label">
+        <i class="star icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Silly Dog</div>
+      <p class="description">Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.</p>
+    </div>
+  </div>
+  <div class="item">
+    <div class="image">
+      <img src="http://placehold.it/200x200">
+      <a class="star ui corner label">
+        <i class="star icon"></i>
+      </a>
+    </div>
+    <div class="content">
+      <div class="name">Happy Dog</div>
+      <p class="description">Happy dogs are pretty interesting if you are an unhappy person.</p>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui four {$modifiers} items&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;star ui corner label&quot;&gt;
+        &lt;i class=&quot;star icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;name&quot;&gt;Cute Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;This dog has some things going for it. Its pretty cute and looks like it&#x27;d be fun to cuddle up with.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;star ui corner label&quot;&gt;
+        &lt;i class=&quot;star icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;name&quot;&gt;Faithful Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;Sometimes its more important to have a dog you know you can trust. But not every dog is trustworthy, you can tell by looking at its smile.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;star ui corner label&quot;&gt;
+        &lt;i class=&quot;star icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;name&quot;&gt;Silly Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;Silly dogs can be quite fun to have as companions. You never know what kind of ridiculous thing they will do.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;image&quot;&gt;
+      &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+      &lt;a class=&quot;star ui corner label&quot;&gt;
+        &lt;i class=&quot;star icon&quot;&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;name&quot;&gt;Happy Dog&lt;/div&gt;
+      &lt;p class=&quot;description&quot;&gt;Happy dogs are pretty interesting if you are an unhappy person.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4" class="kss-section kss-depth-2">
+            <h1 class="kss-title"><span class="kss-ref">4.4</span> List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list is a group of related content items ordered consecutively</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui divided list">
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Schnoodle</div>
+      Your new dog
+    </div>
+    <div class="list">
+      <div class="item">
+        <i class="mail outline icon"></i>
+        <div class="content">
+          <a class="header">Thanks for being my owner</a>
+          <div class="description">Im so glad you chose to bring me home from the shelter...</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="mail outline icon"></i>
+        <div class="content">
+          <a class="header">What a walk</a>
+          <div class="description">Man i am so tired that walk today really was too far...</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="map icon"></i>
+        <div class="content">
+          <a class="header">Sorry about your old dog</a>
+          <div class="description">Is this your address? I'm getting dropped off from the SPCA...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Ragamuffin</div>
+      Your old dog.
+    </div>
+    <div class="list">
+      <div class="item">
+        <i class="photo icon"></i>
+        <div class="content">
+          <a class="header">Was on a walk today</a>
+          <div class="description">Here's a picture of me on the farm with a cow...</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="mail outline icon"></i>
+        <div class="content">
+          <a class="header">Ruff Ruff</a>
+          <div class="description">I know i usually message you in english but i wanted to see how your dog language was progressing...</div>
+        </div>
+      </div>
+      <div class="item">
+        <i class="mail outline icon"></i>
+        <div class="content">
+          <a class="header">Reaching Out</a>
+          <div class="description">Hey its your old dog, been a while since you sent me to the farm...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Schnoodle&lt;/div&gt;
+      Your new dog
+    &lt;/div&gt;
+    &lt;div class=&quot;list&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        &lt;i class=&quot;mail outline icon&quot;&gt;&lt;/i&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;header&quot;&gt;Thanks for being my owner&lt;/a&gt;
+          &lt;div class=&quot;description&quot;&gt;Im so glad you chose to bring me home from the shelter...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        &lt;i class=&quot;mail outline icon&quot;&gt;&lt;/i&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;header&quot;&gt;What a walk&lt;/a&gt;
+          &lt;div class=&quot;description&quot;&gt;Man i am so tired that walk today really was too far...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        &lt;i class=&quot;map icon&quot;&gt;&lt;/i&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;header&quot;&gt;Sorry about your old dog&lt;/a&gt;
+          &lt;div class=&quot;description&quot;&gt;Is this your address? I&#x27;m getting dropped off from the SPCA...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Ragamuffin&lt;/div&gt;
+      Your old dog.
+    &lt;/div&gt;
+    &lt;div class=&quot;list&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        &lt;i class=&quot;photo icon&quot;&gt;&lt;/i&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;header&quot;&gt;Was on a walk today&lt;/a&gt;
+          &lt;div class=&quot;description&quot;&gt;Here&#x27;s a picture of me on the farm with a cow...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        &lt;i class=&quot;mail outline icon&quot;&gt;&lt;/i&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;header&quot;&gt;Ruff Ruff&lt;/a&gt;
+          &lt;div class=&quot;description&quot;&gt;I know i usually message you in english but i wanted to see how your dog language was progressing...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;
+        &lt;i class=&quot;mail outline icon&quot;&gt;&lt;/i&gt;
+        &lt;div class=&quot;content&quot;&gt;
+          &lt;a class=&quot;header&quot;&gt;Reaching Out&lt;/a&gt;
+          &lt;div class=&quot;description&quot;&gt;Hey its your old dog, been a while since you sent me to the farm...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.1" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.1</span> Bulleted List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can mark items with a bullet. For convenience, a simple bulleted list can also use ul tag.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui bulleted list">
+  <div class="item">Cats</div>
+  <div class="item">Horses</div>
+  <div class="item">Dogs
+    <div class="list">
+      <div class="item">Labradoodles</div>
+      <div class="item">Shiba Inu</div>
+      <div class="item">Mastiff</div>
+    </div>
+  </div>
+</div>
+<ul class="ui list">
+  <li>Cats</li>
+  <li>Horses</li>
+  <li>Dogs</li>
+    <ul>
+      <li>Labradoodles</li>
+      <li>Shiba Inu</li>
+      <li>Mastiff</li>
+    </ul>
+</ul>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui bulleted list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;Cats&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Horses&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Dogs
+    &lt;div class=&quot;list&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;Labradoodles&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;Shiba Inu&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;Mastiff&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ul class=&quot;ui list&quot;&gt;
+  &lt;li&gt;Cats&lt;/li&gt;
+  &lt;li&gt;Horses&lt;/li&gt;
+  &lt;li&gt;Dogs&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Labradoodles&lt;/li&gt;
+      &lt;li&gt;Shiba Inu&lt;/li&gt;
+      &lt;li&gt;Mastiff&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/ul&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.2" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.2</span> Ordered List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can be ordered numerically. For convenience, a simple ordered list can also use the ol tag.</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui ordered list">
+  <div class="item">Getting Started</div>
+  <div class="item">Introduction</div>
+  <div class="item">Languages
+    <div class="list">
+      <div class="item">HTML</div>
+      <div class="item">Javascript</div>
+      <div class="item">CSS</div>
+    </div>
+  </div>
+</div>
+<ol class="ui list">
+  <li>Cats</li>
+  <li>Horses</li>
+  <li>Dogs</li>
+    <ol>
+      <li>Labradoodles</li>
+      <li>Shiba Inu</li>
+      <li>Mastiff</li>
+    </ol>
+</ol>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui ordered list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;Getting Started&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Introduction&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Languages
+    &lt;div class=&quot;list&quot;&gt;
+      &lt;div class=&quot;item&quot;&gt;HTML&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;Javascript&lt;/div&gt;
+      &lt;div class=&quot;item&quot;&gt;CSS&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;ol class=&quot;ui list&quot;&gt;
+  &lt;li&gt;Cats&lt;/li&gt;
+  &lt;li&gt;Horses&lt;/li&gt;
+  &lt;li&gt;Dogs&lt;/li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Labradoodles&lt;/li&gt;
+      &lt;li&gt;Shiba Inu&lt;/li&gt;
+      &lt;li&gt;Mastiff&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/ol&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.3" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.3</span> Link List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A link list is specially formatted for page links</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui link list">
+  <a class="item">Home</a>
+  <a class="item">About</a>
+  <a class="item">Jobs</a>
+  <a class="item">Team</a>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui link list&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;Home&lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;About&lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;Jobs&lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;Team&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.4" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.4</span> Icon List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list item can have an icon</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui list">
+  <a class="item">
+    <i class="right triangle icon"></i>
+    How do you know your dog likes you?
+  </a>
+  <a class="item">
+    <i class="right triangle icon"></i>
+    When is it ok to send your dog to a farm?
+  </a>
+  <a class="item">
+    <i class="right triangle icon"></i>
+    Can you get your dog back from a farm if you really want him back?
+  </a>
+  <a class="item">
+    <i class="right triangle icon"></i>
+    Is trespassing on a farm a misdemeanor offence?
+  </a>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui list&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;right triangle icon&quot;&gt;&lt;/i&gt;
+    How do you know your dog likes you?
+  &lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;right triangle icon&quot;&gt;&lt;/i&gt;
+    When is it ok to send your dog to a farm?
+  &lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;right triangle icon&quot;&gt;&lt;/i&gt;
+    Can you get your dog back from a farm if you really want him back?
+  &lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;
+    &lt;i class=&quot;right triangle icon&quot;&gt;&lt;/i&gt;
+    Is trespassing on a farm a misdemeanor offence?
+  &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.5" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.5</span> Content List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can have groups of content that can be floated left or right</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui divided list">
+  <div class="item">
+    <div class="right floated tiny teal ui button">View Listing</div>
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">New York Dog Fair</div>
+    </div>
+  </div>
+  <div class="item">
+    <div class="right floated tiny teal ui button">View Listing</div>
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Dog Appreciation Day</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;right floated tiny teal ui button&quot;&gt;View Listing&lt;/div&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;New York Dog Fair&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;right floated tiny teal ui button&quot;&gt;View Listing&lt;/div&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Dog Appreciation Day&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.6" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.6</span> External Link List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can contain items that link</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui list">
+  <a class="item">What is a FAQ?</a>
+  <a class="item">How does one go about reading answers to questions in a FAQ</a>
+  <a class="item">How do you close a web browser?</a>
+  <a class="item">What is the most popular FAQ question?</a>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui list&quot;&gt;
+  &lt;a class=&quot;item&quot;&gt;What is a FAQ?&lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;How does one go about reading answers to questions in a FAQ&lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;How do you close a web browser?&lt;/a&gt;
+  &lt;a class=&quot;item&quot;&gt;What is the most popular FAQ question?&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.7" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.7</span> List with Headers</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list item can contain a header</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui list">
+  <div class="item">
+    <div class="header">New York City</div>
+    A lovely city
+  </div>
+  <div class="item">
+    <div class="header">Chicago</div>
+    Also quite a lovely city
+  </div>
+  <div class="item">
+    <div class="header">Los Angeles</div>
+    Sometimes can be a lovely city
+  </div>
+  <div class="item">
+    <div class="header">San Francisco</div>
+    What a lovely city
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;header&quot;&gt;New York City&lt;/div&gt;
+    A lovely city
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;header&quot;&gt;Chicago&lt;/div&gt;
+    Also quite a lovely city
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;header&quot;&gt;Los Angeles&lt;/div&gt;
+    Sometimes can be a lovely city
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;div class=&quot;header&quot;&gt;San Francisco&lt;/div&gt;
+    What a lovely city
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.8" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.8</span> List with Descriptions</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list item can contain a description</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui divided list">
+  <div class="item">
+    <i class="circular map marker icon"></i>
+    <div class="content">
+      <a class="header">New York City</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="circular map marker icon"></i>
+    <div class="content">
+      <a class="header">Chicago</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="circular map marker icon"></i>
+    <div class="content">
+      <a class="header">Los Angeles</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="circular map marker icon"></i>
+    <div class="content">
+      <a class="header">San Francisco</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;circular map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;New York City&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;circular map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Chicago&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;circular map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Los Angeles&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;circular map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;San Francisco&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.9" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.9</span> Horizontal Lists</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can be formatted horizontally</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui horizontal list">
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Snickerdoodle</div>
+      An excellent companion
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Poodle</div>
+      A poodle, its pretty basic
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Paulo</div>
+      He's also a dog
+    </div>
+  </div>
+</div>
+<div class="ui ordered horizontal list">
+  <div class="item">New York City</div>
+  <div class="item">Chicago</div>
+  <div class="item">Los Angeles</div>
+  <div class="item">San Francisco</div>
+</div>
+<div class="ui horizontal bulleted list">
+  <div class="item">
+    Apples
+  </div>
+  <div class="item">
+    Pears
+  </div>
+  <div class="item">
+    Oranges
+  </div>
+  <div class="item">
+    Soursop
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui horizontal list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Snickerdoodle&lt;/div&gt;
+      An excellent companion
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Poodle&lt;/div&gt;
+      A poodle, its pretty basic
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Paulo&lt;/div&gt;
+      He&#x27;s also a dog
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui ordered horizontal list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;New York City&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Chicago&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Los Angeles&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;San Francisco&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui horizontal bulleted list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    Apples
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    Pears
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    Oranges
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    Soursop
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.10" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.10</span> Selection List</h1>
+            
+            
+            <div class="kss-description">
+              <p>A selection list formats list items as possible choices</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui selection list">
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Snickerdoodle</div>
+      An excellent companion
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Poodle</div>
+      A poodle, its pretty basic
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Paulo</div>
+      He's also a dog
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui selection list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Snickerdoodle&lt;/div&gt;
+      An excellent companion
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Poodle&lt;/div&gt;
+      A poodle, its pretty basic
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Paulo&lt;/div&gt;
+      He&#x27;s also a dog
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.11" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.11</span> Relaxed Lists</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can relax its padding to provide more negative space</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui relaxed divided list">
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">New York City</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Chicago</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Los Angeles</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+</div>
+<div class="ui very relaxed divided list">
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">New York City</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Chicago</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Los Angeles</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+</div>
+<div class="ui relaxed horizontal divided list">
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">New York City</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Chicago</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Los Angeles</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+</div>
+<div class="ui very relaxed horizontal divided list">
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">New York City</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Chicago</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="map marker icon"></i>
+    <div class="content">
+      <a class="header">Los Angeles</a>
+      <div class="description">A lovely city</div>
+    </div>
+  </div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui relaxed divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;New York City&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Chicago&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Los Angeles&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui very relaxed divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;New York City&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Chicago&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Los Angeles&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui relaxed horizontal divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;New York City&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Chicago&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Los Angeles&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui very relaxed horizontal divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;New York City&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Chicago&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;i class=&quot;map marker icon&quot;&gt;&lt;/i&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;a class=&quot;header&quot;&gt;Los Angeles&lt;/a&gt;
+      &lt;div class=&quot;description&quot;&gt;A lovely city&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.12" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.12</span> Divided Lists</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can show divisions between content</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui divided list">
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Snickerdoodle</div>
+      An excellent companion
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Poodle</div>
+      A poodle, its pretty basic
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Paulo</div>
+      He's also a dog
+    </div>
+  </div>
+</div>
+<div class="ui divided horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui divided list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Snickerdoodle&lt;/div&gt;
+      An excellent companion
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Poodle&lt;/div&gt;
+      A poodle, its pretty basic
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Paulo&lt;/div&gt;
+      He&#x27;s also a dog
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui divided horizontal list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;About Us&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Contact&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Support&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.13" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.13</span> Celled Lists</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can divide its items into cells</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui celled list">
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Snickerdoodle</div>
+      An excellent companion
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Poodle</div>
+      A poodle, its pretty basic
+    </div>
+  </div>
+  <div class="item">
+    <img src="http://placehold.it/200x200">
+    <div class="content">
+      <div class="header">Paulo</div>
+      He's also a dog
+    </div>
+  </div>
+</div>
+<div class="ui celled horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui celled list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Snickerdoodle&lt;/div&gt;
+      An excellent companion
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Poodle&lt;/div&gt;
+      A poodle, its pretty basic
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;
+    &lt;img src=&quot;http://placehold.it/200x200&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+      &lt;div class=&quot;header&quot;&gt;Paulo&lt;/div&gt;
+      He&#x27;s also a dog
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ui celled horizontal list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;About Us&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Contact&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Support&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          <section id="section-4.4.14" class="kss-section kss-depth-3">
+            <h1 class="kss-title"><span class="kss-ref">4.4.14</span> Sized Lists</h1>
+            
+            
+            <div class="kss-description">
+              <p>A list can vary in size</p>
+
+            </div>
+            
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  <div class="ui {$modifiers} horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.mini</div>
+                  <div class="kss-modifier-description">
+                    <p>mini</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui mini horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.tiny</div>
+                  <div class="kss-modifier-description">
+                    <p>tiny</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui tiny horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.small</div>
+                  <div class="kss-modifier-description">
+                    <p>small</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui small horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.large</div>
+                  <div class="kss-modifier-description">
+                    <p>large</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui large horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.huge</div>
+                  <div class="kss-modifier-description">
+                    <p>huge</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui huge horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">.massive</div>
+                  <div class="kss-modifier-description">
+                    <p>massive</p>
+
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  <div class="ui massive horizontal list">
+  <div class="item">About Us</div>
+  <div class="item">Contact</div>
+  <div class="item">Support</div>
+</div>
+                </div>
+              </div>
+              
+              <div class="kss-markup">
+                <pre><code data-language="html">&lt;div class=&quot;ui {$modifiers} horizontal list&quot;&gt;
+  &lt;div class=&quot;item&quot;&gt;About Us&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Contact&lt;/div&gt;
+  &lt;div class=&quot;item&quot;&gt;Support&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </div>
+            </div>
+            
+          </section>
+          
+          
+        </article>
+        <!-- <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer> -->
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <script src="/lib/semantic-ui/javascript/semantic.js">
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    <script>
+
+// attach ready event
+$(document).ready(function() {
+
+	$(".toggle.button").state({
+		text: {
+			inactive : 'Vote',
+			active   : 'Voted'
+		},
+		className: {
+			inactive : 'inactive',
+			active : 'active'
+		}
+	});
+
+	$('#datepicker').datepicker();
+
+	$('.ui.checkbox').checkbox();
+	$('.ui.dropdown').dropdown();
+	$('.ui.accordion').accordion();
+	$('.ui.modal').modal();
+	$('[data-content]').popup();
+	$('.ui.rating').rating();
+	$('.shape').shape();
+	// $('.ui.sidebar').sidebar();
+
+	$('.enablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('enable');
+	});
+	$('.disablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('disable');
+	});
+	$('.togglethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('toggle');
+	});
+
+	$('.toggledimmer').on('click', function() {
+		$('.page.dimmer').dimmer('toggle');
+	});
+
+	$('.showsectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('show');
+	});
+
+	$('.hidesectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('hide');
+	});
+
+	$('.testmodalbutton').on('click', function() {
+		$('.test.modal').modal('show');
+	});
+	$('.testbasicmodalbutton').on('click', function() {
+		$('.basic.modal').modal('show');
+	});
+	$('.testsmallmodalbutton').on('click', function() {
+		$('.small.modal').modal('show');
+	});
+	$('.testlargemodalbutton').on('click', function() {
+		$('.large.modal').modal('show');
+	});
+
+	$('.testcallbacksbutton').on('click', function() {
+		$('.testcallbacks.modal').modal('show');
+	});
+	$('.testcallbacks.modal').modal('setting', 'onDeny', function(){
+		window.alert('Denied!');
+	}).modal('setting', 'onApprove', function(){
+		window.alert('Approved!');
+	});
+
+	$('.testforcedbutton').on('click', function() {
+		$('.testforced.modal').modal('show');
+	});
+	$('.testforced.modal').modal('setting', 'closable', false);
+
+	$('.modaltransitionselection').dropdown({
+		onChange: function(value) {
+			$('.transitiontest.modal').modal('setting', 'transition', value).modal('show');
+		}
+	});
+
+	$('.readonly.rating').rating('disable');
+	$('.clearable.rating').rating('setting', 'clearable', true);
+
+	$('.direction .button').on("click", function() {
+		$action = $(this).data("animation") + " " + $(this).data("direction");
+		$('.shape').shape($action);
+	});
+
+	$('.testsidebar').on('click', function(){
+		$('.demo.sidebar').sidebar('setting', 'overlay', false).sidebar('toggle');
+	});
+	$('.testoverlaysidebar').on('click', function(){
+		$('.overlay.sidebar').sidebar('setting', 'overlay', true).sidebar('toggle');
+	});
+
+	$('.sidebardirection.button').on('click', function() {
+		$('.sidebar').filter('.' + $(this).data('direction') ).sidebar('toggle');
+	});
+
+	$transition = $('.transitionsexample.dropdown');
+	$transitionButton = $('.transitionsexample.button');
+	$transitionButton.on('click', function(event) {
+		$transition.dropdown('toggle');
+		event.stopImmediatePropagation();
+	});
+
+	$transition.dropdown({
+		onChange: function(value) {
+			$transition.dropdown('setting', 'transition', value);
+		}
+	});
+
+	$transitionelement = $(".transitionelement");
+	$(".testtransition.button").on("click", function() {
+		switch($(this).data("transition")) {
+			case "scale":
+				$transitionelement.transition('scale').transition('scale');
+				break;
+			case "fade":
+				$transitionelement.transition('fade').transition('fade');
+				break;
+			case "horizontal flip":
+				$transitionelement.transition('horizontal flip').transition('horizontal flip');
+				break;
+			case "vertical flip":
+				$transitionelement.transition('vertical flip').transition('vertical flip');
+				break;
+			case "pulse":
+				$transitionelement.transition('pulse');
+				break;
+			case "bounce":
+				$transitionelement.transition('bounce');
+				break;
+			case "flash":
+				$transitionelement.transition('flash');
+				break;
+			case "shake":
+				$transitionelement.transition('shake');
+				break;
+			case "tada":
+				$transitionelement.transition('tada');
+				break;
+			case "slide up":
+				$transitionelement.transition('slide up').transition('slide up');
+				break;
+			case "slide down":
+				$transitionelement.transition('slide down').transition('slide down');
+				break;
+			case "start loop":
+				$transitionelement.transition('set looping').transition('bounce', '2000ms');
+				break;
+			case "stop loop":
+				$transitionelement.transition('remove looping');
+				break;
+			case "flip then scale":
+				$transitionelement.transition('horizontal flip').transition('scale');
+				break;
+			case "callback":
+				$transitionelement.transition({
+					animation : 'scale',
+					duration  : '2s',
+					complete  : function() {
+						alert('done');
+					}
+				}).transition('scale');
+				break;
+		}
+	});
+
+	setTimeout(function(){
+		$("body > div > section").css("marginLeft","250px");
+		$("body > section").css("marginLeft","270px");
+	},1000);
+	
+});
+    </script>
+  </body>
+</html>

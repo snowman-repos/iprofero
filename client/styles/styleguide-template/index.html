@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>iProfero Styleguide v0.0.1</title>
+    <meta name="description" content="" />
+    <meta name="generator" content="kss-node" />
+    <link rel="stylesheet" href="public/kss.css" />
+    <link rel='stylesheet' href='/lib/semantic-ui/css/semantic.css' />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link href="/img/icons/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--[if lt IE 9]>
+    <script src="public/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body id="kss-node">
+    <div class="kss-wrapper">
+      <div class="kss-sidebar kss-fixed">
+        <div class="kss-sidebar-inner">
+          <header class="kss-header">
+            <h1 class="kss-doc-title"><a href="./">iProfero Styleguide</a></h1>
+            <h2 class="kss-doc-subtitle">v0.0.1</h2>
+          </header>
+          <nav class="kss-nav">
+            <ul class="kss-menu" data-kss-ref="{{rootNumber}}">
+              <li class="kss-menu-item"><a href="./"><span class="kss-ref">0</span><span class="kss-name">Overview</span></a></li>
+              {{#eachRoot}}
+              <li class="kss-menu-item"><a href="section-{{reference}}.html"><span class="kss-ref">{{reference}}</span><span class="kss-name">{{header}}</span></a></li>
+              {{/eachRoot}}
+            </ul>
+            {{#if overview}}
+            {{else}}
+            <ul class="kss-menu-child">
+              {{#eachSection rootNumber}}
+              {{#whenDepth 1}}
+              {{else}}
+              <li class="kss-menu-item"><a href="#section-{{reference}}"><span class="kss-ref">{{reference}}</span><span class="kss-name">{{header}}</span></a></li>
+              {{/whenDepth}}
+              {{/eachSection}}
+            </ul>
+            {{/if}}
+          </nav>
+        </div>
+      </div>
+      <div class="kss-content">
+        <article class="kss-article">
+          {{#if overview}}
+          <section id="section-0" class="kss-section kss-overview">
+            {{html overview}}
+          </section>
+          {{else}}
+          {{#eachSection rootNumber}}
+          <section id="section-{{reference}}" class="kss-section kss-depth-{{refDepth}}">
+            <h1 class="kss-title"><span class="kss-ref">{{reference}}</span> {{header}}</h1>
+            {{#ifAny markup modifiers}}
+            {{#if description}}
+            <div class="kss-description">
+              {{html description}}
+            </div>
+            {{/if}}
+            <div class="kss-modifier-block">
+              <div class="kss-modifier kss-modifier-original">
+                <div class="kss-modifier-example">
+                  {{modifierMarkup}}
+                </div>
+              </div>
+              {{#eachModifier}}
+              <div class="kss-modifier">
+                <div class="kss-modifier-head">
+                  <div class="kss-modifier-name">{{name}}</div>
+                  <div class="kss-modifier-description">
+                    {{html description}}
+                  </div>
+                </div>
+                <div class="kss-modifier-example">
+                  {{modifierMarkup}}
+                </div>
+              </div>
+              {{/eachModifier}}
+              <div class="kss-markup">
+                <pre><code data-language="html">{{markup}}</code></pre>
+              </div>
+            </div>
+            {{else}}
+            {{#if description}}
+            <div class="kss-description">
+              {{html description}}
+            </div>
+            {{/if}}
+            {{/ifAny}}
+          </section>
+          {{/eachSection}}
+          {{/if}}
+        </article>
+        <!-- <footer class="kss-footer">
+          <div>Created using <a href="https://github.com/hughsk/kss-node">kss-node</a> and <a href="https://github.com/htanjo/kss-node-template">kss-node-template</a>.</div>
+        </footer> -->
+      </div>
+    </div>
+    <script src="public/kss.js"></script>
+    <script src="public/jquery-1.9.1.min.js"></script>
+    <script src="/lib/semantic-ui/javascript/semantic.js">
+    <!--[if gt IE 8]><!-->
+    <script src="public/rainbow.min.js"></script>
+    <!--<![endif]-->
+    <script src="public/main.js"></script>
+    <script>
+
+// attach ready event
+$(document).ready(function() {
+
+	$(".toggle.button").state({
+		text: {
+			inactive : 'Vote',
+			active   : 'Voted'
+		},
+		className: {
+			inactive : 'inactive',
+			active : 'active'
+		}
+	});
+
+	$('#datepicker').datepicker();
+
+	$('.ui.checkbox').checkbox();
+	$('.ui.dropdown').dropdown();
+	$('.ui.accordion').accordion();
+	$('.ui.modal').modal();
+	$('[data-content]').popup();
+	$('.ui.rating').rating();
+	$('.shape').shape();
+	// $('.ui.sidebar').sidebar();
+
+	$('.enablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('enable');
+	});
+	$('.disablethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('disable');
+	});
+	$('.togglethem.button').on('click', function() {
+		$(this).parent().nextAll('.checkbox').checkbox('toggle');
+	});
+
+	$('.toggledimmer').on('click', function() {
+		$('.page.dimmer').dimmer('toggle');
+	});
+
+	$('.showsectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('show');
+	});
+
+	$('.hidesectiondimmer').on('click', function() {
+		$('.dogs.dimmer').dimmer('hide');
+	});
+
+	$('.testmodalbutton').on('click', function() {
+		$('.test.modal').modal('show');
+	});
+	$('.testbasicmodalbutton').on('click', function() {
+		$('.basic.modal').modal('show');
+	});
+	$('.testsmallmodalbutton').on('click', function() {
+		$('.small.modal').modal('show');
+	});
+	$('.testlargemodalbutton').on('click', function() {
+		$('.large.modal').modal('show');
+	});
+
+	$('.testcallbacksbutton').on('click', function() {
+		$('.testcallbacks.modal').modal('show');
+	});
+	$('.testcallbacks.modal').modal('setting', 'onDeny', function(){
+		window.alert('Denied!');
+	}).modal('setting', 'onApprove', function(){
+		window.alert('Approved!');
+	});
+
+	$('.testforcedbutton').on('click', function() {
+		$('.testforced.modal').modal('show');
+	});
+	$('.testforced.modal').modal('setting', 'closable', false);
+
+	$('.modaltransitionselection').dropdown({
+		onChange: function(value) {
+			$('.transitiontest.modal').modal('setting', 'transition', value).modal('show');
+		}
+	});
+
+	$('.readonly.rating').rating('disable');
+	$('.clearable.rating').rating('setting', 'clearable', true);
+
+	$('.direction .button').on("click", function() {
+		$action = $(this).data("animation") + " " + $(this).data("direction");
+		$('.shape').shape($action);
+	});
+
+	$('.testsidebar').on('click', function(){
+		$('.demo.sidebar').sidebar('setting', 'overlay', false).sidebar('toggle');
+	});
+	$('.testoverlaysidebar').on('click', function(){
+		$('.overlay.sidebar').sidebar('setting', 'overlay', true).sidebar('toggle');
+	});
+
+	$('.sidebardirection.button').on('click', function() {
+		$('.sidebar').filter('.' + $(this).data('direction') ).sidebar('toggle');
+	});
+
+	$transition = $('.transitionsexample.dropdown');
+	$transitionButton = $('.transitionsexample.button');
+	$transitionButton.on('click', function(event) {
+		$transition.dropdown('toggle');
+		event.stopImmediatePropagation();
+	});
+
+	$transition.dropdown({
+		onChange: function(value) {
+			$transition.dropdown('setting', 'transition', value);
+		}
+	});
+
+	$transitionelement = $(".transitionelement");
+	$(".testtransition.button").on("click", function() {
+		switch($(this).data("transition")) {
+			case "scale":
+				$transitionelement.transition('scale').transition('scale');
+				break;
+			case "fade":
+				$transitionelement.transition('fade').transition('fade');
+				break;
+			case "horizontal flip":
+				$transitionelement.transition('horizontal flip').transition('horizontal flip');
+				break;
+			case "vertical flip":
+				$transitionelement.transition('vertical flip').transition('vertical flip');
+				break;
+			case "pulse":
+				$transitionelement.transition('pulse');
+				break;
+			case "bounce":
+				$transitionelement.transition('bounce');
+				break;
+			case "flash":
+				$transitionelement.transition('flash');
+				break;
+			case "shake":
+				$transitionelement.transition('shake');
+				break;
+			case "tada":
+				$transitionelement.transition('tada');
+				break;
+			case "slide up":
+				$transitionelement.transition('slide up').transition('slide up');
+				break;
+			case "slide down":
+				$transitionelement.transition('slide down').transition('slide down');
+				break;
+			case "start loop":
+				$transitionelement.transition('set looping').transition('bounce', '2000ms');
+				break;
+			case "stop loop":
+				$transitionelement.transition('remove looping');
+				break;
+			case "flip then scale":
+				$transitionelement.transition('horizontal flip').transition('scale');
+				break;
+			case "callback":
+				$transitionelement.transition({
+					animation : 'scale',
+					duration  : '2s',
+					complete  : function() {
+						alert('done');
+					}
+				}).transition('scale');
+				break;
+		}
+	});
+
+	setTimeout(function(){
+		$("body > div > section").css("marginLeft","250px");
+		$("body > section").css("marginLeft","270px");
+	},1000);
+	
+});
+    </script>
+  </body>
+</html>

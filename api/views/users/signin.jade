@@ -1,0 +1,30 @@
+extends auth
+
+block auth
+
+	//- Login form
+	.ui.white.segment
+		form.ui.fluid.form(action="/users/session", method="post", ng-submit="", validate)
+	
+			.field
+				label(for="email") Email
+				.ui.left.labeled.icon.input
+					input#email(type="email", name="email", placeholder="e.g. joe.bloggs@agency.com", data-ng-required)
+					i.mail.icon
+					.ui.corner.label
+						i.asterisk.icon
+
+			.field
+				label(for="password") Password
+				.ui.left.labeled.icon.input
+					input#password(type="password", name="password", data-ng-required)
+					i.lock.icon
+					.ui.corner.label
+						i.asterisk.icon
+
+			.inline.field
+				input.ui.blue.submit.button(type='submit', value="log in", dimmer)
+				| or 
+				a(href="/signup", target="_self") sign up
+
+			.ui.error.message

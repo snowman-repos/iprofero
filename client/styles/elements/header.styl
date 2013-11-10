@@ -1,0 +1,305 @@
+// Header
+//
+// Headers provide a short summary of content
+//
+// .small - small header
+// .large - normal (large) header
+// .huge - huge header
+// .massive - massive header
+//
+// Markup:
+// <h2 class="ui header">
+//   Account Settings
+// </h2>
+//
+// Styleguide 2.4
+
+.celled.grid h2.ui.header
+	margin-bottom 		0
+
+h5.ui.header
+	font-size 			0.85rem
+	line-height 		2
+	margin-bottom 		0
+	text-transform 		uppercase
+
+.ui.massive.header
+	font-size 			3em
+
+	.floated.right.button
+		display 		block
+		float 			none
+		margin-top 		1em
+
+		@media only screen and (min-width: 769px)
+			float 		right
+			margin-top 	-3em
+
+.breadcrumb + .ui.massive.header
+	margin-top 			0
+
+// Descriptive Headers
+//
+// Headers may have sub headers containing further context to the section
+//
+// Markup:
+// <h2 class="ui header">
+//   Account Settings
+//   <div class="sub header">Manage your account settings and set e-mail preferences.</div>
+// </h2>
+// <h2 class="ui header">
+//   <i class="settings icon"></i>
+//   Account Settings
+// </h2>
+// <h2 class="ui header">
+//   <i class="settings icon"></i>
+//   <div class="content">
+//     Account Settings
+//     <div class="sub header">Manage your account settings and set e-mail preferences.</div>
+//   </div>
+// </h2>
+//
+// Styleguide 2.4.1
+
+// Icon Headers
+//
+// A header can be formatted to emphasize an icon
+//
+// Markup:
+// <div class="ui icon header">
+//   <i class="circular question icon"></i>Questions
+//   <div class="sub header">Have any questions? Contact Us</div>
+// </div>
+//
+// Styleguide 2.4.2
+
+// Page Headings
+//
+// Headers may be oriented to give the heirarchy of a section in the context of the page
+//
+// Markup:
+// <div class="ui vertical segment">
+//   <h1 class="ui header">First header</h1>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//   <h2 class="ui header">Second header</h2>
+//   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+//   <h3 class="ui header">Third header</h3>
+//   <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+//   <h4 class="ui header">Fourth header</h4>
+//   <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+//   <h5 class="ui header">Fifth header</h5>
+//   <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+// </div>
+//
+// Styleguide 2.4.3
+
+// Content Headings
+//
+// Headers may be oriented to give the importance of a section in the context of the content that surrounds it
+//
+// Markup:
+// <div class="ui vertical segment">
+//   <div class="ui huge header">Huge Header</div>
+//   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+//   <div class="ui large header">Large Header</div>
+//   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+//   <div class="ui medium header">Medium Header</div>
+//   <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+//   <div class="ui small header">Small Header</div>
+//   <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+//   <div class="ui tiny header">Tiny Header</div>
+//   <p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+// </div>
+// 
+// Styleguide 2.4.4
+
+// Disabled Headers
+//
+// A header can show that it is inactive
+//
+// Markup:
+// <div class="ui disabled header">
+//   Disabled Header
+// </div>
+//
+// Styleguide 2.4.5
+
+// Attached Headers
+//
+// A header can be attached to other content
+//
+// Markup:
+// <h4 class="ui top attached header">
+//   Sign Up For Our Site
+// </h4>
+// <div class="ui segment attached">
+//   <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</p>
+//   <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+// </div>
+// <h4 class="ui bottom attached header">
+//   Thanks
+// </h4>
+//
+// Styleguide 2.4.6
+
+// Floating Headers
+//
+// A header can sit to the left or right of other content
+//
+// Markup:
+// <div class="ui segment">
+//   <h3 class="ui right floated header">
+//     Go Forward
+//   </h3>
+//   <h3 class="ui left floated header">
+//     Go Back
+//   </h3>
+// </div>
+//
+// Styleguide 2.4.7
+
+// Text Aligned Headers
+//
+// A header can have its text aligned to a side
+//
+// Markup:
+// <div class="ui segment">
+//   <h3 class="ui right aligned header">
+//     Right
+//   </h3>
+//   <h3 class="ui left aligned header">
+//     Left
+//   </h3>
+//   <h3 class="ui center aligned header">
+//     Center
+//   </h3>
+// </div>
+//
+// Styleguide 2.4.8
+
+// Coloured Headings
+//
+// A header can be formatted with different colors
+//
+// Markup:
+// <h3 class="ui black header">
+//   Black
+//   <div class="sub header">An excellent color</div>
+// </h3>
+// <h3 class="ui blue header">
+//   Blue
+//   <div class="sub header">An excellent color</div>
+// </h3>
+// <h3 class="ui red header">
+//   Red
+//   <div class="sub header">An excellent color</div>
+// </h3>
+// <h3 class="ui green header">
+//   Green
+//   <div class="sub header">An excellent color</div>
+// </h3>
+// <h3 class="ui yellow header">
+//   Green
+//   <div class="sub header">An excellent color</div>
+// </h3>
+// <h3 class="ui purple header">
+//   Purple
+//   <div class="sub header">An excellent color</div>
+// </h3>
+// <h3 class="ui teal header">
+//   Teal
+//   <div class="sub header">An excellent color</div>
+// </h3>
+//
+// Styleguide 2.4.9
+
+.ui.yellow.header
+	color 			$yellow !important
+
+.ui.orange.header
+	color 			$orange !important
+
+// Dividing Headers
+//
+// A header can be formatted to divide itself from the content below it
+//
+// Markup:
+// <h3 class="ui dividing header">
+//   The nature of dogs
+// </h3>
+// <p>Understanding how dogs behave in nature can help us to better fulfill their needs when we bring them into our homes.</p>
+// <p>When a puppy enters the world, his first pack leader is his mother. Canine moms teach rules, boundaries, and limitations from day one!</p>
+// <p>Newborn puppies don't get a name like we do. The closest thing to a personality is a dog's status within the pack. In the animal world, there are two positions: the leader and the follower.</p>
+//
+// Styleguide 2.4.10
+
+// Block Headers
+//
+// A header can be formatted to create a block
+//
+// Markup:
+// <h4 class="ui black block header">
+//   Block Header
+// </h4>
+// <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+//
+// Styleguide 2.4.11
+
+// Inverted Block Headers
+//
+// A header can have its colors inverted for contrast
+//
+// Markup:
+// <h4 class="ui inverted black block header">
+//   Black
+// </h4>
+// <h4 class="ui inverted blue block header">
+//   Blue
+// </h4>
+// <h4 class="ui inverted red block header">
+//   Red
+// </h4>
+// <h4 class="ui inverted green block header">
+//   Green
+// </h4>
+// <h4 class="ui inverted purple block header">
+//   Purple
+// </h4>
+// <h4 class="ui inverted teal block header">
+//   Teal
+// </h4>
+//
+// Styleguide 2.4.12
+
+// Link Headers
+// 
+// A header can also be a link
+//
+// Markup:
+// <a href="" class="ui link header">
+//   This is a Link header
+// </a>
+//
+// Styleguide 2.4.13
+
+.link.header
+	color 				$text-colour
+	text-decoration 	none
+	transition 			$fast-transition
+
+	&:focus,
+	&:hover
+		color 			lighten(@color, 15%)
+		transition		$fast-transition
+
+// Inline headers
+// 
+// A header can be displayed inline
+//
+// Markup:
+// This is an <div class="ui inline header">inline</div> header
+//
+// Styleguide 2.4.14
+
+.ui.inline.header
+	display 			inline-block

@@ -1,0 +1,138 @@
+div.page-container(data-ng-controller='UsersController', data-ng-init='findOne()')
+
+	.ui.profile.page.grid
+		.row
+			.profile.first.column
+				.profile.avatar.edit(data-ng-if="isLoggedInUser || isAdmin")
+					.ui.fade.instant.reveal
+						.visible.content
+							i.massive.inverted.user.icon(data-ng-if="!user.avatar")
+							img(data-ng-src="{{user.avatar}}", data-ng-if="user.avatar")
+						.hidden.content
+							i.massive.inverted.pencil.icon
+				.profile.avatar(data-ng-if="!isLoggedInUser && !isAdmin")
+					i.massive.inverted.user.icon(data-ng-if="!user.avatar")
+					img.ui.circular.image(data-ng-src="{{user.avatar}}", data-ng-if="user.avatar")
+				h1.ui.massive.profile.header
+					span(click-to-edit-headline="user.name", default="'no name'" , data-ng-if="isLoggedInUser || isAdmin")
+					span(data-ng-bind="user.name", data-ng-if="!isLoggedInUser && !isAdmin")
+					.disabled.profile.sub.header
+						span(click-to-edit-headline="user.job_title", default="'no job title yet'" , data-ng-if="isLoggedInUser || isAdmin")
+						span(data-ng-bind="user.job_title", data-ng-if="!isLoggedInUser && !isAdmin")
+		.row.compact
+			.column
+				.ui.celled.relaxed.stackable.filled.rounded.grid
+					.profile.top.row
+						.sixteen.wide.column
+							.ui.profile.floated.left.team.header
+								i.users.icon
+								span(click-to-edit-headline="user.team", default="'no team'")
+							.ui.tiny.floated.right.disabled.profile.dates.header
+								span(click-to-edit="user.employment_period.start", default="'start date'" , data-ng-if="isLoggedInUser || isAdmin")
+								span(data-ng-bind="user.employment_period.start || '?'", data-ng-if="!isLoggedInUser && !isAdmin")
+								span  - 
+								span(click-to-edit="user.employment_period.end", default="'present'" , data-ng-if="isLoggedInUser || isAdmin")
+								span(data-ng-bind="user.employment_period.end || '?'", data-ng-if="!isLoggedInUser && !isAdmin")
+					.row
+						.ten.wide.column(data-ng-switch="user.projects.length != 0")
+							h5.ui.disabled.header(data-ng-switch-when="true")
+								i.briefcase.icon
+								| Projects
+							h5.ui.disabled.header(data-ng-switch-when="false")
+								i.briefcase.icon
+								| No projects yet
+							.ui.vertical.green.fluid.menu(data-ng-switch-when="true")
+								a.item(href="#!/projects/{{project.id}}", data-ng-repeat="project in user.projects")
+									.ui.header
+										span(data-ng-bind="project.name")
+										i.right.arrow.floated.small.icon
+										.sub.header.disabled(data-ng-bind="project.client")
+						.six.wide.column
+							h5.ui.disabled.header Contact
+							.ui.vertical.text.menu
+								a.item(href="mailto:{{user.contact.email}}", data-ng-class="{'disabled':!user.contact.email}")
+									i.mail.icon
+									span(click-to-edit="user.contact.email", default="'no email yet'" , data-ng-if="isLoggedInUser || isAdmin && user.contact.email")
+									span(data-ng-if="!isLoggedInUser && !isAdmin", data-ng-bind="user.contact.email || 'nothing yet'")
+								a.item(href="tel:{{user.contact.telephone}}", data-ng-class="{'disabled':!user.contact.telephone}")
+									i.phone.icon
+									span(click-to-edit="user.contact.telephone", default="'no telephone yet'" , data-ng-if="isLoggedInUser || isAdmin && user.contact.telephone")
+									span(data-ng-if="!isLoggedInUser && !isAdmin", data-ng-bind="user.contact.telephone || 'nothing yet'")
+								a.item(href="https://github.com/{{user.contact.github}}", data-ng-class="{'disabled':!user.contact.github}")
+									i.github.icon
+									span(click-to-edit="user.contact.github", default="'no github'" , data-ng-if="isLoggedInUser || isAdmin && user.contact.github")
+									span(data-ng-if="!isLoggedInUser && !isAdmin", data-ng-bind="user.contact.github || 'nothing yet'")
+								a.item(href="{{user.contact.skype}}", data-ng-class="{'disabled':!user.contact.skype}")
+									i.skype.icon
+									span(click-to-edit="user.contact.skype", default="'no skype'" , data-ng-if="isLoggedInUser || isAdmin && user.contact.skype")
+									span(data-ng-if="!isLoggedInUser && !isAdmin", data-ng-bind="user.contact.skype || 'nothing yet'")
+
+							div(data-ng-if="user.website")
+								h5.ui.disabled.header
+									i.url.icon
+									| Website
+								a(href="{{user.website}}", data-ng-bind="user.website")
+
+							h5.ui.disabled.header
+								i.certificate.icon
+								| Skills
+							tags-input.green(ng-model="skills", list="skillSuggestions", placeholder="Add a skill", replace-spaces-with-dashes="false", add-on-comma="true", add-on-space="false")
+
+	.ui.profile.admin.page.grid(data-ng-if="isAdmin")
+		.row
+			.column
+				table.ui.inverted.cobalt.padded.definition.table.segment
+					tbody
+						tr
+							td salary
+							td
+								.ui.huge.header
+									i.tiny.yuan.icon
+									span(data-ng-bind="user.salary")
+						tr
+							td utilisation
+							td
+								.ui.huge.header XX%
+						tr
+							td previous evaluation
+							td
+								.ui.huge.header XX%
+						tr
+							td role
+							td
+								.ui.selection.dropdown(dropdown)
+									input#role(name="role", type="hidden", data-ng-model="user.role")
+									.default.text(data-ng-bind="user.role || 'Role'")
+									i.dropdown.icon
+									.menu
+										.item(data-value="admin", data-ng-click="user.role = 'admin'") admin
+										.item(data-value="user", data-ng-click="user.role = 'user'") user
+					tfoot
+						tr
+							th(colspan="2")
+
+								.ui.red.labeled.icon.button(data-ng-click="remove()")
+									i.remove.icon
+									| Delete user
+
+	.ui.change-avatar.modal.transition.hidden(avatar-modal)
+		i.close.icon
+		.header
+			img.ui.image.avatar(data-ng-src="{{user.avatar}}", data-ng-if="user.avatar")
+			i.inverted.circular.user.icon(data-ng-if="!user.avatar")
+			| Upload a new Profile Image
+		.content
+			.left
+				form(method="post", enctype="multipart/form-data", data-ng-submit="sendFile()")
+					uploader
+			.right
+				.dropbox
+					i.large.move.icon
+					p.disabled drop file here
+		.actions
+			.ui.icon.green.button 
+				i.save.icon
+				|  save
+			.ui.icon.button
+				i.remove.icon
+				| cancel

@@ -1,0 +1,43 @@
+// Footer
+// 
+// A footer is a content area at the bottom of a page
+//
+// Markup:
+// <footer role="contentinfo">
+// 	<div class="ui horizontal bulleted list">
+// 		<div class="item">
+// 			<a href="/help">help</a>
+// 		</div>
+// 		<div class="item">
+// 			<a href="/contact">contact</a>
+// 		</div>
+// 		<div class="item">
+// 			<a href="/blog">blog</a>
+// 		</div>
+// 		<div class="item">
+// 			&copy; 2013 Profero
+// 		</div>
+// 	</div>
+// </footer>
+//
+// Styleguide 3.3
+
+footer
+	background				#333
+	color					#ccc
+	height					100%
+	padding					1em 0
+	text-align				center
+
+	a
+		color 				$white
+
+		&:hover,
+		&:focus
+			color 			$yellow
+
+	.ui.horizontal.list .item
+		font-size			0.7rem
+
+	.ui.bulleted.list .item:before
+		line-height 		1rem

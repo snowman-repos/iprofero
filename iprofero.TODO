@@ -1,0 +1,150 @@
+ ☐ ugly signup / signin URLs ???
+ ☐ weibo signup / login not working ???
+ ☐ upload avatar
+ ☐ requirejs / production files
+ ☐ grunt newer being a pain in the ass
+ ☐ validation on admin settings page (add activity) not working
+ ☐ database + controller optimisation: getprojectsbyparent (children), getparent, getusersbyproject (participants)
+ ☐ general optimisations
+ ☐ display activities grouped by parent in admin settings page
+ ☐ bug when editting project / changing participants
+ ☐ unit/e2e tests required - should have done them at the same time :(
+     ☐ api
+         ☐ create an activity
+         ☐ get one activity
+         ☐ get all activities
+         ☐ delete an activity
+         ☐ update an activity
+         ☐ create a job
+         ☐ get one job
+         ☐ get all jobs
+         ☐ delete an job
+         ☐ update an job
+         ☐ create a project
+         ☐ get one project
+         ☐ get all projects
+         ☐ delete an project
+         ☐ update an project
+         ☐ create a skill
+         ☐ get one skill
+         ☐ get all skills
+         ☐ delete an skill
+         ☐ update an skill
+         ☐ create a team
+         ☐ get one team
+         ☐ get all teams
+         ☐ delete an team
+         ☐ update an team
+         ☐ create a technology
+         ☐ get one technology
+         ☐ get all technologies
+         ☐ delete an technology
+         ☐ update an technology
+         ☐ create a user with local
+         ☐ create a user with twitter
+         ☐ create a user with facebook
+         ☐ create a user with github
+         ☐ create a user with google
+         ☐ create a user with linkedin
+         ☐ create a user with weibo
+         ☐ get a user
+         ☐ get all users
+         ☐ remove a user
+         ☐ update a user
+         ☐ log in with local
+         ☐ log in with twitter
+         ☐ log in with facebook
+         ☐ log in with github
+         ☐ log in with google
+         ☐ log in with linkedin
+         ☐ log in with weibo
+         ☐ log out
+     ☐ client
+         ☐ admin
+             ☐ restrict access to admin users
+             ☐ fetch all skills
+             ☐ add skill
+             ☐ remove skill
+             ☐ fetch all jobs
+             ☐ add job
+             ☐ remove job
+             ☐ fetch all technologies
+             ☐ add technology
+             ☐ remove technology
+             ☐ fetch all jobs
+             ☐ add job
+             ☐ remove job
+             ☐ fetch all activities
+             ☐ add activity
+             ☐ add child activity
+             ☐ remove activity
+             ☐ remove child activity
+             ☐ remove parent activity
+             ☐ update activity
+             ☐ update child activity
+         ☐ global
+             ☐ restrict access to logged in users
+             ☐ set menu
+             ☐ redirect user to welcome page if required fields are missing
+             ☐ fetch all skills
+             ☐ fetch all jobs
+             ☐ fetch all teams
+             ☐ fetch all projects
+             ☐ determine which welcome step
+             ☐ update user
+             ☐ set project participation
+             ☐ update project
+             ☐ add skill
+             ☐ directive: format dates
+             ☐ directive: run function on enter keypress
+             ☐ directive: run function on escape keypress
+             ☐ directive: validate numerical input
+             ☐ directive: validate welcome page
+             ☐ directive: validate signup form
+             ☐ directive: validate login form
+             ☐ directive: checkboxes
+             ☐ directive: dimers
+             ☐ directive: dissmissable
+             ☐ directive: dropdown
+             ☐ directive: toggle sidebar
+             ☐ directive: open sidebar
+             ☐ directive: close sidebar
+             ☐ directive: multiple project select
+             ☐ directive: multiple people select
+             ☐ directive: click to edit
+             ☐ directive: click to edit headline
+             ☐ service: activity
+             ☐ service: job
+             ☐ service: skill
+             ☐ service: team
+             ☐ service: technology
+             ☐ service: global
+         ☐ projects
+             ☐ restrict access to logged in users
+             ☐ service: project
+             ☐ get people
+             ☐ get projects
+             ☐ get 1 project
+             ☐ set parent
+             ☐ unset parent
+             ☐ set participant
+             ☐ unset participant
+             ☐ check can toggle participant
+             ☐ get technologies
+             ☐ add technology
+             ☐ add project
+             ☐ update project
+             ☐ update single field
+             ☐ delete project
+             ☐ 
+         ☐ users
+             ☐ service: user
+             ☐ directive: open avatar modal
+             ☐ get skills
+             ☐ add skill
+             ☐ remove user
+             ☐ update user
+             ☐ update single user field
+             ☐ get all users
+             ☐ get one user 
+ ☐ Put all these issues on github issue tracker

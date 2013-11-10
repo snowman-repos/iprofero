@@ -1,0 +1,664 @@
+// Menu
+// 
+// A menu is a collection of elements showing related user actions
+//
+// .vertical - A vertical menu displays elements vertically. A vertical menu's width defaults to an arbitrary size. To have it fit your content more precisely use the fluid variation in conjunction with ui grid.
+// .inverted - A menu may have its colors inverted to show greater contrast.
+// .small - A menu can have a small size
+// .large - A menu can have a large size
+// .fitted - A menu item or menu can remove element padding, vertically or horizontally
+// .borderless - A menu item or menu can have no borders
+//
+// Markup:
+// <div class="ui {$modifiers} menu">
+//   <a class="active item">
+//     <i class="home icon"></i> Home
+//   </a>
+//   <a class="item">
+//     <i class="mail icon"></i> Messages
+//   </a>
+//   <div class="right menu">
+//     <div class="item">
+//       <div class="ui icon input">
+//         <input type="text" placeholder="Search...">
+//         <i class="search link icon"></i>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.7
+
+.ui.menu.fixed
+	z-index 				100
+
+.ui.inverted.menu
+	.header.item
+		background-color 	transparent
+
+// Pagination Menu
+// 
+// A pagination menu is specially formatted to present links to pages of content
+//
+// Markup:
+// <div class="ui pagination menu">
+//   <a class="icon item">
+//     <i class="icon left arrow"></i>
+//   </a>
+//   <a class="active item">
+//     1
+//   </a>
+//   <div class="disabled item">
+//     ...
+//   </div>
+//   <a class="item">
+//     10
+//   </a>
+//   <a class="item">
+//     11
+//   </a>
+//   <a class="item">
+//     12
+//   </a>
+//   <a class="icon item">
+//     <i class="icon right arrow"></i>
+//   </a>
+// </div>
+//
+// Styleguide 3.7.1
+
+// Tabular Menu
+// 
+// A message can be formatted to show tabs of information
+//
+// Markup:
+// <div class="ui tabular menu">
+//   <a class="active item">
+//     Bio
+//   </a>
+//   <a class="item">
+//     Pics
+//   </a>
+// </div>
+//
+// Styleguide 3.7.2
+
+// Tiered Menu
+// 
+// A tiered menu can show the sub-sections available as part of an activated section.
+//
+// Markup:
+// <div class="ui tiered menu">
+//   <div class="menu">
+//     <a class="active item">
+//       <i class="users icon"></i>
+//       Friends
+//     </a>
+//     <a class="item">
+//       <i class="grid layout icon"></i> Browse
+//     </a>
+//     <a class="item">
+//       <i class="mail icon"></i> Messages
+//     </a>
+//     <div class="right menu">
+//       <div class="item">
+//         <div class="ui icon input">
+//           <input type="text" placeholder="Search...">
+//           <i class="search icon"></i>
+//         </div>
+//       </div>
+//       <div class="ui dropdown item">
+//         More <i class="icon dropdown"></i>
+//         <div class="menu">
+//           <a class="item"><i class="edit icon"></i> Edit Profile</a>
+//           <a class="item"><i class="globe icon"></i> Choose Language</a>
+//           <a class="item"><i class="settings icon"></i> Account Settings</a>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+//   <div class="ui sub menu">
+//     <a class="active item">Search</a>
+//     <a class="item">Add</a>
+//     <a class="item">Remove</a>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.3
+
+// Vertical Menu with Submenus
+// 
+// A tiered menu can show the sub-sections available as part of an activated section.
+//
+// Markup:
+// <div class="ui vertical menu">
+//   <div class="item">
+//     <div class="ui input"><input type="text" placeholder="Search..."></div>
+//   </div>
+//   <div class="item">
+//     <i class="home icon"></i> Home
+//     <div class="menu">
+//       <a class="active item">Search</a>
+//       <a class="item">Add</a>
+//       <a class="item">Remove</a>
+//     </div>
+//   </div>
+//   <a class="item">
+//     <i class="grid layout icon"></i> Browse
+//   </a>
+//   <a class="item">
+//     <i class="mail icon"></i> Messages
+//   </a>
+//   <div class="ui dropdown item">
+//     More <i class="dropdown icon"></i>
+//     <div class="menu">
+//       <a class="item"><i class="edit icon"></i> Edit Profile</a>
+//       <a class="item"><i class="globe icon"></i> Choose Language</a>
+//       <a class="item"><i class="settings icon"></i> Account Settings</a>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.5
+
+// Secondary Menu
+// 
+// A secondary menu allows for a section of content on a page to be activated
+//
+// .vertical - A vertical secondary menu
+//
+// Markup:
+// <div class="ui secondary {$modifiers} menu">
+//   <a class="active item">
+//     <i class="home icon"></i> Home
+//   </a>
+//   <a class="item">
+//     <i class="mail icon"></i> Messages
+//   </a>
+//   <a class="item">
+//     <i class="user icon"></i> Friends
+//   </a>
+//   <div class="right menu">
+//     <div class="item">
+//       <div class="ui icon input">
+//         <input type="text" placeholder="Search...">
+//         <i class="search link icon"></i>
+//       </div>
+//     </div>
+//     <a class="ui item">
+//       Logout
+//     </a>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.6
+
+// Pointing Menu
+// 
+// A menu can point to content to show relationship
+//
+// .secondary - Secondary pointing menu
+// .vertical - vertical pointing menu
+// .secondary.vertical -  secondary vertical pointing menu
+//
+// Markup:
+// <div class="ui {$modifiers} pointing menu">
+//   <a class="active item">
+//     <i class="home icon"></i> Home
+//   </a>
+//   <a class="item">
+//     <i class="mail icon"></i> Messages
+//   </a>
+//   <a class="item">
+//     <i class="user icon"></i> Friends
+//   </a>
+//   <div class="right menu">
+//     <div class="item">
+//       <div class="ui icon input">
+//         <input type="text" placeholder="Search...">
+//         <i class="search link icon"></i>
+//       </div>
+//     </div>
+//     <div class="ui dropdown item">
+//       Language <i class="dropdown icon"></i>
+//       <div class="menu">
+//         <a class="item">English</a>
+//         <a class="item">Russian</a>
+//         <a class="item">Spanish</a>
+//       </div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.7
+
+// Text Menu
+// 
+// A menu can display simple text links
+//
+// .vertical - A vertical text menu
+//
+// Markup:
+// <div class="ui {$modifiers} text menu">
+//   <div class="header item">Sort By</div>
+//   <a class="active item">
+//     <i class="home icon"></i> Closest
+//   </a>
+//   <a class="item">
+//     <i class="mail icon"></i> Most Comments
+//   </a>
+//   <a class="item">
+//     <i class="user icon"></i> Most Popular
+//   </a>
+// </div>
+//
+// Styleguide 3.7.8
+
+// Menu Header Items
+// 
+// A menu may have a header to help label sections of a menu.
+//
+// Markup:
+// <div class="ui vertical menu">
+//   <div class="header item">
+//     <i class="user icon"></i>
+//     Communities
+//   </div>
+//   <div class="item">
+//     College
+//     <div class="menu">
+//       <a class="item">Baseball</a>
+//       <a class="item">Basketball</a>
+//       <a class="item">Golf</a>
+//     </div>
+//   </div>
+//   <a class="item">
+//     Dance
+//   </a>
+//   <a class="item">
+//     Aerobics
+//   </a>
+//   <div class="header item">
+//     <i class="globe icon"></i>
+//     Cities
+//   </div>
+//   <a class="item">
+//     New York
+//   </a>
+//   <a class="item">
+//     Montreal
+//   </a>
+//   <a class="item">
+//     Los Angeles
+//   </a>
+//   <a class="item">
+//     San Francisco
+//   </a>
+//   <div class="header item">
+//     <i class="icon calendar"></i>
+//     Months
+//   </div>
+//   <a class="item">
+//     August
+//   </a>
+//   <a class="item">
+//     June
+//   </a>
+// </div>
+//
+// Styleguide 3.7.9
+
+.ui.vertical.menu
+	
+	.ui.header
+
+		i.floated.right.icon
+			margin-top 			-1.3em
+			position 			absolute
+			right 				1em
+			top 				50%
+
+// Menu Text Items
+// 
+// A menu may have a simple text item.
+//
+// Markup:
+// <div class="ui vertical menu">
+//   <div class="header item">
+//     Promotions
+//     <span class="ui teal label">New</span>
+//   </div>
+//   <div class="text item">
+//     <a>Join now</a> and save $10 on a pro membership!
+//   </div>
+//   <div class="item">
+//     <p><a>Join tomorrow</a> and save $5 on pro.</p>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.10
+
+// Menu Input Items
+// 
+// A menu item can contain an input inside of it
+//
+// Markup:
+// <div class="ui menu">
+//   <div class="item">
+//     <div class="ui icon input">
+//       <input type="text" placeholder="Search...">
+//       <i class="search icon"></i>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.11
+
+// Menu Buttons
+// 
+// A menu item can contain a button inside of it
+//
+// Markup:
+// <div class="ui menu">
+//   <div class="item">
+//     <div class="ui teal button">Sign up</div>
+//   </div>
+//   <div class="item">
+//     <div class="ui button">Log-in</div>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.12
+
+// Menu Link Items
+// 
+// A menu may contain a link item, or an item formatted as if it is a link.
+//
+// Markup:
+// <div class="ui vertical menu">
+//   <a href="http://www.google.com" class="item">
+//     Visit Google
+//   </a>
+//   <div class="link item">
+//     Javascript Link
+//   </div>
+// </div>
+//
+// Styleguide 3.7.13
+
+// Menu Dropdown Elements
+// 
+// An item may contain a nested menu in a dropdown.
+//
+// Markup:
+// <div class="ui vertical menu">
+//   <div class="ui dropdown item">
+//     Categories <i class="dropdown icon"></i>
+//     <div class="menu">
+//       <a class="item">Electronics</a>
+//       <a class="item">Automotive</a>
+//       <a class="item">Home</a>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.14
+
+// Menu Groups
+// 
+// A menu may contain another menu group in the same level as menu items.
+//
+// Markup:
+// <div class="ui menu">
+//   <a class="item">Browse</a>
+//   <a class="item">Submit</a>
+//   <div class="right menu">
+//     <a class="item">Sign Up</a>
+//     <a class="item">Help</a>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.15
+
+// Nested Menus
+// 
+// A menu item may contain another menu nested inside that acts as a grouped sub-menu.
+//
+// Markup:
+// <div class="ui vertical menu">
+//   <a class="item"><b>Friends</b></a>
+//   <div class="item">
+//     <a><b>Your Profile</b></a>
+//     <div class="menu">
+//       <a class="item">Inbox</a>
+//       <a class="item">Activity</a>
+//       <a class="item">Groups</a>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.16
+
+// Menu Item States
+// 
+// Menu items are only hoverable if they are links, defined with the variant "link", or are given the class name hover programmatically.
+//
+// .hover - A menu item can be hovered
+// .down - A menu item can be pressed in
+// .active - A menu item can be active
+//
+// Markup:
+// <div class="ui compact menu">
+//   <div class="{$modifiers} item">
+//     Link
+//   </div>
+// </div>
+//
+// Styleguide 3.7.17
+
+// Coloured Menu Items
+// 
+// Additional colors can be specified.
+//
+// .red - red
+// .green - green
+// .blue - blue
+// .yellow - yellow
+// .orange - orange
+// .purple - purple
+// .teal - teal
+// .cobalt - cobalt
+//
+// Markup:
+// <div class="ui menu">
+//   <a class="active {$modifiers} item">
+//     <i class="home icon"></i> Home
+//   </a>
+//   <a class="item">
+//     <i class="user icon"></i> Friends
+//   </a>
+// </div>
+// <div class="ui {$modifiers} menu">
+//   <a class="active item">
+//     <i class="home icon"></i> Home
+//   </a>
+//   <a class="item">
+//     <i class="mail icon"></i> Messages
+//   </a>
+//   <a class="item">
+//     <i class="user icon"></i> Friends
+//   </a>
+// </div>
+//
+// Styleguide 3.7.18
+
+.ui.menu .yellow.active.item,
+.ui.yellow.menu .active.item
+	border-color 		$yellow !important
+	color 				$yellow !important
+
+.ui.menu .cobalt.active.item,
+.ui.cobalt.menu .active.item
+	border-color 		$cobalt !important
+	// color 				$cobalt !important
+
+// Inverted Coloured Menus
+// 
+// These colors can also be inverted
+//
+// .red - red
+// .green - green
+// .blue - blue
+// .yellow - yellow
+// .orange - orange
+// .purple - purple
+// .teal - teal
+// .cobalt - cobalt
+//
+// Markup:
+// <div class="ui {$modifiers} inverted menu">
+//   <a class="active item">
+//     <i class="home icon"></i> Home
+//   </a>
+//   <a class="item">
+//     <i class="mail icon"></i> Messages
+//   </a>
+//   <a class="item">
+//     <i class="user icon"></i> Friends
+//   </a>
+// </div>
+//
+// Styleguide 3.7.19
+
+.ui.inverted.yellow.menu
+	background-color 	$yellow
+
+.ui.inverted.menu .yellow.active.item,
+.ui.inverted.yellow.menu .active.item
+	color 				$white!important
+
+.ui.inverted.cobalt.menu
+	background-color 	$cobalt
+
+.ui.inverted.menu .cobalt.active.item,
+.ui.inverted.cobalt.menu .active.item
+	// color 				$cobalt!important
+
+// Icon Menus
+// 
+// A menu may have just icons
+//
+// .vertical - A vertical icon menu
+//
+// Markup:
+// <div class="ui {$modifiers} icon menu">
+//   <a class="red item">
+//     <i class="mail icon"></i>
+//   </a>
+//   <a class="teal item">
+//     <i class="lab icon"></i>
+//   </a>
+//   <a class="green item">
+//     <i class="star icon"></i>
+//   </a>
+// </div>
+//
+// Styleguide 3.7.20
+
+// Labelled Icon Menu
+// 
+// A menu may have labeled icons
+//
+// .vertical - A vertical labeled icon menu
+//
+// Markup:
+// <div class="ui {$modifiers} labeled icon menu">
+//   <a class="red item">
+//     <i class="mail icon"></i>
+//     Mail
+//   </a>
+//   <a class="teal item">
+//     <i class="lab icon"></i>
+//     Lab
+//   </a>
+//   <a class="green item">
+//     <i class="star icon"></i>
+//     Favorites
+//   </a>
+// </div>
+//
+// Styleguide 3.7.21
+
+// Fluid Menus
+// 
+// A vertical menu may take the size of its container. (A horizontal menu does this by default)
+//
+// Markup:
+// <div class="ui fluid vertical menu">
+//   <a class="item">Run</a>
+//   <a class="item">Walk</a>
+//   <a class="item">Bike</a>
+// </div>
+//
+// Styleguide 3.7.22
+
+// Evenly Sized Menu Items
+// 
+// A menu may divide its items evenly
+//
+// Markup:
+// <div class="ui fluid three item menu">
+//   <a class="item">Buy</a>
+//   <a class="item">Sell</a>
+//   <a class="item">Rent</a>
+// </div>
+//
+// Styleguide 3.7.23
+
+// Vertical Menu Pointing to Adjacent Content
+// 
+// A vertical menu can point to content adjacent to itself to show ownership
+//
+// Markup:
+// <div class="ui pointing vertical menu">
+//   <a class="item">
+//     Site Title
+//   </a>
+//   <div class="item">
+//     <b>Grouped Section</b>
+//     <div class="menu">
+//       <a class="item">Subsection 1</a>
+//       <a class="active item">Subsection 1</a>
+//       <a class="item">Subsection 1</a>
+//     </div>
+//   </div>
+//   <div class="ui dropdown item">
+//     Dropdown <i class="dropdown icon"></i>
+//     <div class="menu">
+//       <div class="item">Choice 1</div>
+//       <div class="item">Choice 2</div>
+//       <div class="item">Choice 3</div>
+//     </div>
+//   </div>
+// </div>
+//
+// Styleguide 3.7.24
+
+// Attached Menu Items
+// 
+// A menu may be attached to other content segments
+//
+// Markup:
+// <div class="ui top attached tabular menu">
+//   <a class="active item">
+//     Tab 1
+//   </a>
+//   <a class="item">
+//     Tab 2
+//   </a>
+// </div>
+// <div class="ui bottom attached segment">
+//   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+// </div>
+//
+// Styleguide 3.7.25

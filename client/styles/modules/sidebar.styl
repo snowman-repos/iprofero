@@ -1,0 +1,117 @@
+// Sidebar
+// 
+// A sidebar is a menu hidden beside page content
+//
+// Markup:
+// <div class="ui testsidebar button">toggle sidebar</div>
+// <div class="ui red vertical demo sidebar menu">
+//   <a class="item">
+//     <i class="home icon"></i>
+//     Test
+//   </a>
+//   <a class="active item">
+//     <i class="heart icon"></i>
+//     Sidebar
+//   </a>
+// </div>
+//
+// Styleguide 5.11
+
+.sidebar.menu
+	
+	.item
+		padding 			0
+
+	.item > a,
+	.item span,
+	.item > div > a
+		color 				$white
+		display 			block
+		font-weight 		600
+		letter-spacing 		0.5px
+		padding 			0.83em 0.95em
+		text-decoration 	none
+		text-transform 		uppercase
+
+	.item > a.active,
+	.item > div > a.active
+		background-color 	rgba($white, 0.2)
+
+	.item > a,
+	.item > div > a
+		&:hover,
+		&.hover
+			background-color rgba($white, 0.1);
+
+	.submenu > .item
+		font-size			0.9em
+		font-weight			400
+		padding				0.65em 2em
+
+// Overlay Sidebar
+// 
+// A sidebar can overlay page content instead of pushing it to the side
+//
+// Markup:
+// <div class="ui testoverlaysidebar button">toggle sidebar</div>
+// <div class="ui red vertical overlay sidebar menu">
+//   <a class="item">
+//     <i class="home icon"></i>
+//     Test
+//   </a>
+//   <a class="active item">
+//     <i class="heart icon"></i>
+//     Sidebar
+//   </a>
+// </div>
+//
+// Styleguide 5.11.1
+
+// Sidebar Directions
+// 
+// A sidebar can appear on any side of content
+//
+// Markup:
+// <div class="ui buttons">
+//   <div class="ui sidebardirection button" data-direction="top">
+//     Top
+//   </div>
+//   <div class="ui sidebardirection button" data-direction="right">
+//     Right
+//   </div>
+//   <div class="ui sidebardirection button" data-direction="bottom">
+//     Bottom
+//   </div>
+// </div>
+// <div class="ui red inverted top sidebar menu">
+//   <a class="item">
+//     <i class="home icon"></i>
+//     Test
+//   </a>
+//   <a class="active item">
+//     <i class="heart icon"></i>
+//     Sidebar
+//   </a>
+// </div>
+// <div class="ui blue inverted vertical right sidebar menu">
+//   <a class="item">
+//     <i class="home icon"></i>
+//     Test
+//   </a>
+//   <a class="active item">
+//     <i class="heart icon"></i>
+//     Sidebar
+//   </a>
+// </div>
+// <div class="ui purple inverted bottom sidebar menu">
+//   <a class="item">
+//     <i class="home icon"></i>
+//     Test
+//   </a>
+//   <a class="active item">
+//     <i class="heart icon"></i>
+//     Sidebar
+//   </a>
+// </div>
+//
+// Styleguide 5.11.2
