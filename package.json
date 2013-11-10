@@ -36,14 +36,14 @@
         "async": "latest",
         "view-helpers": "latest",
         "mean-logger": "latest",
-        "forever": "latest",
-        "bower": "latest",
+        "forever": "latest"
+    },
+    "devDependencies": {
+    	"bower": "latest",
         "grunt": "latest",
         "grunt-cli": "latest",
         "grunt-env": "latest",
-        "grunt-bower-task": "latest"
-    },
-    "devDependencies": {
+        "grunt-bower-task": "latest",
         "supertest": "latest",
         "should": "latest",
         "grunt-contrib-watch": "latest",
