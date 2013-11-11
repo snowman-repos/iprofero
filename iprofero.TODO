@@ -8,6 +8,7 @@
  ☐ general optimisations
  ☐ display activities grouped by parent in admin settings page
  ☐ bug when editting project / changing participants
+ ☐ deploying to heroku - can't get forever to run a coffeescript app
  ☐ unit/e2e tests required - should have done them at the same time :(
      ☐ api
          ☐ create an activity

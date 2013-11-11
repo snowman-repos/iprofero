@@ -4,33 +4,33 @@
 		"name": "iProfero - An agency management toolset"
 	},
 	"facebook": {
-		"clientID": "413569945431691",
-		"clientSecret": "8138363695a0d30bd372233a821ae440",
+		"clientID": "351682878309202",
+		"clientSecret": "9699810acc2bf2cabdf324c093f29952",
 		"callbackURL": "http://iprofero.herokuapp.com/auth/facebook/callback"
 	},
 	"twitter": {
-		"clientID": "secaZz0s8ENgskInc1BsrA",
-		"clientSecret": "ZMgzorWS3wJXymZ9pfnxbBIhKjI0P9ivnyPzrHdVio",
+		"clientID": "gDsiHd4WeRWmAfAifoeQ",
+		"clientSecret": "2T4jlujrC6AcxVBU6D8juxMSV7g5pIYVYRulxHwhw",
 		"callbackURL": "http://iprofero.herokuapp.com/auth/twitter/callback"
 	},
 	"github": {
-		"clientID": "3a15d1fc1d1db3ea9ffb",
-		"clientSecret": "541db94923d7547f9702e67f31d58c668ff7a4ed",
+		"clientID": "95baf993b612908fa0ad",
+		"clientSecret": "aef9ce845884709d3a652942bfa47124d6a851cb",
 		"callbackURL": "http://iprofero.herokuapp.com/auth/github/callback"
 	},
 	"google": {
-		"clientID": "395855882532.apps.googleusercontent.com",
-		"clientSecret": "lhnZvpn2xH9NAaBnPYHr4Z5K",
+		"clientID": "395855882532-eflld25j5kt9jdithne0i4qgms95965u.apps.googleusercontent.com",
+		"clientSecret": "0awEUhYUkCGCscgXFOz9V9-o",
 		"callbackURL": "http://iprofero.herokuapp.com/auth/google/callback"
 	},
 	"linkedin": {
-		"clientID": "3id5lx82kf81",
-		"clientSecret": "rV37aeKZkeWw3dEc",
+		"clientID": "yaxt2aywvivl",
+		"clientSecret": "ezEEgpBOb8tVjeCT",
 		"callbackURL": "http://iprofero.herokuapp.com/auth/linkedin/callback"
 	},
 	"weibo": {
-		"clientID": "1916403085",
-		"clientSecret": "1e57bdc7101aa068c9767edb36eea6b3",
+		"clientID": "3853861258",
+		"clientSecret": "f153d70584ae60070e4ed79759411f46",
 		"callbackURL": "http://iprofero.herokuapp.com/auth/weibo/callback"
 	}
 }
