@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/forever -m 5 -c coffee server.coffee
+web: coffee server.coffee
