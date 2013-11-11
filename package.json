@@ -35,7 +35,8 @@
         "async": "latest",
         "view-helpers": "latest",
         "mean-logger": "latest",
-        "forever": "latest"
+        "forever": "latest",
+        "coffee-script": "latest"
     },
     "devDependencies": {
     	"bower": "latest",
