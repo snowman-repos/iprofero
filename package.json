@@ -36,7 +36,8 @@
         "view-helpers": "latest",
         "mean-logger": "latest",
         "forever": "latest",
-        "coffee-script": "latest"
+        "coffee-script": "latest",
+        "nodemon": "latest"
     },
     "devDependencies": {
     	"bower": "latest",
