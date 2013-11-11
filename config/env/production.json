@@ -6,31 +6,31 @@
 	"facebook": {
 		"clientID": "413569945431691",
 		"clientSecret": "8138363695a0d30bd372233a821ae440",
-		"callbackURL": "http://localhost:3000/auth/facebook/callback"
+		"callbackURL": "http://iprofero.herokuapp.com/auth/facebook/callback"
 	},
 	"twitter": {
 		"clientID": "secaZz0s8ENgskInc1BsrA",
 		"clientSecret": "ZMgzorWS3wJXymZ9pfnxbBIhKjI0P9ivnyPzrHdVio",
-		"callbackURL": "http://localhost:3000/auth/twitter/callback"
+		"callbackURL": "http://iprofero.herokuapp.com/auth/twitter/callback"
 	},
 	"github": {
 		"clientID": "3a15d1fc1d1db3ea9ffb",
 		"clientSecret": "541db94923d7547f9702e67f31d58c668ff7a4ed",
-		"callbackURL": "http://localhost:3000/auth/github/callback"
+		"callbackURL": "http://iprofero.herokuapp.com/auth/github/callback"
 	},
 	"google": {
 		"clientID": "395855882532.apps.googleusercontent.com",
 		"clientSecret": "lhnZvpn2xH9NAaBnPYHr4Z5K",
-		"callbackURL": "http://localhost:3000/auth/google/callback"
+		"callbackURL": "http://iprofero.herokuapp.com/auth/google/callback"
 	},
 	"linkedin": {
 		"clientID": "3id5lx82kf81",
 		"clientSecret": "rV37aeKZkeWw3dEc",
-		"callbackURL": "http://localhost:3000/auth/linkedin/callback"
+		"callbackURL": "http://iprofero.herokuapp.com/auth/linkedin/callback"
 	},
 	"weibo": {
 		"clientID": "1916403085",
 		"clientSecret": "1e57bdc7101aa068c9767edb36eea6b3",
-		"callbackURL": "http://127.0.0.1:3000/auth/weibo/callback"
+		"callbackURL": "http://iprofero.herokuapp.com/auth/weibo/callback"
 	}
 }
