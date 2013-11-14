@@ -3,9 +3,10 @@
 window.app = angular.module("iprofero", [
 	"ngCookies",
 	"ngResource",
+	"ngSanitize",
 	"ui.route",
 	"ui.mask",
-	"datePicker",
+	"ui.bootstrap.datetimepicker",
 	"xeditable",
 	"tags-input",
 	"underscore",

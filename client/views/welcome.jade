@@ -101,14 +101,18 @@ div.page-container(data-ng-controller="IndexController", data-ng-init="welcome()
 									i.yuan.icon
 									.ui.corner.label
 										i.asterisk.icon
-					
 							.field
-								label(for="startdate") When did you start working at Profero?
-								.ui.left.labeled.icon.input
-									input(date-time, month, year, min-view="month", max-view="year", format="MMMM, yyyy", data-ng-model="user.employment_period.start")
-									i.calender.icon
+								label(for="startdate") When did you start working at 
+									span(data-ng-bind="user.agency")
+										| ?
+								.ui.left.icon.dropdown.input(dropdown)
+									input(name="date", type="text", data-ng-model="startdate", tabindex="2")
+									i.calendar.icon
 									.ui.corner.label
 										i.asterisk.icon
+									.menu
+										.item
+											datetimepicker(data-ng-model="user.employment_period.start", data-datetimepicker-config="{ minView: 'day', maxView: 'year', startView: 'day' }")
 					
 					.ui.top.margin.grid
 						.center.aligned.column

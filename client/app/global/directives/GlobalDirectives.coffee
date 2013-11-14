@@ -9,6 +9,7 @@
 # 3.................VALIDATION
 # 4.................SEMANTIC UI COMPONENTS
 # 5.................CUSTOM COMPONENTS
+# 6.................EVENTS
 
 # ----------------------------------------
 # 	FORMATTING
@@ -46,10 +47,10 @@ angular.module("iprofero.system").directive "onEscape", ->
 # ----------------------------------------
 
 # Only allow numerical values
-angular.module("iprofero.admin").directive "validNumber", ->
+angular.module("iprofero.system").directive "validNumber", ->
 	require: "?ngModel"
 	link: (scope, element, attrs, ngModelCtrl) ->
-		return  unless ngModelCtrl
+		return unless ngModelCtrl
 		ngModelCtrl.$parsers.push (val) ->
 			clean = val.replace(/[^0-9,.]+/g, "")
 			if val isnt clean
@@ -416,3 +417,12 @@ angular.module("iprofero.system").directive "clickToEditHeadline", ->
 			else
 				$scope.$parent.updateSingleProperty(actualProperty, $scope.value)
 				$scope.disableEditor()
+
+# ----------------------------------------
+# 	EVENTS
+# ----------------------------------------
+
+angular.module("iprofero.system").directive "focus", ->
+	restrict: "A"
+	link: (scope, element, attrs) ->
+		element.focus()

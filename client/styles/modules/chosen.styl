@@ -1,0 +1,357 @@
+// Chosen
+// 
+// A module for allowing users to search in select input fields
+//
+// Markup:
+// <select chosen multiple id="states">
+// 	<option value="AK">Alaska</option>
+// 	<option value="AZ">Arizona</option>
+// 	<option value="AR">Arkansas</option>    
+// 	<option value="CA">California</option>    
+// </select>
+//
+// Styleguide 5.3
+
+.chosen-container
+	position relative
+	display inline-block
+	vertical-align middle
+	font-size 1em
+	zoom 1
+	*display inline
+	-webkit-user-select none
+	-moz-user-select none
+	user-select none
+	width 100% !important
+	.chosen-drop
+		position absolute
+		top 100%
+		left -9999px
+		z-index 1010
+		-webkit-box-sizing border-box
+		-moz-box-sizing border-box
+		box-sizing border-box
+		width 100%
+		border 1px solid $light-grey
+		border-top 0
+		background #fff
+		box-shadow 0 4px 5px rgba($black, 0.15)
+	&.chosen-with-drop
+		.chosen-drop
+			left 0
+	a
+		cursor pointer
+	.chosen-results
+		position relative
+		overflow-x hidden
+		overflow-y auto
+		margin 0 4px 4px 0
+		padding 0 0 0 4px
+		max-height 240px
+		-webkit-overflow-scrolling touch
+		li
+			display none
+			margin 0
+			padding 0.8em 0.5em
+			list-style none
+			line-height 15px
+			&.active-result
+				display list-item
+				cursor pointer
+			&.disabled-result
+				display list-item
+				color #ccc
+				cursor default
+			&.highlighted
+				background-color $very-light-grey
+				color rgba($black, 0.8)
+			&.no-results
+				display list-item
+				background #f4f4f4
+			&.group-result
+				display list-item
+				font-weight bold
+				cursor default
+			&.group-option
+				padding-left 15px
+			em
+				font-style normal
+				text-decoration underline
+	.icon
+		float right
+		opacity 0.7
+		margin 0.3em 0.5em 0 0
+		-webkit-transition opacity 0.2s ease-out
+		-moz-transition opacity 0.2s ease-out
+		-o-transition opacity 0.2s ease-out
+		-ms-transition opacity 0.2s ease-out
+		transition opacity 0.2s ease-out
+		width auto
+		font-size 1em
+	.dropdown.icon:before
+		content "\f0d7"
+
+.chosen-container-single
+	.chosen-single
+		position relative
+		display block
+		overflow hidden
+		padding 8px
+		height 23px
+		border 1px solid $light-grey
+		border-radius 5px
+		background-color #fff
+		box-shadow 0 0 3px white inset, 0 1px 1px rgba($black, 0.1)
+		color #444
+		text-decoration none
+		white-space nowrap
+		line-height 24px
+		span
+			overflow hidden
+			margin-right 26px
+			text-overflow ellipsis
+			white-space nowrap
+		abbr
+			position absolute
+			top 6px
+			right 26px
+			display block
+			width 12px
+			height 12px
+			font-size 1px
+			&:hover
+				background-position -42px -10px
+		div
+			position absolute
+			top 0
+			right 0
+			display block
+			width 18px
+			height 100%
+			b
+				display block
+				width 100%
+				height 100%
+	.chosen-default
+		color rgba($black, 0.5)
+
+		&:hover
+			color rgba($black, 0.8)
+	.chosen-single-with-deselect
+		span
+			margin-right 38px
+	&.chosen-disabled
+		.chosen-single
+			abbr
+				&:hover
+					background-position -42px -10px
+	.chosen-search
+		position relative
+		z-index 1010
+		margin 0
+		padding 3px 4px
+		white-space nowrap
+		input[type="text"]
+			-webkit-box-sizing border-box
+			-moz-box-sizing border-box
+			box-sizing border-box
+			margin 1px 0
+			padding 0.5em
+			width 100%
+			height auto
+			outline 0
+			border 1px solid $light-grey
+			font-size 1em
+			font-family sans-serif
+			line-height normal
+			border-radius 0
+	.chosen-drop
+		margin-top -1px
+		border-radius 0 0 4px 4px
+		background-clip padding-box
+	&.chosen-container-single-nosearch
+		.chosen-search
+			position absolute
+			left -9999px
+
+.chosen-container-multi
+	.chosen-choices
+		position relative
+		overflow hidden
+		-webkit-box-sizing border-box
+		-moz-box-sizing border-box
+		box-sizing border-box
+		margin 0
+		padding 0
+		width 100%
+		height auto !important
+		height 1%
+		border 1px solid $light-grey
+		background-color #fff
+		cursor text
+		li
+			float left
+			list-style none
+			&.search-field
+				margin 0
+				padding 0
+				white-space nowrap
+				input[type="text"]
+					margin 1px 0
+					padding 5px
+					height 15px
+					outline 0
+					border 0 !important
+					background transparent !important
+					box-shadow none
+					color #666
+					font-size 100%
+					font-family sans-serif
+					line-height normal
+					border-radius 0
+				.default
+					color #999
+			&.search-choice
+				position relative
+				margin 3px 0 3px 5px
+				padding 3px 20px 3px 5px
+				border 1px solid $light-grey
+				border-radius 3px
+				box-shadow 0 0 2px white inset, 0 1px 0 rgba($black, 0.05)
+				color #333
+				line-height 13px
+				cursor default
+				.search-choice-close
+					position absolute
+					top 4px
+					right 3px
+					display block
+					width 12px
+					height 12px
+					font-size 1px
+					&:hover
+						background-position -42px -10px
+			&.search-choice-disabled
+				padding-right 5px
+				border 1px solid #ccc
+				color #666
+			&.search-choice-focus
+				background #d4d4d4
+				.search-choice-close
+					background-position -42px -10px
+	.chosen-results
+		margin 0
+		padding 0
+	.chosen-drop
+		.result-selected
+			display list-item
+			color #ccc
+			cursor default
+
+.chosen-container-active
+	.chosen-single
+		border 1px solid rgba($black, 0.1)
+		box-shadow 0 0 5px rgba($black, 0.3)
+	&.chosen-with-drop
+		.chosen-single
+			border 1px solid $light-grey
+			-moz-border-radius-bottomright 0
+			border-bottom-right-radius 0
+			-moz-border-radius-bottomleft 0
+			border-bottom-left-radius 0
+			box-shadow 0 1px 0 #fff inset
+			div
+				border-left none
+				background transparent
+				b
+					background-position -18px 2px
+	.chosen-choices
+		border 1px solid #5897fb
+		box-shadow 0 0 5px rgba($black, 0.3)
+		li
+			&.search-field
+				input[type="text"]
+					color #111 !important
+
+.chosen-disabled
+	opacity 0.5 !important
+	cursor default
+	.chosen-single
+		cursor default
+	.chosen-choices
+		.search-choice
+			.search-choice-close
+				cursor default
+
+.chosen-rtl
+	text-align right
+	.chosen-single
+		overflow visible
+		padding 0 8px 0 0
+		span
+			margin-right 0
+			margin-left 26px
+			direction rtl
+		div
+			right auto
+			left 3px
+		abbr
+			right auto
+			left 26px
+	.chosen-single-with-deselect
+		span
+			margin-left 38px
+	.chosen-choices
+		li
+			float right
+			&.search-field
+				input[type="text"]
+					direction rtl
+			&.search-choice
+				margin 3px 5px 3px 0
+				padding 3px 5px 3px 19px
+				.search-choice-close
+					right auto
+					left 4px
+	&.chosen-container-single
+		.chosen-results
+			margin 0 0 4px 4px
+			padding 0 4px 0 0
+		.chosen-single
+			div
+				b
+					background-position 6px 2px
+		&.chosen-with-drop
+			.chosen-single
+				div
+					b
+						background-position -12px 2px
+	.chosen-results
+		li
+			&.group-option
+				padding-right 15px
+				padding-left 0
+	&.chosen-container-active
+		&.chosen-with-drop
+			.chosen-single
+				div
+					border-right none
+	.chosen-search
+		input[type="text"]
+			padding 4px 5px 4px 20px
+			direction rtl
+
+.chosen-rtl.chosen-container-single-nosearch .chosen-search,
+.chosen-rtl .chosen-drop
+	left 9999px
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi)
+	.chosen-rtl .chosen-search input[type="text"],
+	.chosen-container-single .chosen-single abbr,
+	.chosen-container-single .chosen-single div b,
+	.chosen-container-single .chosen-search input[type="text"],
+	.chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+	.chosen-container .chosen-results-scroll-down span,
+	.chosen-container .chosen-results-scroll-up span
+		background-size 52px 37px !important
+		background-repeat no-repeat !important

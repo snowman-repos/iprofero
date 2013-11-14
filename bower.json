@@ -14,10 +14,11 @@
     "underscore.string": "2.3.3",
     "json3": "~3.2.4",
     "jquery": "~1.9.1",
-    "semantic-ui": "*",
+    "semantic-ui": "latest",
     "formatter": "*",
     "momentjs": "*",
-    "angular-momentjs": "*"
+    "angular-momentjs": "*",
+    "chosen": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.0.8",

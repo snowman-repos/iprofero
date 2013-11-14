@@ -78,7 +78,7 @@ module.exports = (grunt) ->
 				indentation:
 					level: "ignore"
 				max_line_length:
-					value: 80
+					value: 180
 					level: "error"
 				newlines_after_classes:
 					level: "error"

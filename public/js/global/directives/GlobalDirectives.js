@@ -36,7 +36,7 @@
     };
   });
 
-  angular.module("iprofero.admin").directive("validNumber", function() {
+  angular.module("iprofero.system").directive("validNumber", function() {
     return {
       require: "?ngModel",
       link: function(scope, element, attrs, ngModelCtrl) {
@@ -418,6 +418,15 @@
             return $scope.disableEditor();
           }
         };
+      }
+    };
+  });
+
+  angular.module("iprofero.system").directive("focus", function() {
+    return {
+      restrict: "A",
+      link: function(scope, element, attrs) {
+        return element.focus();
       }
     };
   });

@@ -26,6 +26,26 @@ exports.all = (req, res) ->
 		else
 			res.jsonp timesheets
 
+exports.allForPerson = (req, res) ->
+	person = req.profile
+	Timesheet.find(person: person._id).exec (err, timesheets) ->
+		if err
+			res.render "error",
+				status: 500
+		else
+			# group these by date
+			res.jsonp timesheets
+
+exports.allForProject = (req, res) ->
+	project = req.project
+	Timesheet.find(project: project._id).exec (err, timesheets) ->
+		if err
+			res.render "error",
+				status: 500
+		else
+			res.jsonp timesheets
+
+
 # update single timesheet
 exports.update = (req, res) ->
 	timesheet = req.timesheet

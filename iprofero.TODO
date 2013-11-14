@@ -6,9 +6,11 @@
  ☐ validation on admin settings page (add activity) not working
  ☐ database + controller optimisation: getprojectsbyparent (children), getparent, getusersbyproject (participants)
  ☐ general optimisations
+ ☐ timesheet - prevent invalid input
  ☐ display activities grouped by parent in admin settings page
- ☐ bug when editting project / changing participants
+ ☐ bug when editting project / changing participants - welcome page screwing things up
  ☐ deploying to heroku - can't get forever to run a coffeescript app
+ ☐ timesheet timer - sync every so often in case browser session closed?
  ☐ unit/e2e tests required - should have done them at the same time :(
      ☐ api
          ☐ create an activity

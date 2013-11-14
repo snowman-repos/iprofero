@@ -313,7 +313,6 @@ angular.module("iprofero.projects").controller "ProjectsController", [
 		$scope.find = (query) ->
 			Projects.query query, (projects) ->
 				$scope.projects = projects
-				console.log $scope.projects.length
 				$scope.predicate = "name"
 				$scope.reverse = false
 

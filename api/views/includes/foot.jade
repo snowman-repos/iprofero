@@ -23,6 +23,7 @@ else
 	script(type='text/javascript', src='/lib/angular/angular.js')
 	script(type='text/javascript', src='/lib/angular-cookies/angular-cookies.js')
 	script(type='text/javascript', src='/lib/angular-resource/angular-resource.js')
+	script(type='text/javascript', src='/lib/angular-sanitize/angular-sanitize.js')
 	
 	//Angular UI
 	script(type='text/javascript', src='/lib/angular-ui-utils/modules/route.js')
@@ -39,7 +40,8 @@ else
 	script(type='text/javascript', src='/lib/formatter/lib/jquery.formatter.js')
 	script(type='text/javascript', src='/lib/momentjs/moment.js')
 	script(type='text/javascript', src='/lib/angular-momentjs/angular-momentjs.js')
-	script(type='text/javascript', src='/lib/angular-datepicker/angular-date-picker.js')
+	script(type='text/javascript', src='/lib/chosen/chosen.jquery.js')
+	script(type='text/javascript', src='/lib/angular-bootstrap-datetimepicker/src/js/datetimepicker.js')
 
 	//Application Init
 	script(type='text/javascript', src='/js/app.js')
@@ -52,29 +54,33 @@ else
 	script(type='text/javascript', src='/js/global/services/TeamService.js')
 	script(type='text/javascript', src='/js/global/services/TechnologyService.js')
 	script(type='text/javascript', src='/js/global/services/ActivityService.js')
+	script(type='text/javascript', src='/js/global/directives/GlobalDirectives.js')
+	script(type='text/javascript', src='/js/global/filters/GlobalFilters.js')
 	script(type='text/javascript', src='/js/global/controllers/IndexController.js')
 	script(type='text/javascript', src='/js/global/controllers/HeaderController.js')
 	script(type='text/javascript', src='/js/global/controllers/SidebarController.js')
-	script(type='text/javascript', src='/js/global/directives/GlobalDirectives.js')
-	script(type='text/javascript', src='/js/global/filters/GlobalFilters.js')
 	
 	//Users
 	script(type='text/javascript', src='/js/users/services/UsersService.js')
-	script(type='text/javascript', src='/js/users/controllers/UsersController.js')
 	script(type='text/javascript', src='/js/users/directives/UsersDirectives.js')
+	script(type='text/javascript', src='/js/users/controllers/UsersController.js')
 	
 	//Projects
 	script(type='text/javascript', src='/js/projects/services/ProjectsService.js')
-	script(type='text/javascript', src='/js/projects/controllers/ProjectsController.js')
 	script(type='text/javascript', src='/js/projects/directives/ProjectsDirectives.js')
+	script(type='text/javascript', src='/js/projects/controllers/ProjectsController.js')
 	
 	//Timesheets
+	script(type='text/javascript', src='/js/timesheets/filters/TimesheetsFilters.js')
 	script(type='text/javascript', src='/js/timesheets/services/TimesheetsService.js')
+	script(type='text/javascript', src='/js/timesheets/services/StopwatchService.js')
+	script(type='text/javascript', src='/js/timesheets/services/TimesheetPreferencesService.js')
+	script(type='text/javascript', src='/js/timesheets/directives/TimesheetsDirectives.js')
 	script(type='text/javascript', src='/js/timesheets/controllers/TimesheetsController.js')
 
 	//Admin
-	script(type='text/javascript', src='/js/admin/controllers/AdminController.js')
 	script(type='text/javascript', src='/js/admin/directives/AdminDirectives.js')
+	script(type='text/javascript', src='/js/admin/controllers/AdminController.js')
 	script(type='text/javascript', src='/js/admin/controllers/ReportsController.js')
 	
 	//Init

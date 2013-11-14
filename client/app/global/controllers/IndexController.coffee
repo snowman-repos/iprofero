@@ -222,4 +222,17 @@ angular.module("iprofero.system").controller "IndexController", [
 			$scope.newSkills = $.grep($scope.user.skills, (el) ->
 				$.inArray(el, $scope.skillSuggestions) is -1
 			)
+
+		# Format the date nicely from the date picker so that it
+		# shows nicely in the input element
+		$scope.$watch("user.employment_period.start", ->
+			if moment($scope.user.employment_period.start).isSame(moment(),'day')
+				$scope.date = "today"
+			else if moment($scope.user.employment_period.start).isSame(moment().subtract('days', 1),'day')
+				$scope.date = "yesterday"
+			else if moment($scope.user.employment_period.start).isSame(moment(), 'week')
+				$scope.date = moment($scope.user.employment_period.start).format("dddd")
+			else
+				$scope.date = moment($scope.newtimelog.date).format("DD MMM")
+		)
 ]

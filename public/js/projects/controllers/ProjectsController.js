@@ -312,7 +312,6 @@
       $scope.find = function(query) {
         return Projects.query(query, function(projects) {
           $scope.projects = projects;
-          console.log($scope.projects.length);
           $scope.predicate = "name";
           return $scope.reverse = false;
         });

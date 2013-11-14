@@ -9,3 +9,15 @@ angular.module("iprofero.timesheets").factory "Timesheets", [
 			update:
 				method: "PUT"
 ]
+
+angular.module("iprofero.timesheets").factory "PersonTimesheets", [
+	"$resource", ($resource) ->
+		$resource "users/timesheets/:userId",
+			userId: "@_id"
+]
+
+angular.module("iprofero.timesheets").factory "ProjectTimesheets", [
+	"$resource", ($resource) ->
+		$resource "projects/timesheets/:projectId",
+			projectId: "@_id"
+]

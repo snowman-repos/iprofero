@@ -81,6 +81,8 @@ module.exports = (app, passport, auth, profile) ->
 	app.get "/timesheets/:timesheetId", auth.requiresLogin, timesheets.show
 	app.put "/timesheets/:timesheetId", auth.requiresLogin, timesheets.update
 	app.del "/timesheets/:timesheetId", auth.requiresLogin, timesheets.remove
+	app.get "/users/timesheets/:userId", auth.requiresLogin, timesheets.allForPerson
+	app.get "/projects/timesheets/:projectId", auth.requiresLogin, timesheets.allForProject
 	app.param("timesheetId", timesheets.timesheet)
 
 	# Main Routes

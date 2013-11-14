@@ -1,9 +1,141 @@
-.page-container.top.margin(data-ng-controller='TimesheetsController')
+.page-container.top.margin(data-ng-controller='TimesheetsController', data-ng-init="timer = 'off';")
 
-	.ui.page.grid
-		.column
-			.ui.huge.icon.message
-				i.smile.icon
-				.content
-					.header Timesheets Page
-					| Ready to start coding!
+	.ui.page.stackable.grid
+		.row
+			.eleven.wide.column
+	
+				form.ui.form.segment(data-ng-switch="prefs.logType")
+					.ui.small.icon.buttons.bottom.margin
+						.ui.button(data-ng-class="{'active':prefs.logType == 'form'}", data-ng-click="prefs.logType = 'form'; setLogType();")
+							i.block.layout.icon
+						.ui.button(data-ng-class="{'active':prefs.logType == 'slider'}", data-ng-click="prefs.logType = 'slider'; setLogType();")
+							i.resize.horizontal.icon
+						.ui.button(data-ng-class="{'active':prefs.logType == 'timer'}", data-ng-click="prefs.logType = 'timer'; setLogType();")
+							i.time.icon
+						.ui.button(data-ng-class="{'active': prefs.dateRange == true}", data-ng-click="prefs.dateRange = !prefs.dateRange; setDateFormat()", data-ng-hide="prefs.logType=='timer'")
+							i.calendar.icon
+							i.resize.horizontal.icon
+							i.calendar.icon
+
+					.two.stackable.fields(data-ng-switch-when="form", data-ng-hide="prefs.dateRange == true")
+						.hours.field
+							.ui.left.icon.input
+								input(name="hours", type="text", data-ng-model="newtimelog.hours", tabindex="1", placeholder="e.g. 1, 1.5, 8, 12.25", validate-time)
+								i.time.icon
+						.field
+							.ui.left.icon.dropdown.input(dropdown)
+								input(name="date", type="text", data-ng-model="date", tabindex="2")
+								i.calendar.icon
+								.menu
+									.item
+										datetimepicker(data-ng-model="newtimelog.date", data-datetimepicker-config="{ minView: 'day', maxView: 'month', startView: 'day' }")
+
+					div(data-ng-switch-when="form", data-ng-show="prefs.dateRange == true")
+						.hours.field
+							.ui.left.icon.input
+								input(name="hours", type="text", data-ng-model="newtimelog.hours", tabindex="1", placeholder="e.g. 1, 1.5, 8, 12.25", validate-time)
+								i.time.icon
+						.two.stackable.fields
+							.field
+								label.small from:
+								.ui.left.icon.dropdown.input(dropdown)
+									input(name="date", type="text", data-ng-model="startdate", tabindex="2")
+									i.calendar.icon
+									.menu
+										.item
+											datetimepicker(data-ng-model="newtimelog.startdate", data-datetimepicker-config="{ minView: 'day', maxView: 'month', startView: 'day' }")
+							.field
+								label.small to:
+								.ui.left.icon.dropdown.input(dropdown)
+									input(name="date", type="text", data-ng-model="enddate", tabindex="2")
+									i.calendar.icon
+									.menu
+										.item
+											datetimepicker(data-ng-model="newtimelog.enddate", data-datetimepicker-config="{ minView: 'day', maxView: 'month', startView: 'day' }")
+
+					div(data-ng-switch-when="slider")
+						.field
+							.ui.center.aligned.huge.header
+								i.time.icon
+								|  {{newtimelog.time | time}}
+							input(type="range", max="86400", min="0", step="900", data-ng-model="newtimelog.time", tabindex="1")
+						.field(data-ng-hide="prefs.dateRange == true")
+							.ui.left.icon.dropdown.input(dropdown)
+								input(name="date", type="text", data-ng-model="date", tabindex="2")
+								i.calendar.icon
+								.menu
+									.item
+										datetimepicker(data-ng-model="newtimelog.date", data-datetimepicker-config="{ minView: 'day', maxView: 'month', startView: 'day' }")
+						.two.stackable.fields(data-ng-show="prefs.dateRange == true")
+							.field
+								label.small from:
+								.ui.left.icon.dropdown.input(dropdown)
+									input(name="date", type="text", data-ng-model="startdate", tabindex="2")
+									i.calendar.icon
+									.menu
+										.item
+											datetimepicker(data-ng-model="newtimelog.startdate", data-datetimepicker-config="{ minView: 'day', maxView: 'month', startView: 'day' }")
+							.field
+								label.small to:
+								.ui.left.icon.dropdown.input(dropdown)
+									input(name="date", type="text", data-ng-model="enddate", tabindex="2")
+									i.calendar.icon
+									.menu
+										.item
+											datetimepicker(data-ng-model="newtimelog.enddate", data-datetimepicker-config="{ minView: 'day', maxView: 'month', startView: 'day' }")
+
+
+					div(data-ng-switch-when="timer")
+						.field
+							.ui.center.aligned.massive.header(data-ng-class="{'disabled': Stopwatch.data.status == 'off'}") {{Stopwatch.data.value | duration}}
+
+						.ui.center.aligned.bottom.margin
+							.ui.buttons
+								.ui.icon.button(data-ng-click="Stopwatch.start();", data-ng-class="{active: Stopwatch.data.status == 'on'}")
+									i.time.icon
+								.ui.icon.button(data-ng-click="Stopwatch.stop();", data-ng-class="{active: Stopwatch.data.status == 'paused'}")
+									i.pause.icon
+								.ui.icon.button(data-ng-click="Stopwatch.reset();")
+									i.undo.icon
+
+					.two.stackable.fields
+						.field
+							select(chosen, data-ng-model="project", data-ng-options="project.name for project in user.projects", data-placeholder="{{projectNames[newtimelog.project] || 'Project'}}", data-no-results-text="'No projects'", tabindex="3")
+
+						.field
+							select(chosen, data-ng-model="activity", data-ng-options="activity.name for activity in activities", data-placeholder="{{activityNames[newtimelog.activity] || 'Activity'}}", data-no-results-text="'No activities'", tabindex="4")
+
+					label.small(for="comment") Comment:
+					.ui.fluid.input.bottom.margin
+						input#comment(data-ng-model="newtimelog.comment", placeholder="anything else?", tabindex="5")
+
+					.ui.center.aligned(data-ng-show="prefs.logType != 'timer'")
+						.ui.green.labeled.icon.button(tabindex="6", data-ng-class="{'disabled': newtimelog.project == '' || newtimelog.activity == '' || newtimelog.date == '' || !newtimelog.time || !valid}", data-ng-click="logTime()")
+							i.save.icon
+							| Log time
+
+					.ui.center.aligned(data-ng-show="prefs.logType == 'timer'")
+						.ui.green.labeled.icon.button(tabindex="6", data-ng-class="{'disabled': newtimelog.project == '' || newtimelog.activity == '' || newtimelog.date == '' || Stopwatch.data.value == 0}", data-ng-click="logTime()")
+							i.save.icon
+							| Log time
+	
+			.five.wide.column
+				.ui.header Hours this week: 
+					.ui.circular.label(data-ng-class="{'green':hoursThisWeek >= 40, 'red':hoursThisWeek < 40}", data-ng-bind="hoursThisWeek")
+					.sub.header Projects: 
+						span(data-ng-bind="activeProjects")
+
+		.row
+			.column
+
+				//- should loop through timelog dates first, then each timelog for that date
+				.ui.relaxed.animated.divided.list(data-ng-if="myTimelogs.length != 0")
+					.item(data-ng-repeat="timelog in myTimelogs| orderBy: timelog.date")
+						img.ui.avatar.image(data-ng-src="{{user.avatar}}")
+						i.right.floated.circular.pencil.icon.link
+						i.right.floated.circular.remove.icon.link
+						.content
+							.header(data-ng-bind="projectNames[timelog.project]")
+							span(data-ng-bind="timelog.time / 60 / 60")
+				p(data-ng-if="myTimelogs.length == 0")
+					i No timesheets logged yet

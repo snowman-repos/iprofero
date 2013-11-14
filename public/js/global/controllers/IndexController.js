@@ -173,12 +173,23 @@
         });
       };
       $scope.populateDataFromSNS = function() {};
-      return $scope.tagsUpdated = function(field) {
+      $scope.tagsUpdated = function(field) {
         $scope.user.skills = $scope.skills;
         return $scope.newSkills = $.grep($scope.user.skills, function(el) {
           return $.inArray(el, $scope.skillSuggestions) === -1;
         });
       };
+      return $scope.$watch("user.employment_period.start", function() {
+        if (moment($scope.user.employment_period.start).isSame(moment(), 'day')) {
+          return $scope.date = "today";
+        } else if (moment($scope.user.employment_period.start).isSame(moment().subtract('days', 1), 'day')) {
+          return $scope.date = "yesterday";
+        } else if (moment($scope.user.employment_period.start).isSame(moment(), 'week')) {
+          return $scope.date = moment($scope.user.employment_period.start).format("dddd");
+        } else {
+          return $scope.date = moment($scope.newtimelog.date).format("DD MMM");
+        }
+      });
     }
   ]);
 
