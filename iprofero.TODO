@@ -11,6 +11,9 @@
  ☐ bug when editting project / changing participants - welcome page screwing things up
  ☐ deploying to heroku - can't get forever to run a coffeescript app
  ☐ timesheet timer - sync every so often in case browser session closed?
+ ☐ nice error notifications at the top of the page
+ ☐ timesheets pagination
+ ☐ keyboard shortcuts
  ☐ unit/e2e tests required - should have done them at the same time :(
      ☐ api
          ☐ create an activity
@@ -18,6 +21,13 @@
          ☐ get all activities
          ☐ delete an activity
          ☐ update an activity
+         ☐ create a timesheet
+         ☐ get one timesheet
+         ☐ get all timesheets
+         ☐ get all timesheets for person
+         ☐ get all timesheets for project
+         ☐ update a timesheet
+         ☐ delete a timesheet
          ☐ create a job
          ☐ get one job
          ☐ get all jobs
@@ -149,5 +159,22 @@
              ☐ update user
              ☐ update single user field
              ☐ get all users
-             ☐ get one user 
+             ☐ get one user
+         ☐ timesheets
+             ☐ remember log type preference
+             ☐ remember last project logged
+             ☐ remember last activity logged
+             ☐ remember last hours logged
+             ☐ remember date type preferred
+             ☐ save timesheet from form for single date
+             ☐ save timesheet from form for date range
+             ☐ save timesheet from slider for single date
+             ☐ save timesheet from slider for date range
+             ☐ save timesheet from timer
+             ☐ prevent saving of timesheets without complete data: project, activity, date, hours
+             ☐ list all user's timesheets
+             ☐ show correct hours for this week
+             ☐ show correct projects logged for this week
+             ☐ edit timesheet
+             ☐ delete timesheet
  ☐ Put all these issues on github issue tracker

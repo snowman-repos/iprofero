@@ -24,6 +24,7 @@ angular.module("iprofero.timesheets").controller "TimesheetsController", [
 
 		$scope.user = Global.user
 		$scope.Stopwatch = Stopwatch
+		$MINIMUM_TIME = 900
 
 		# ------------------
 		# Setup
@@ -76,12 +77,12 @@ angular.module("iprofero.timesheets").controller "TimesheetsController", [
 
 		# Fetch my timelogs
 		$scope.myTimelogs = []
-		PersonTimesheets.get
+		PersonTimesheets.query
 				userId: $scope.user._id
 			, (timelogs) ->
 				$scope.myTimelogs = timelogs
-				$scope.hoursThisWeek = 12
-				$scope.activeProjects = 3
+		$scope.hoursThisWeek = 12
+		$scope.activeProjects = 3
 
 		# ------------------
 		# Preferences
@@ -107,8 +108,9 @@ angular.module("iprofero.timesheets").controller "TimesheetsController", [
 		# Ensure the time stays the same if the user switches between
 		# the textbox and the slider input method. The slider records
 		# seconds while the textbox records hours, so need conversion.
+		# Don't let people log timesheets less than 15 minutes.
 		$scope.$watch("newtimelog.hours", ->
-			$scope.valid = $scope.newtimelog.hours > 0 and $scope.newtimelog.hours < 24
+			$scope.valid = $scope.newtimelog.hours > 0.25 and $scope.newtimelog.hours < 24
 			if $scope.valid
 				$scope.newtimelog.time = $scope.newtimelog.hours * 60 * 60
 				$scope.setHours()
@@ -196,14 +198,15 @@ angular.module("iprofero.timesheets").controller "TimesheetsController", [
 
 			if $scope.prefs.logType == "timer"
 
-				if Stopwatch.data.value != 0 and
+				if Stopwatch.data.value > $MINIMUM_TIME and
 					$scope.newtimelog.project != "" and
 					$scope.newtimelog.activity != "" and
 					$scope.newtimelog.date != ""
 
 						# save
-						
+
 						$scope.newtimelog.time = Stopwatch.data.value
+						$scope.newtimelog.hours = Stopwatch.data.value / 60 / 60
 
 						# Save a single timesheet
 						$scope.save($scope.newtimelog)
@@ -214,8 +217,8 @@ angular.module("iprofero.timesheets").controller "TimesheetsController", [
 						Stopwatch.reset()
 
 				else
-					console.log "can't save - incomplete data"
-					console.log "Time: " + Stopwatch.data.value
+					console.log "can't save - incomplete data or time too short"
+					console.log "Time: " + Stopwatch.data.value + "s"
 					console.log $scope.newtimelog
 
 			else
@@ -271,10 +274,30 @@ angular.module("iprofero.timesheets").controller "TimesheetsController", [
 
 		$scope.save = (timesheet) ->
 			newtimesheet = $scope.newTimesheet(timesheet)
-			console.log "SAVING:"
-			console.log newtimesheet
-			console.log "------------"
 			newtimesheet.$save (response) ->
-				# Add newly added timelog to list
+				$scope.myTimelogs.push response
 
+		# ------------------
+		# Edit
+		# ------------------
+
+		$scope.update = (id) ->
+
+			timesheet = $scope.myTimelogs.filter (timelog) -> timelog._id == id
+
+			if timesheet.length != 0
+				timesheet[0].$update (response) ->
+
+		# ------------------
+		# Delete
+		# ------------------
+
+		$scope.delete = (id) ->
+
+			timesheet = $scope.myTimelogs.filter (timelog) -> timelog._id == id
+			if timesheet.length != 0
+				timesheet[0].$remove (response) ->
+					if $scope.myTimelogs?
+						$scope.myTimelogs =
+							$scope.myTimelogs.filter (timelog) -> timelog._id != response._id
 ]

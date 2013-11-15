@@ -18,14 +18,14 @@ validatePresenceOf = (value) ->
 # Validation Rules
 
 TimesheetSchema.path("date").validate ((date) ->
-	return true if date.getMonth
+	return true if date.getMonth()
 	false
 ), "Timesheet date must be a date"
 
 TimesheetSchema.path("hours").validate ((hours) ->
-	return true if hours isnt 0
+	return true if hours > 0 and hours < 24
 	false
-), "Timesheet hours cannot be zero"
+), "Timesheet hours must be between 0 and 24"
 
 TimesheetSchema.path("person").validate ((person) ->
 	return true if person.length isnt 0
@@ -39,13 +39,13 @@ TimesheetSchema.path("project").validate ((project) ->
 
 
 TimesheetSchema.pre "save", (next) ->
-	if not validatePresenceOf(@date)
-		next new Error("Timesheet Date Required")
-	else if not validatePresenceOf(@person)
+	if not validatePresenceOf(@person)
 		next new Error("Timesheet Person Required")
+	else if not validatePresenceOf(@date.toString())
+		next new Error("Timesheet Date Required")
 	else if not validatePresenceOf(@project)
 		next new Error("Timesheet Project Required")
-	else if not validatePresenceOf(@hours)
+	else if not validatePresenceOf(@hours.toString())
 		next new Error("Timesheet Hours Required")
 	else
 		next()

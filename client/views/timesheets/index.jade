@@ -106,16 +106,17 @@
 							select(chosen, data-ng-model="activity", data-ng-options="activity.name for activity in activities", data-placeholder="{{activityNames[newtimelog.activity] || 'Activity'}}", data-no-results-text="'No activities'", tabindex="4")
 
 					label.small(for="comment") Comment:
-					.ui.fluid.input.bottom.margin
+					.ui.fluid.left.icon.input
 						input#comment(data-ng-model="newtimelog.comment", placeholder="anything else?", tabindex="5")
+						i.comment.icon
 
-					.ui.center.aligned(data-ng-show="prefs.logType != 'timer'")
+					.ui.center.aligned.top.margin(data-ng-show="prefs.logType != 'timer'")
 						.ui.green.labeled.icon.button(tabindex="6", data-ng-class="{'disabled': newtimelog.project == '' || newtimelog.activity == '' || newtimelog.date == '' || !newtimelog.time || !valid}", data-ng-click="logTime()")
 							i.save.icon
 							| Log time
 
-					.ui.center.aligned(data-ng-show="prefs.logType == 'timer'")
-						.ui.green.labeled.icon.button(tabindex="6", data-ng-class="{'disabled': newtimelog.project == '' || newtimelog.activity == '' || newtimelog.date == '' || Stopwatch.data.value == 0}", data-ng-click="logTime()")
+					.ui.center.aligned.top.margin(data-ng-show="prefs.logType == 'timer'")
+						.ui.green.labeled.icon.button(tabindex="6", data-ng-class="{'disabled': newtimelog.project == '' || newtimelog.activity == '' || newtimelog.date == '' || Stopwatch.data.value < 900}", data-ng-click="logTime()")
 							i.save.icon
 							| Log time
 	
@@ -129,13 +130,53 @@
 			.column
 
 				//- should loop through timelog dates first, then each timelog for that date
-				.ui.relaxed.animated.divided.list(data-ng-if="myTimelogs.length != 0")
-					.item(data-ng-repeat="timelog in myTimelogs| orderBy: timelog.date")
+				.ui.relaxed.animated.divided.timelogs.selection.list(data-ng-if="myTimelogs.length != 0")
+					.item(data-ng-repeat="timelog in myTimelogs| orderBy: timelog.date", data-ng-click="showcomment = !showcomment")
 						img.ui.avatar.image(data-ng-src="{{user.avatar}}")
-						i.right.floated.circular.pencil.icon.link
-						i.right.floated.circular.remove.icon.link
+						.circular.ui.basic.small.red.icon.button.right.floated(data-ng-click="delete('{{timelog._id}}')")
+							i.remove.icon
+						.circular.ui.basic.small.blue.edit.icon.button.right.floated(data-ng-click="edittimelog = !edittimelog", data-ng-class="{'active':edittimelog}")
+							i.pencil.icon
 						.content
-							.header(data-ng-bind="projectNames[timelog.project]")
-							span(data-ng-bind="timelog.time / 60 / 60")
+							.header
+								span(data-ng-bind="projectNames[timelog.project] + ': '")
+								span(data-ng-bind="activityNames[timelog.activity]")
+							span(data-ng-bind="timelog.hours | number:2")
+							span hrs
+							p(data-ng-show="showcomment", data-ng-if="timelog.comment")
+								i(data-ng-bind="timelog.comment")
+							.ui.segment(data-ng-show="edittimelog")
+								.ui.form
+									.two.stackable.fields
+										.field
+											.ui.left.icon.dropdown.input(dropdown)
+												.ui.center.aligned.header.top.margin
+													span(data-ng-bind="timelog.date | date")
+												.menu
+													.item
+														datetimepicker(data-ng-model="timelog.date", data-datetimepicker-config="{ minView: 'day', maxView: 'month', startView: 'day' }")
+										.field
+											label Hours:
+											.ui.left.icon.input
+												input(type="text", data-ng-model="timelog.hours", placeholder="e.g. 1, 1.5, 8, 12.25", validate-time)
+												i.time.icon
+									.two.stackable.fields
+										.field
+											label Project:
+											select(chosen, data-ng-model="timelog.project", data-ng-options="project.name for project in user.projects", data-placeholder="{{projectNames[timelog.project] || 'Project'}}", data-no-results-text="'No projects'")
+										.field
+											label Activity:
+											select(chosen, data-ng-model="timelog.activity", data-ng-options="activity.name for activity in activities", data-placeholder="{{activityNames[timelog.activity] || 'Activity'}}", data-no-results-text="'No activities'")
+									.field
+										label Comment:
+										.ui.left.icon.input
+											input(type="text", data-ng-model="timelog.comment")
+											i.comment.icon
+
+									.ui.fluid.blue.icon.button(data-ng-click="update('{{timelog._id}}'); edittimelog = !edittimelog;", data-ng-class="{'disabled': !timelog.date || !timelog.project || !timelog.activity || !timelog.hours || timelog.hours <= 0 || timelog.hours >= 24 }")
+										i.save.icon
+										|  Update Timesheet
+
+
 				p(data-ng-if="myTimelogs.length == 0")
 					i No timesheets logged yet

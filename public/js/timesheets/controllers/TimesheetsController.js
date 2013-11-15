@@ -1,9 +1,10 @@
 (function() {
   angular.module("iprofero.timesheets").controller("TimesheetsController", [
     "$scope", "Global", "Timesheets", "PersonTimesheets", "ProjectTimesheets", "Users", "Projects", "Activities", "Stopwatch", "TimesheetPreferences", function($scope, Global, Timesheets, PersonTimesheets, ProjectTimesheets, Users, Projects, Activities, Stopwatch, TimesheetPreferences) {
-      var project, _i, _len, _ref;
+      var $MINIMUM_TIME, project, _i, _len, _ref;
       $scope.user = Global.user;
       $scope.Stopwatch = Stopwatch;
+      $MINIMUM_TIME = 900;
       $scope.prefs = {
         logType: "form"
       };
@@ -56,13 +57,13 @@
         $scope.setActivity();
       }
       $scope.myTimelogs = [];
-      PersonTimesheets.get({
+      PersonTimesheets.query({
         userId: $scope.user._id
       }, function(timelogs) {
-        $scope.myTimelogs = timelogs;
-        $scope.hoursThisWeek = 12;
-        return $scope.activeProjects = 3;
+        return $scope.myTimelogs = timelogs;
       });
+      $scope.hoursThisWeek = 12;
+      $scope.activeProjects = 3;
       $scope.prefs.logType = TimesheetPreferences.get("logType");
       if ($scope.prefs.logType === "") {
         $scope.prefs.logType = "form";
@@ -77,7 +78,7 @@
         $scope.prefs.dateRange = false;
       }
       $scope.$watch("newtimelog.hours", function() {
-        $scope.valid = $scope.newtimelog.hours > 0 && $scope.newtimelog.hours < 24;
+        $scope.valid = $scope.newtimelog.hours > 0.25 && $scope.newtimelog.hours < 24;
         if ($scope.valid) {
           $scope.newtimelog.time = $scope.newtimelog.hours * 60 * 60;
           return $scope.setHours();
@@ -155,15 +156,16 @@
       $scope.logTime = function() {
         var end, start;
         if ($scope.prefs.logType === "timer") {
-          if (Stopwatch.data.value !== 0 && $scope.newtimelog.project !== "" && $scope.newtimelog.activity !== "" && $scope.newtimelog.date !== "") {
+          if (Stopwatch.data.value > $MINIMUM_TIME && $scope.newtimelog.project !== "" && $scope.newtimelog.activity !== "" && $scope.newtimelog.date !== "") {
             $scope.newtimelog.time = Stopwatch.data.value;
+            $scope.newtimelog.hours = Stopwatch.data.value / 60 / 60;
             $scope.save($scope.newtimelog);
             $scope.resetNewTimeLog();
             $scope.newtimelog.hours = 0;
             return Stopwatch.reset();
           } else {
-            console.log("can't save - incomplete data");
-            console.log("Time: " + Stopwatch.data.value);
+            console.log("can't save - incomplete data or time too short");
+            console.log("Time: " + Stopwatch.data.value + "s");
             return console.log($scope.newtimelog);
           }
         } else {
@@ -201,13 +203,36 @@
           comment: timesheet.comment
         });
       };
-      return $scope.save = function(timesheet) {
+      $scope.save = function(timesheet) {
         var newtimesheet;
         newtimesheet = $scope.newTimesheet(timesheet);
-        console.log("SAVING:");
-        console.log(newtimesheet);
-        console.log("------------");
-        return newtimesheet.$save(function(response) {});
+        return newtimesheet.$save(function(response) {
+          return $scope.myTimelogs.push(response);
+        });
+      };
+      $scope.update = function(id) {
+        var timesheet;
+        timesheet = $scope.myTimelogs.filter(function(timelog) {
+          return timelog._id === id;
+        });
+        if (timesheet.length !== 0) {
+          return timesheet[0].$update(function(response) {});
+        }
+      };
+      return $scope["delete"] = function(id) {
+        var timesheet;
+        timesheet = $scope.myTimelogs.filter(function(timelog) {
+          return timelog._id === id;
+        });
+        if (timesheet.length !== 0) {
+          return timesheet[0].$remove(function(response) {
+            if ($scope.myTimelogs != null) {
+              return $scope.myTimelogs = $scope.myTimelogs.filter(function(timelog) {
+                return timelog._id !== response._id;
+              });
+            }
+          });
+        }
       };
     }
   ]);

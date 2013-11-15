@@ -71,7 +71,7 @@ module.exports = (app, passport, auth, profile) ->
 	app.get "/projects/:projectId", auth.requiresLogin, projects.show
 	app.put "/projects/:projectId", auth.requiresLogin, auth.user.isAdmin, projects.update
 	app.del "/projects/:projectId", auth.requiresLogin, auth.user.isAdmin, projects.remove
-	app.param("projectId", projects.project);
+	app.param "projectId", projects.project
 
 	# Timesheet Routes
 	
@@ -80,10 +80,11 @@ module.exports = (app, passport, auth, profile) ->
 	app.post "/timesheets", auth.requiresLogin, timesheets.create
 	app.get "/timesheets/:timesheetId", auth.requiresLogin, timesheets.show
 	app.put "/timesheets/:timesheetId", auth.requiresLogin, timesheets.update
-	app.del "/timesheets/:timesheetId", auth.requiresLogin, timesheets.remove
-	app.get "/users/timesheets/:userId", auth.requiresLogin, timesheets.allForPerson
-	app.get "/projects/timesheets/:projectId", auth.requiresLogin, timesheets.allForProject
-	app.param("timesheetId", timesheets.timesheet)
+	app.put "/users/:userId/timesheets/:timesheetId", auth.requiresLogin, timesheets.update
+	app.del "/users/:userId/timesheets/:timesheetId", auth.requiresLogin, timesheets.remove
+	app.get "/users/:userId/timesheets", auth.requiresLogin, timesheets.allForPerson
+	app.get "/projects/:projectId/timesheets/:timesheetId", auth.requiresLogin, timesheets.allForProject
+	app.param "timesheetId", timesheets.timesheet
 
 	# Main Routes
 
