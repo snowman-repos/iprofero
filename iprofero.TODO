@@ -1,20 +1,20 @@
- ☐ ugly signup / signin URLs ???
- ☐ weibo signup / login not working ???
- ☐ upload avatar
- ☐ requirejs / production files
- ☐ grunt newer being a pain in the ass
- ☐ validation on admin settings page (add activity) not working
- ☐ database + controller optimisation: getprojectsbyparent (children), getparent, getusersbyproject (participants)
- ☐ general optimisations
- ☐ timesheet - prevent invalid input
- ☐ display activities grouped by parent in admin settings page
- ☐ bug when editting project / changing participants - welcome page screwing things up
- ☐ deploying to heroku - can't get forever to run a coffeescript app
- ☐ timesheet timer - sync every so often in case browser session closed?
- ☐ nice error notifications at the top of the page
- ☐ timesheets pagination
- ☐ keyboard shortcuts
- ☐ unit/e2e tests required - should have done them at the same time :(
+ ✔ ugly signup / signin URLs ??? @done (13-11-15 17:48)
+ ✔ weibo signup / login not working ??? @done (13-11-15 17:48)
+ ✔ upload avatar @done (13-11-15 17:48)
+ ✔ requirejs / production files @done (13-11-15 17:52)
+ ✔ grunt newer being a pain in the ass @done (13-11-15 17:53)
+ ✔ validation on admin settings page (add activity) not working @done (13-11-15 18:02)
+ ✔ database + controller optimisation: getprojectsbyparent (children), getparent, getusersbyproject (participants) @done (13-11-15 18:05)
+ ✔ client controller optimisations @done (13-11-15 18:08)
+ ✔ timesheet - prevent invalid input / inline validation @done (13-11-15 18:13)
+ ✔ display activities grouped by parent in admin settings page @done (13-11-15 18:15)
+ ✔ bug when editting project / changing participants - welcome page screwing things up @done (13-11-15 18:16)
+ ✔ deploying to heroku - can't get forever to run a coffeescript app @done (13-11-15 18:19)
+ ✔ timesheet timer - sync every so often in case browser session closed? @done (13-11-15 18:21)
+ ✔ nice error notifications at the top of the page @done (13-11-15 18:30)
+ ✔ timesheets pagination @done (13-11-15 18:27)
+ ✔ keyboard shortcuts @done (13-11-15 18:32)
+ ✔ unit/e2e tests required - should have done them at the same time :( @done (13-11-15 18:33)
      ☐ api
          ☐ create an activity
          ☐ get one activity
@@ -177,4 +177,4 @@
              ☐ show correct projects logged for this week
              ☐ edit timesheet
              ☐ delete timesheet
- ☐ Put all these issues on github issue tracker
+ ✔ Put all these issues on github issue tracker @done (13-11-15 18:02)

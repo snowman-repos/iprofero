@@ -3,7 +3,7 @@ window.app.config [ "$routeProvider", ($routeProvider) ->
 	# Client-side routes
 
 	$routeProvider.when("/timesheets",
-		templateUrl: "views/timesheets/index.html"
+		templateUrl: "views/timesheets/timesheets.html"
 	).when("/projects",
 		templateUrl: "views/projects/list.html"
 	).when("/projects/new",
